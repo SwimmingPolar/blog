@@ -1,3 +1,10 @@
+import { withThemeSwitch } from "../lib";
+// Storybook specific global styles
+import "../styles/storybook.css";
+
+// Global decorators
+export const decorators = [withThemeSwitch];
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -6,4 +13,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
