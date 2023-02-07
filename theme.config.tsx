@@ -1,4 +1,5 @@
-import { useRouter } from "next/router";
+import { Logo } from "@/components";
+import { useCurrentLanguage } from "@/hooks";
 import { DocsThemeConfig } from "nextra-theme-docs/.";
 
 const docsRepositoryBase =
@@ -9,11 +10,7 @@ const config: DocsThemeConfig = {
   docsRepositoryBase,
 
   // Logo obviously
-  logo: (
-    <h3>
-      <span>YOO DONG HEON</span>
-    </h3>
-  ),
+  logo: <Logo />,
 
   // Github link the navbar
   project: {
@@ -53,21 +50,46 @@ const config: DocsThemeConfig = {
     content: "",
   },
 
+  // Edit link on the page
   editLink: {
     component: (props: { className?: string; filePath?: string }) => {
-      const router = useRouter();
-      const text = router.locale === "ko" ? "수정하기" : "Edit this page";
+      const text = useCurrentLanguage({
+        ko: "수정하기",
+        en: "Edit this page",
+      });
       const href = props.filePath
         ? docsRepositoryBase + `/${props?.filePath}`
         : "";
       return (
-        <>
-          <a className={props?.className} href={href} target="_blank">
-            {text}
-          </a>
-        </>
+        <a className={props?.className} href={href} target="_blank">
+          {text}
+        </a>
       );
     },
+  },
+
+  // Search component on the navbar
+  search: {
+    placeholder: () => {
+      return useCurrentLanguage({
+        ko: "검색하기...",
+        en: "Search documentation...",
+      });
+    },
+    emptyResult: () => {
+      const text = useCurrentLanguage({
+        ko: "검색 결과가 없어용",
+        en: "No results found",
+      });
+      return (
+        <span className="nx-block nx-select-none nx-p-8 nx-text-center nx-text-sm nx-text-gray-400">
+          {text}
+        </span>
+      );
+    },
+  },
+  footer: {
+    text: "2023 © YDH - 🎉 sometime it just happens",
   },
 };
 
