@@ -1,4 +1,4 @@
-import nextra from "nextra";
+const nextra = require("nextra");
 
 const withNextra = nextra({
   theme: "nextra-theme-docs",
@@ -9,7 +9,7 @@ const withNextra = nextra({
   defaultShowCopyCode: true,
 });
 
-export default withNextra({
+module.exports = withNextra({
   i18n: {
     locales: ["ko", "en"],
     defaultLocale: "ko",
