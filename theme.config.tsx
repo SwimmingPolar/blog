@@ -43,6 +43,7 @@ const config: DocsThemeConfig = {
   sidebar: {
     // Expand all
     defaultMenuCollapseLevel: 3,
+    toggleButton: true,
   },
 
   // Feedback button on the sidebar of the page

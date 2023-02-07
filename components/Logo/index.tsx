@@ -45,7 +45,10 @@ export const Logo = () => {
       <Image
         src={carrotSvg}
         alt="carrot"
-        className={isOnHome ? styles["large-carrot"] : styles["small-carrot"]}
+        className={
+          (isOnHome ? styles["large-carrot"] : styles["small-carrot"]) +
+          " carrot"
+        }
         ref={carrotRef}
       />
     </div>

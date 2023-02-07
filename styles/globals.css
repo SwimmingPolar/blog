@@ -1,3 +1,7 @@
+/* 
+    This styles are for re-ordering the elements on the home page.
+    Style Start
+*/
 #__next div[dir="ltr"] {
   display: flex;
   flex-direction: column;
@@ -37,9 +41,49 @@
   display: none;
 }
 /* When on home page */
-#__next div[dir="ltr"] > footer.home-footer {
+#__next div[dir="ltr"].home > footer {
   order: 4;
 }
-#__next div[dir="ltr"] > footer.home-footer > div:nth-of-type(2) {
+#__next div[dir="ltr"].home > footer > div:nth-of-type(2) {
   display: flex;
 }
+/* 
+    This styles are for re-ordering the elements on the home page.
+    Style End
+*/
+
+/* 
+    This styles are to adjust animation and layout of the navbar and sidebar
+    when the user is on the home page.
+    Style Start
+*/
+/* Navbar container to have same z-index to sidebar element when not opned */
+#__next div[dir="ltr"].home .nextra-nav-container {
+  z-index: 15;
+}
+/* When sidebar is opened, navbar container will have same
+  z-index value to sidebar element to be visible side by side */
+body.nx-overflow-hidden #__next div[dir="ltr"].home .nextra-nav-container {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+}
+
+/* Remove transition effect when opening sidebar
+   on home page only to make the ux better because
+   we have adjusted layout by styling, we can't add
+   navbar component on the sidebar component */
+#__next div[dir="ltr"].home .nextra-sidebar-container {
+  transition: none !important;
+}
+
+/* Make the carrot small */
+body.nx-overflow-hidden .carrot {
+  transform: scale(1.25) rotate(0);
+  transition: none !important;
+}
+/* 
+    This styles are to adjust animation and layout of the navbar and sidebar
+    when the user is on the home page.
+    Style End
+*/

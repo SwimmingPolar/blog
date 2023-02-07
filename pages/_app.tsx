@@ -10,14 +10,15 @@ export default function App({ Component, pageProps }: AppProps) {
 
   // When on home page, show the footer at the bottom
   useEffect(() => {
-    const footer = document.querySelector('#__next div[dir="ltr"] > footer');
+    // Content container
+    const container = document.querySelector('#__next div[dir="ltr"]');
     if (isOnHome) {
-      footer?.classList.add("home-footer");
+      container?.classList.add("home");
     }
 
     return () => {
       if (isOnHome) {
-        footer?.classList.remove("home-footer");
+        container?.classList.remove("home");
       }
     };
   }, [isOnHome]);

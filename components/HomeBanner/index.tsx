@@ -26,7 +26,7 @@ export const HomeBanner: FC = () => {
   }, [isRendered]);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper + " home-banner"}>
       <div className={styles.box}>
         <div className={styles.image} ref={imageRef} />
       </div>
