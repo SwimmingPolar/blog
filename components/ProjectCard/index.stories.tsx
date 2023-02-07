@@ -1,7 +1,6 @@
-import { withThemeSwitch } from "@/lib";
 import { ComponentMeta } from "@storybook/react";
 import styled from "styled-components";
-import { Card } from "./";
+import { ProjectCard } from "./";
 
 const Content = styled.div`
   display: flex;
@@ -16,16 +15,16 @@ const Content = styled.div`
 `;
 
 export default {
-  title: "Components/Card",
-  component: Card,
-} as ComponentMeta<typeof Card>;
+  title: "Components/ProjectCard",
+  component: ProjectCard,
+} as ComponentMeta<typeof ProjectCard>;
 
 export const Default = () => {
   return (
-    <Card>
+    <ProjectCard>
       <Content>
-        <h1>Card</h1>
+        <h1>ProjectCard</h1>
       </Content>
-    </Card>
+    </ProjectCard>
   );
 };
