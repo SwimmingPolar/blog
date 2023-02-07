@@ -3,7 +3,7 @@ import { withThemeSwitch } from "../lib";
 import "../styles/storybook.css";
 
 // Global decorators
-export const decorators = [withThemeSwitch];
+export const decorators = [];
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
