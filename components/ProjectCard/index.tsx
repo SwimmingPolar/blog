@@ -16,11 +16,11 @@ const Wrapper = styled.div`
 
 const Box = styled.div``;
 
-type CardProps = {
+type ProjectCardProps = {
   children: React.ReactNode;
 };
 
-export const Card = ({ children }: CardProps) => {
+export const ProjectCard = ({ children }: ProjectCardProps) => {
   return (
     <Wrapper>
       <Box>{children}</Box>
