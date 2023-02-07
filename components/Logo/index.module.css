@@ -1,0 +1,25 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-text {
+  font-size: 1.1rem;
+  font-family: "Noto Sans Kr", sans-serif;
+  font-weight: bold;
+  color: #444;
+  word-break: keep-all;
+  white-space: pre-wrap;
+}
+
+.large-carrot {
+  transition: transform 0.15s ease-in-out;
+  transform: scale(2.25) rotate(-10deg);
+}
+
+.small-carrot {
+  transition: transform 0.15s ease-in-out;
+  transform: scale(1.25);
+}

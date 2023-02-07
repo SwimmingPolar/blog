@@ -1,4 +1,5 @@
-import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { withThemeSwitch } from "@/lib";
+import { ComponentMeta } from "@storybook/react";
 import styled from "styled-components";
 import { Card } from "./";
 
