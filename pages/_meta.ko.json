@@ -1,0 +1,17 @@
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "title": "요약"
+  },
+  "projects": {
+    "title": "프로젝트"
+  },
+  "stacks": {
+    "title": "기술 스택"
+  },
+  "contact": {
+    "title": "연락처"
+  }
+}

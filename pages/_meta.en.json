@@ -1,0 +1,17 @@
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "title": "Summary"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "stacks": {
+    "title": "Stacks"
+  },
+  "contact": {
+    "title": "Contact"
+  }
+}

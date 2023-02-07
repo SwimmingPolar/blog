@@ -1,0 +1,11 @@
+{
+  "frontend": {
+    "title": "Frontend"
+  },
+  "backend": {
+    "title": "Backend"
+  },
+  "scraper": {
+    "title": "Scraper"
+  }
+}
