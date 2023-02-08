@@ -1,9 +1,19 @@
-import type { ReactNode } from "react";
-import Link from "next/link";
 import cn from "clsx";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import type { ReactNode } from "react";
 
 import styles from "./style.module.css";
+
+type Feature = {
+  large?: boolean;
+  centered?: boolean;
+  lightOnly?: boolean;
+  className?: string;
+  href?: string;
+  index: number;
+  children: ReactNode;
+};
 
 export function Feature({
   large,
@@ -14,7 +24,7 @@ export function Feature({
   href,
   index,
   ...props
-}: any) {
+}: Feature) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
