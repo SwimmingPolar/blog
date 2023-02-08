@@ -4,25 +4,38 @@ import Image from "next/image";
 type ScreenShot = {
   src: string;
   alt: string;
+  caption?: string;
   full?: boolean;
 };
 
-export function Screenshot({ src, alt, full }: ScreenShot) {
+export function Screenshot({ src, alt, full, caption }: ScreenShot) {
   return (
-    <div
+    <figure
       className={cn(
-        "mt-6 -mb-4 flex justify-center overflow-hidden rounded-xl border dark:border-zinc-800",
+        "mt-6 -mb-4 flex flex-col justify-center overflow-hidden rounded-xl border dark:border-zinc-800",
         full ? "bg-white" : "bg-zinc-100"
       )}
     >
-      <Image
-        src={src}
-        alt={alt}
-        className={cn(
-          "w-auto select-none bg-white",
-          full ? "" : "ring-1 ring-gray-200"
-        )}
-      />
-    </div>
+      <div className="flex justify-center">
+        <Image
+          src={src}
+          alt={alt}
+          className={cn(
+            "w-auto select-none bg-white grow-0",
+            full ? "" : "ring-1 ring-gray-200"
+          )}
+        />
+      </div>
+      {caption ? (
+        <figcaption
+          className={cn(
+            "flex justify-center border-t mt-0",
+            full ? "bg-white" : "bg-zinc-100"
+          )}
+        >
+          <span className="dark:text-black">{caption}</span>
+        </figcaption>
+      ) : null}
+    </figure>
   );
 }
