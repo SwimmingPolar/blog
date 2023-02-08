@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import styles from "./style.module.css";
+import styles from "./features.module.css";
 
 type Feature = {
   large?: boolean;
