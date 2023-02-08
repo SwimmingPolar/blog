@@ -1,9 +1,10 @@
 import { HomeBanner } from "@/components";
 import { useRenderOnHome } from "@/hooks";
 import { AppProps } from "next/app";
+import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import "@/styles/globals.css";
-import { useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const isOnHome = useRenderOnHome();
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       {isOnHome ? <HomeBanner /> : null}
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
