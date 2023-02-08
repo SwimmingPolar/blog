@@ -1,0 +1,193 @@
+import { Tree, Folder, File, Screenshot } from "@/components";
+import "@code-hike/mdx/dist/index.css";
+
+# Nextra Review
+
+## 1. Learning Curve
+
+    {" "}
+
+When creating a blog, we need to use a template or create one
+from scratch by ourselves. I could have built it from scratch
+but it's difficult to just add basic features we need on a blog,
+so I chose to use a template. I've seen people using 'Notion' or
+github page with 'Jekyll', for me, 'Notion' looks exceptionally
+complicated. At first glance, it seems to be just attaching components.
+But in detail, there are many variables to control like building some
+kind of design system. For `Jekyll`, I don't know why, but I feel like
+it's missing something. `nextra` gives me a feeling that it is a well-made
+cooking pack that still works even if I add my own ingredients but is just
+fine without any.
+
+<Tree>
+  <Folder name="Features" defaultOpen>
+    <File name="Markdown" />
+    <File name="Code Highlight" />
+    <File name="Image Optimization" />
+    <File name="Deploy" />
+    <File name="SSG / SSR" />
+    <File name="SEO" />
+  </Folder>
+</Tree>
+
+It does not provide too many features, and appropriately removes
+unnecessary things so that web developers can easily build a site.
+To install a code highlighting library like CodeHike, MDX2 is required,
+but since MDX2 is supported by default, there is no need to install and
+set it up separately. Plug-ins or libraries that require MDX can be
+installed and used immediately.
+
+<CH.Code>
+
+```js app.js focus=2:4
+function lorem(ipsum, dolor = 1) {
+  const sit = ipsum == null ? 0 : ipsum.sit;
+  dolor = sit - amet(dolor);
+  return sit ? consectetur(ipsum) : [];
+}
+```
+
+```python hello.py
+print("Hello, world!")
+```
+
+---
+
+```css styles.css
+.lorem {
+  color: #fff;
+  padding: 10px;
+  background: #000;
+}
+```
+
+</CH.Code>
+
+## 2. Degree of Completion
+
+    {" "}
+
+At this point, there is no various `theme` provided, so you have to configure
+it from the beginning. I've visited a lot of `Jekyll` demo sites to choose a
+theme for my own blog, but it's just hard to find the one I want. On the other
+hand `nextra` offer `navbar`, `sidebar`, `footer`, and even searchbar` to play
+around with and use as you like. The degree of completion is high enough that
+you can use it as it is if you do not need customization. The design is neat
+enough not to get boring, but it doesn't fall behind modern web design.
+
+Although it is very simple to create routing or menus based on routing, it
+is a little annoying. `nextra` uses `next.js`, so if you create a file
+in `pages` folder, a link is automatically created in `navbar` component provided
+by `nextra`. To rename or reorder links in `navbar`, you only need to
+edit `_meta.json` file recognized by `nextra`.
+
+After completing the basic settings, I just had to create an `mdx` file
+in the `page` folder and start writing. Since `next.js` is what's behind the `nextra`,
+`i18n` or 'dark mode' configuration is easy and it is easy to respond to the language respectively.
+
+#### \_meta.json Configuration
+
+import MetaJsonScreenshot from "../../../public/pages/projects/nextra-portfolio/_meta.json.png";
+
+<Screenshot src={MetaJsonScreenshot} alt="_meta.json.screenshot" />
+
+<br />
+
+<CH.Code>
+```json _meta.en.json
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "title": "Summary"
+  },
+  "projects": {
+    "title": "Projects"
+  },
+  "stacks": {
+    "title": "Stacks"
+  },
+  "contact": {
+    "title": "Contact"
+  }
+}
+```
+
+```json _meta.ko.json
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "title": "요약"
+  },
+  "projects": {
+    "title": "프로젝트"
+  },
+  "stacks": {
+    "title": "기술 스택"
+  },
+  "contact": {
+    "title": "연락처"
+  }
+}
+```
+
+</CH.Code>
+
+#### \_meta.json Configuration Result
+
+import NavbarScreenshot from "../../../public/pages/projects/nextra-portfolio/navbar.png";
+
+<Screenshot src={NavbarScreenshot} alt="navbar.screenshot" />
+
+The added page appears in the `navbar` component without any extra
+configurations, and the order and name set in `_meta.json` are mapped to the
+page file name.
+
+## 3. Pros and Cons
+
+### Pros
+
+The advantages will be the ones mentioned above, and, To be honest,
+I'm in no position to comment on this because I haven't used other
+blog templates or libraries. Still, if I had to point out the advantages
+felt while using `nextra`, except for the features mentioned above,
+Hmm... not really. However, I think the biggest advantage is that there
+is no discomfort like I felt when using 'Notion' because of its vast
+features and the overwhelming number of components and emojis. And a
+feeling that I had when trying to use 'Jekyll' that something was missing out.
+
+I don't know why, but the folders that I unknowingly overlapped to make
+the layout cleaner on `notion`, or all the wandering that I had to go
+through to look for more perfect skin when I decided to use 'Jekyll'.
+It's all gone.
+
+> Install > Default Configuration > Deploy > Write MDX File
+
+### Cons
+
+#### Customizing
+
+Since it is a framework, there are many abstractions.
+The pros of `nextra` because it's based on `next.js` can be a disadvantage.
+It can be easier to use `nextra` if you take a look at `next.js`'s tutorial first before
+using `nextra`.
+
+The biggest drawback is that you need to know `next.js` to make it easier
+to use `nextra`, and since there are many abstractions when
+you want to take it out and customize it, you will find yourself wondering
+where should I modify it.
+It is convenient that `navbar` is provided, but we don't have complete access to other
+default components like `footer` or `sidebar` when styling. So I had to force customization through
+globals.css instead of through the functions provided by `nextra`,
+then later when `nextra` gets updated, this whole force customization can easily turn into a useless configuration.
+
+#### Official Documentation
+
+It's still in the early stages of project, so it's not well documented.
+`nextra` has two basic `themes`. There are `doc` and `blog`, but currently
+only the documentation for `doc` is provided, and this is not perfect either.
+The activity of the project maintainer itself is active, so it doesn't seem
+to be a big problem.

@@ -1,0 +1,53 @@
+import { Tree, Folder, File, Screenshot } from "@/components";
+import "@code-hike/mdx/dist/index.css";
+
+# Current Configuration
+
+## 1. Modify Default Layout
+
+- home page
+  1. Added the home banner image above the `navbar`
+  2. Removed the transition on `sidebar` to prevent the layout from breaking on `mobile` and many other styles
+     because of the home banner. It is not a good practice to modify the layout globally
+     It can be broken in the future when `nextra` is updated
+- other page
+  1. Moved `footer` to the bottom of the `navbar`
+  2. Removed the second `div` on the `footer` to be invisible
+
+## 2. i18n
+
+## 3. CodeHike
+
+<CH.Code>
+
+```js app.js
+function lorem(ipsum, dolor = 1) {
+  const sit = ipsum == null ? 0 : ipsum.sit;
+  dolor = sit - amet(dolor);
+  return sit ? consectetur(ipsum) : [];
+}
+```
+
+</CH.Code>
+
+## 4. Cloned `nextra docs`'s components
+
+Stole the basic components used in `nextra docs`
+
+<Tree>
+  <Folder name="Components" defaultOpen>
+    <File name="FileTree" />
+    <File name="Card" />
+    <File name="Table" />
+    <File name="Video" />
+    <File name="Screenshot" />
+  </Folder>
+</Tree>
+
+It was very convenient and pretty to use, so I took it
+
+## 5. Installed tailwind, postcss, autoprefixer
+
+Installed aboved packages to support for the #3 components
+
+## 5. Installed storybook

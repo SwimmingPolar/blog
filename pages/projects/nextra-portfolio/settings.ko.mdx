@@ -7,8 +7,10 @@ import "@code-hike/mdx/dist/index.css";
 
 - home page
   1. `navbar` 위에 배너 이미지를 노출시킴
-  2. 배너 이미지 노출로 `mob ile`에서 `sidebar`레이아웃이 틀어지는 걸 방지하기 위해
+  2. 배너 이미지 노출로 `mobile`에서 `sidebar`레이아웃이 틀어지는 걸 방지하기 위해
      `sidebar`의 `transition`을 없애고, `z-index`등등 여러가지 복합적인`styles`를 수정함
+     글로벌 스타일을 통해 레이아웃을 수정하는 것은 좋지 않은 방법임
+     추후 `nextra` 업데이트와 함께 레이아웃이 틀어질 수 있음
 - other page
   1. `footer`의 위치를 수정해서 `navbar` 밑으로 가게 함
   2. `footer`의 하단 `div`를 보이지 않게 수정함
