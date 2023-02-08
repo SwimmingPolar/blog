@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./index.module.css";
 import carrotSvg from "/public/images/carrot.svg";
+import { throttle } from "lodash";
 
 export const Logo = () => {
   const boxRef = useRef<HTMLImageElement>(null);
@@ -10,7 +11,10 @@ export const Logo = () => {
   const isOnHome = useRenderOnHome();
 
   useEffect(() => {
-    const handleScroll = () => {
+    // Scroll event bound position controlling often makes
+    // the element flicker up and down. Throttle somehow reduces
+    // this flickering side effect.
+    const handleScroll = throttle(() => {
       if (!carrotRef.current) {
         return;
       }
@@ -25,7 +29,7 @@ export const Logo = () => {
       } else {
         carrotRef.current.classList.remove(styles["small-carrot"]);
       }
-    };
+    });
 
     if (isOnHome) {
       ["scroll", "resize"].forEach((event) => {
