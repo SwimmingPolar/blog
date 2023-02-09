@@ -177,15 +177,10 @@ import BuildsggScreenshot from '/public/pages/projects/electrokerot/intro/builds
 버그도 많아 문제가 많았었다. 데모를 만들어봤지만 `DX`가 너무 별로기도 하고 라이브러리
 전반적으로 실제로 사용하기에는 무리가 있었기 때문에 다른 방법을 찾아야 했다.
 
-<<<<<<< HEAD
-
 <Video
   src="/pages/projects/electrokerot/intro/infinite-scroll.mp4"
   autoPlay={false}
 />
-=======
-<Video src="/public/hello.mp4" />
->>>>>>> ac7adb2d88bd78059438c95e33b49927200d3d3c
 
 부품 검색이 가능해야 하니 부품 검색 기능에 대해 생각하고 있었는데, 내가 가지고 있던 지식으론
 부품을 검색하는 기능을 구현하기에는 부족했다. 얼핏 들었던 `elasticsearch`를 사용해보려고 했는데
@@ -281,13 +276,8 @@ import InfraScreenshot from '/public/pages/projects/electrokerot/intro/infra.png
 
 을 통해 해결할 수 있다. 스크래퍼 서버의 경우, 성능이 좋은 서버가 필요하기 때문에 상용 클라우드나 프리티어를 통해 해결할 수 없다.
 
-<<<<<<< HEAD
 결국, 전반적인 서비스에 필요한 인프라를 직접 클라우드를 대여해 구축하는 것이 아닌
 자동화 된 클라우드 호스팅을 통해 배포할 가능성이 커졌다.
-=======
-결국, 전반적인 서비스를 클라우드 호스팅을 통해 배포할 가능성이 커졌다.
-
-> > > > > > > ac7adb2d88bd78059438c95e33b49927200d3d3c
 
 ## 6. 데이터/수집
 
@@ -327,11 +317,7 @@ import FlowChartScreenshot from '/public/pages/projects/electrokerot/intro/flowc
 <details>
 <summary>Cypress Media hook</summary>
 
-{" "}
-
 ```ts media.cy.ts
-import { DeviceType, DeviceGroup, Viewports, getDeviceGroup } from 'hooks'
-
 type TestParams = {
   device: Exclude<DeviceType, null>
   deviceGroup: DeviceGroup
@@ -381,195 +367,195 @@ export function withMedia(test: Test, devices?: Array<DeviceType>) {
 <details>
   <summary>최저가 로직</summary>
 
-처음 최저가를 찾아주는 로직을 만들려고 했을 때, 전혀 감이 오지 않았다. 심지어 가능한가도 의문이 들었다.
-여러가지 알고리즘도 들춰보고 검색해봤지만 결국 전체 경우의 수를 다 구해보는 방법 외에는
-최저가를 찾아주는 방법이 없었다. 하지만 경우의 수가 너무 많았다. 예를 들어,
+    처음 최저가를 찾아주는 로직을 만들려고 했을 때, 전혀 감이 오지 않았다. 심지어 가능한가도 의문이 들었다.
+    여러가지 알고리즘도 들춰보고 검색해봤지만 결국 전체 경우의 수를 다 구해보는 방법 외에는
+    최저가를 찾아주는 방법이 없었다. 하지만 경우의 수가 너무 많았다. 예를 들어,
 
-3개의 부품이 있는데, 각각 [3곳, 4곳, 5곳]의 판매처가 있다고 가정하자. 이 경우의 수는 3 \* 4 \* 5 = 60이다.
-보통 7개의 부품이 있고 각각 15개 이상의 판매처가 있기 때문에 경우의 수는 15^7 = 3,874,204,841 이다.
-브라우저에서 최대 10,000,000을 넘어가는 연산이 실행되면 브라우저가 다운되는 것으로 파악되었다.
+    3개의 부품이 있는데, 각각 [3곳, 4곳, 5곳]의 판매처가 있다고 가정하자. 이 경우의 수는 3 \* 4 \* 5 = 60이다.
+    보통 7개의 부품이 있고 각각 15개 이상의 판매처가 있기 때문에 경우의 수는 15^7 = 3,874,204,841 이다.
+    브라우저에서 최대 10,000,000을 넘어가는 연산이 실행되면 브라우저가 다운되는 것으로 파악되었다.
 
-결국 전체 경우의 수는 찾아야 하지만 10,000,000번의 연산을 넘기면 안 되니 전처리를 통해
-경우의 줄이는 방법을 이용했다. 모든 판매처를 다 구해보는 것은 효율적이지 못 하니, 각 부품마다
-최저가를 찾고 이 최저가에 택배 비용을 더해 이것보다 높은 가격을 가진 판매처를 제외하고 다시 최저가를 찾는 방법을 사용했다.
-택비 비용을 더 한 가격보다 비싼 가격의 부품은 그냥 최저가의 부품을 따로 시키면 되기 때문에, 최저가 묶음을 찾아주는
-목록에서 제외시켜도 된다. 이렇게 하면 경우의 수를 줄일 수 있었다.
+    결국 전체 경우의 수는 찾아야 하지만 10,000,000번의 연산을 넘기면 안 되니 전처리를 통해
+    경우의 줄이는 방법을 이용했다. 모든 판매처를 다 구해보는 것은 효율적이지 못 하니, 각 부품마다
+    최저가를 찾고 이 최저가에 택배 비용을 더해 이것보다 높은 가격을 가진 판매처를 제외하고 다시 최저가를 찾는 방법을 사용했다.
+    택비 비용을 더 한 가격보다 비싼 가격의 부품은 그냥 최저가의 부품을 따로 시키면 되기 때문에, 최저가 묶음을 찾아주는
+    목록에서 제외시켜도 된다. 이렇게 하면 경우의 수를 줄일 수 있었다.
 
-```js
-// Preprocess
-// 1. Find product with lowest price and shipping cost (=lowest_offer)
-// 2. Filter product with
-//      price greater than lowest_offer (lowest_offer <= product_price)
-//      price that is not lowest and that cannot be packaged or bundled (has only 1 overlapping vendor when ordering more than 2 parts)
-// 3. .. the more preprocessing logics, the less time to find feasible combinations ...
+    ```ts
+      // Preprocess
+      // 1. Find product with lowest price and shipping cost (=lowest_offer)
+      // 2. Filter product with
+      //    price greater than lowest_offer (lowest_offer <= product_price)
+      //    price that is not lowest and that cannot be packaged or bundled (has only 1 overlapping vendor when ordering more than 2 parts)
+      // 3. The more preprocessing logics, the less time to find feasible combinations ...
 
-// In real, these values are in one matrix
-// They can be separted into 3 matrixes like below or
-// just use as they are
-const product_price = [
-  [3000, 3000, 3500, 5000, 4000, 3000, 3500, 2500],
-  [3500, 4000, 4500, 5500, 5000, 3500, 4000, 3000],
-  [2000, 3000, 2500, 4500, 3000, 2000, 2500, 1500],
-  [1000, 1000, 3000, 3000, 3500, 1000, 3000, 2000],
-  [1000, 3000, 3000, 3000, 2500, 1000, 3000, 2000],
-  [2000, 3000, 2500, 4500, 3000],
-  [1000, 1000, 3000, 3000, 3500],
-  [1000, 3000, 3000, 3000, 2500],
-  [1000, 1000, 3000, 3000, 3500],
-  [2000, 3000, 2500, 4500, 3000]
-]
-const vendors = [
-  [3, 4, 2, 1, 0, 5, 7, 8],
-  [1, 7, 5, 2, 3, 4, 6, 0],
-  [5, 1, 0, 6, 7, 2, 3, 4],
-  [1, 3, 8, 5, 2, 4, 6, 7],
-  [1, 7, 5, 2, 3, 4, 6, 0],
-  [5, 1, 0, 6, 7],
-  [1, 3, 8, 5, 2],
-  [5, 1, 0, 6, 7],
-  [5, 1, 0, 6, 7],
-  [5, 1, 0, 6, 7]
-]
-const shipping_costs = {
-  0: 0,
-  1: 3000,
-  2: 0,
-  3: 0,
-  4: 2000,
-  5: 2000,
-  6: 3000,
-  7: 0,
-  8: 0,
-  9: 2500
-}
+      // In real, these values are in one matrix
+      // They can be separted into 3 matrixes like below or
+      // just use as they are
+      const product_price = [
+        [3000, 3000, 3500, 5000, 4000, 3000, 3500, 2500],
+        [3500, 4000, 4500, 5500, 5000, 3500, 4000, 3000],
+        [2000, 3000, 2500, 4500, 3000, 2000, 2500, 1500],
+        [1000, 1000, 3000, 3000, 3500, 1000, 3000, 2000],
+        [1000, 3000, 3000, 3000, 2500, 1000, 3000, 2000],
+        [2000, 3000, 2500, 4500, 3000],
+        [1000, 1000, 3000, 3000, 3500],
+        [1000, 3000, 3000, 3000, 2500],
+        [1000, 1000, 3000, 3000, 3500],
+        [2000, 3000, 2500, 4500, 3000]
+      ]
+      const vendors = [
+        [3, 4, 2, 1, 0, 5, 7, 8],
+        [1, 7, 5, 2, 3, 4, 6, 0],
+        [5, 1, 0, 6, 7, 2, 3, 4],
+        [1, 3, 8, 5, 2, 4, 6, 7],
+        [1, 7, 5, 2, 3, 4, 6, 0],
+        [5, 1, 0, 6, 7],
+        [1, 3, 8, 5, 2],
+        [5, 1, 0, 6, 7],
+        [5, 1, 0, 6, 7],
+        [5, 1, 0, 6, 7]
+      ]
+      const shipping_costs = {
+        0: 0,
+        1: 3000,
+        2: 0,
+        3: 0,
+        4: 2000,
+        5: 2000,
+        6: 3000,
+        7: 0,
+        8: 0,
+        9: 2500
+      }
 
-// In the entire selected products list, which vendors sells the most products?
-// e.g. cpu: 'vendor A', 'vendor B', 'vendor C'
-//      memory: 'vendor A', 'vendor B'
-//      gpu: 'vendor A'
-// result: { 'vendor A': 3, 'vendor B': 2, 'vendor C': 1 }
-// Among the lowest products, selecting the product from 'vendor A' will
-// result in the lowest price
-const overlapping_vendors = vendors.reduce(
-  (vendorList, parts) =>
-    parts.reduce(
-      (vendorList, vendor) => ({
-        ...vendorList,
-        [vendor]: vendorList[vendor] + 1 || 1
-      }),
-      vendorList
-    ),
-  {}
-)
+      // In the entire selected products list, which vendors sells the most products?
+      // e.g. cpu: 'vendor A', 'vendor B', 'vendor C'
+      //      memory: 'vendor A', 'vendor B'
+      //      gpu: 'vendor A'
+      // result: { 'vendor A': 3, 'vendor B': 2, 'vendor C': 1 }
+      // Among the lowest products, selecting the product from 'vendor A' will
+      // result in the lowest price
+      const overlapping_vendors = vendors.reduce(
+        (vendorList, parts) =>
+          parts.reduce(
+            (vendorList, vendor) => ({
+              ...vendorList,
+              [vendor]: vendorList[vendor] + 1 || 1
+            }),
+            vendorList
+          ),
+        {}
+      )
 
-// Returns the cost of the given products combination
-const getTotalCost = productsList => {
-  let productsCost = 0
-  const usedVendors = new Set()
-  productsList.forEach(product => {
-    const [price, vendor] = product
-    usedVendors.add(vendor)
-    productsCost += price
-  })
-  const shippingCost = Array.from(usedVendors).reduce(
-    (shippingCost, vendor) => shippingCost + +shipping_costs[vendor],
-    0
-  )
-  return productsCost + shippingCost
-}
+      // Returns the cost of the given products combination
+      const getTotalCost = productsList => {
+        let productsCost = 0
+        const usedVendors = new Set()
+        productsList.forEach(product => {
+          const [price, vendor] = product
+          usedVendors.add(vendor)
+          productsCost += price
+        })
+        const shippingCost = Array.from(usedVendors).reduce(
+          (shippingCost, vendor) => shippingCost + +shipping_costs[vendor],
+          0
+        )
+        return productsCost + shippingCost
+      }
 
-// Combine product price matrix and the shipping cost matrix
-const product_price_with_shipping = product_price.map((products, i) =>
-  products.map((price, j) => +price + shipping_costs[vendors[i][j]])
-)
+      // Combine product price matrix and the shipping cost matrix
+      const product_price_with_shipping = product_price.map((products, i) =>
+        products.map((price, j) => +price + shipping_costs[vendors[i][j]])
+      )
 
-// Get rough estimate of the lowest price
-const priceFilter = product_price_with_shipping
+      // Get rough estimate of the lowest price
+      const priceFilter = product_price_with_shipping
 
-  // Iterate through each part category
-  .reduce((sum, products, i) => {
-    // Find the lowest price of the part category
-    const lowestPrice = Math.min(...products)
-    // Get the indexes of the products with lowest price
-    const lowestPriceIndexes = products
-      .map((price, j) => (price === lowestPrice ? j : undefined))
-      .filter(e => e !== undefined)
+        // Iterate through each part category
+        .reduce((sum, products, i) => {
+          // Find the lowest price of the part category
+          const lowestPrice = Math.min(...products)
+          // Get the indexes of the products with lowest price
+          const lowestPriceIndexes = products
+            .map((price, j) => (price === lowestPrice ? j : undefined))
+            .filter(e => e !== undefined)
 
-    // Among the lowest price products, find the one with the most overlapping vendors
-    const lowestPriceIndexesSortedByMostOverlappingVendors =
-      lowestPriceIndexes.sort((a, b) => {
-        const aOverlappingVendors = overlapping_vendors[vendors[i][a]]
-        const bOverlappingVendors = overlapping_vendors[vendors[i][b]]
-        return bOverlappingVendors - aOverlappingVendors
-      })
+          // Among the lowest price products, find the one with the most overlapping vendors
+          const lowestPriceIndexesSortedByMostOverlappingVendors =
+            lowestPriceIndexes.sort((a, b) => {
+              const aOverlappingVendors = overlapping_vendors[vendors[i][a]]
+              const bOverlappingVendors = overlapping_vendors[vendors[i][b]]
+              return bOverlappingVendors - aOverlappingVendors
+            })
 
-    // Pick product with the lowest price and the most overlapping vendors
-    return sum + products[lowestPriceIndexesSortedByMostOverlappingVendors[0]]
-  }, 0)
+          // Pick product with the lowest price and the most overlapping vendors
+          return sum + products[lowestPriceIndexesSortedByMostOverlappingVendors[0]]
+        }, 0)
 
-// Variable to store all the combinations generated
-const generatedCombinations = []
+      // Variable to store all the combinations generated
+      const generatedCombinations = []
 
-// Variable to tempoarily store the selected parts just like a cart
-const selectedParts = []
+      // Variable to tempoarily store the selected parts just like a cart
+      const selectedParts = []
 
-// Core: Recursive function to find all the combinations
-function selectPart(currentPart = 0) {
-  if (product_price.length <= currentPart) {
-    const totalCost = getTotalCost(selectedParts)
-    if (totalCost <= priceFilter) {
-      generatedCombinations.push([...selectedParts])
-    }
-    return
-  }
-  for (let i = 0; i < product_price[currentPart].length; i++) {
-    selectedParts.push([product_price[currentPart][i], vendors[currentPart][i]])
-    selectPart(currentPart + 1)
-    selectedParts.pop()
-  }
-}
+      // Core: Recursive function to find all the combinations
+      function selectPart(currentPart = 0) {
+        if (product_price.length <= currentPart) {
+          const totalCost = getTotalCost(selectedParts)
+          if (totalCost <= priceFilter) {
+            generatedCombinations.push([...selectedParts])
+          }
+          return
+        }
+        for (let i = 0; i < product_price[currentPart].length; i++) {
+          selectedParts.push([product_price[currentPart][i], vendors[currentPart][i]])
+          selectPart(currentPart + 1)
+          selectedParts.pop()
+        }
+      }
 
-// Get the total operations needed to find all the combinations
-const totalOperation = product_price.reduce(
-  (total, products) => total * products.length,
-  1
-)
-console.log(
-  `Total operation: ${String(totalOperation).replace(
-    /\B(?=(\d{3})+(?!\d))/g,
-    ','
-  )}`
-)
+      // Get the total operations needed to find all the combinations
+      const totalOperation = product_price.reduce(
+        (total, products) => total * products.length,
+        1
+      )
+      console.log(
+        `Total operation: ${String(totalOperation).replace(
+          /\B(?=(\d{3})+(?!\d))/g,
+          ','
+        )}`
+      )
 
-// Measuring the time of calcuation
-console.time()
-selectPart()
-console.timeEnd()
+      // Measuring the time of calcuation
+      console.time()
+      selectPart()
+      console.timeEnd()
 
-// Length of all the combinations
-console.log(generatedCombinations.length)
+      // Length of all the combinations
+      console.log(generatedCombinations.length)
 
-// Get the feasible combinations
-const getFeasibleLists = result =>
-  result.filter(e => getTotalCost(e) <= priceFilter)
-const feasibleCombinations = getFeasibleLists(generatedCombinations)
+      // Get the feasible combinations
+      const getFeasibleLists = result =>
+        result.filter(e => getTotalCost(e) <= priceFilter)
+      const feasibleCombinations = getFeasibleLists(generatedCombinations)
 
-// Sort the combinations in ascending order of total cost
-const sortLists = list =>
-  list.sort((a, b) => {
-    return getTotalCost(a) - getTotalCost(b)
-  })
-const sortedCombinations = sortLists(feasibleCombinations)
+      // Sort the combinations in ascending order of total cost
+      const sortLists = list =>
+        list.sort((a, b) => {
+          return getTotalCost(a) - getTotalCost(b)
+        })
+      const sortedCombinations = sortLists(feasibleCombinations)
 
-// Convert the combinations to numbers list
-const result = sortedCombinations.map(list => getTotalCost(list))
+      // Convert the combinations to numbers list
+      const result = sortedCombinations.map(list => getTotalCost(list))
 
-// Print the result
-// Lowest price combinations
-console.log(sortedCombinations[0])
-// Lowest price
-console.log(result[0])
-```
+      // Print the result
+      // Lowest price combinations
+      console.log(sortedCombinations[0])
+      // Lowest price
+      console.log(result[0])
+    ```
 
 </details>
 
@@ -587,10 +573,10 @@ console.log(result[0])
 사용하면 되기 때문이다.
 
 <details>
-  <summary>entity repository</summary>
+<summary>entity repository</summary>
 
 ```ts entity.repository.ts
-export abstract class EntityRepository<T> {
+abstract class EntityRepository<T> {
   protected readonly collection: Collection
   protected readonly classConstructor: ClassConstructor<T>
 
