@@ -1,4 +1,7 @@
 {
+  "intro": {
+    "title": "Intro"
+  },
   "frontend": {
     "title": "Frontend"
   },

@@ -2,7 +2,7 @@ import { useRenderOnHome } from "@/hooks";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./index.module.css";
-import carrotSvg from "/public/images/carrot.svg";
+import carrotSvg from "/public/carrot.svg";
 import { throttle } from "lodash";
 
 export const Logo = () => {

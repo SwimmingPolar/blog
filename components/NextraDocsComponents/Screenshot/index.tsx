@@ -12,11 +12,11 @@ export function Screenshot({ src, alt, full, caption }: ScreenShot) {
   return (
     <figure
       className={cn(
-        "mt-6 -mb-4 flex flex-col justify-center overflow-hidden rounded-xl border dark:border-zinc-800",
+        "mt-6 -mb-4 flex flex-col overflow-hidden rounded-xl border dark:border-zinc-800 flex-1 justify-between",
         full ? "bg-white" : "bg-zinc-100"
       )}
     >
-      <div className="flex justify-center">
+      <div className="flex justify-center items-center flex-1">
         <Image
           src={src}
           alt={alt}

@@ -1,0 +1,717 @@
+import { Tree, Folder, File, Screenshot, Video } from '@/components'
+import '@code-hike/mdx/dist/index.css'
+
+# ElectroKerot 프론트엔드
+
+## 1. 기획 의도
+
+조립 컴퓨터를 구매할 때, `다나와`, `행복쇼핑`, `컴퓨존` 등등 한국에서는 몇 가지 되지 않는 경로를 이용해야한다.
+개인적으로 `다나와`에서 부품을 구매하는 경우가 많은데, `카드`와 `현금`에 따라 가격이 다르게 책정된다.
+보통 `카드`와 `현금` 중에서 가장 낮은 가격은 `현금` 구매 가격이다. 하지만, 각 부품마다 최저가를
+선택할 경우 총 가격이 더 비싸지는 경우가 있다.
+
+이는 판매하는 매장마다 미세하게 가격이 다르고, 배송비가 각 부품마다 부여되기 때문이다.
+이를 해결하기 위해, 최저가와 배송비를 고려하여 각 부품을 소규모 그룹으로 묶고, 잠재적으로 가장 저렴한 가격을
+제공하는 그룹을 개벌적으로 선택해 부품을 구매할 경우, 최대 10% ~ 15%의 가격차이가 발생한다. 이는 평균적인 데스트탑
+구매 비용을 75만원 ~ 150만원 정도로 예상하면, 7.5만원 ~ 22.5만원의 가격차이가 발생한다.
+
+이런 소모적인 계산을 하지 않고, 최저가를 제공하는 서비스가 있으면 좋겠다는 생각에 기획하게 되었다.
+
+## 2. 기획
+
+기획을 시작 할 때는 어떤게 가능하고 어떤게 불가능한지 몰랐기 때문에,
+기능을 최대한 많이 기획했다. 개발을 진행하면서 즉흥적으로 기능을 넣을 경우,
+처음 목표가 틀어지는 경우가 많았기 때문에 애초에 처음부터 최대한 많은 가능성을
+생각해두고 점차 줄여나갈 생각을 했다.
+
+**컨셉**
+
+`부품`이라는 데이터를 중심으로 돌아가는 커뮤니티 기능을 가진 서비스이다.
+부품을 모아 `견적서`라는 또 다른 데이터를 만들 수 있다. 이 견적서는 부품의
+최저가로 구성되게끔 최적화 할 수 있으다. 또한, 부품이나 견적서를 리뷰하거나 공유할 수 있다.
+
+<Tree>
+  <Folder name="초기 기획 기능" defaultOpen>
+    <Folder name="견적서 기능" defaultOpen>
+      <File name="부품 필터링" />
+      <File name="부품 비교하기" />
+      <File name="견적서 비교하기" />
+      <File name="견적서 라이브 링크" />
+      <File name="호환성 검사하기" />
+    </Folder>
+    <Folder name="커뮤니티 기능" defaultOpen>
+      <File name="견적서 자랑 피드" />
+      <File name="동네에서 조립해줄 사람 구인" />
+      <File name="견적서와 함께 글쓰기" />
+      <File name="견적서 검색" />
+      <File name="부품 리뷰하기" />
+      <File name="견적서 평가하기" />
+      <File name="호환성 검사 기능 기여하기" />
+    </Folder>
+  </Folder>
+</Tree>
+
+**견적서 기능**
+
+import SearchResultScreenshot from '/public/pages/projects/electrokerot/intro/search-result-1.png'
+
+<details>
+  <summary>부품 필터링</summary>
+  부품을 필터링 할 수 있다.
+
+    - 유사한 단어를 적절하게 처리한다. (삼성, 샘숭, samsung)
+    - 필터는 하나의 query string에 담겨진 부품의 이름과 태그를 기반으로 검색 결과를 달리한다. (이름: DDR4, 태그: 4GB)
+    - 필터는 공유하기 쉽게 url을 통해 관리한다. (query, page, selected filters)
+    - url로 관리되는 필터는 내부적으로 저장된다.
+
+<Screenshot alt="검색 결과" src={SearchResultScreenshot} caption="검색 결과" />
+<br />
+
+</details>
+
+<details>
+  <summary>부품 비교하기</summary>
+  부품 목록에서 선택한 부품을 비교할 수 있다. 화면 크기 제한 때문에 최대 3개까지
+  비교할 수 있으며, url을 통해 공유할 수 있다. SPA 특성으로 토글하는 방식이 아닌
+  url을 사용해서 비교하는 방식으로 구현해야 한다.
+</details>
+
+<details>
+  <summary>견적서 비교하기</summary>
+  견적서를 묶어서 비교하는 기능이다. 비교 중 가격 최적화를 실행할 수 있다. 화면 크기
+  제한 때문에 최대 3개까지 비교할 수 있으며, url을 통해 공유할 수 있다. SPA 특성으로
+  토글하는 방식이 아닌 url을 사용해서 비교하는 방식으로 구현해야 한다.
+</details>
+
+<details>
+  <summary>견적서 라이브 링크</summary>
+  견적서를 공유할 때, 견적서 소지자가 견적서를 변경할 경우, 소켓을 통해 변경 사항이
+  전파된다 해당 라이브 링크를 보고 있던 사람들은 변경 사항을 실시간으로 확인할 수
+  있다. 이를 통해 빠르게 견적서에 대한 평가가 가능하다.
+</details>
+<details>
+  <summary>호환성 검사하기</summary>
+  부품을 선택할 때, 기본적인 호환성을 검사해 준다. 호환 불가능한 부품을 필터링하기
+  위해 각 부품마다 필터를 자동으로 적용한다. 이 기능은 타당성 검사가 필요하다. 유저가
+  아닌 자동으로 필터를 거는 방식이니 어떻게 보면 거슬릴 수 있다
+</details>
+
+**커뮤니티 기능**
+
+import InstagramScreenshot from '/public/pages/projects/electrokerot/intro/instagram.png'
+import BuildsggScreenshot from '/public/pages/projects/electrokerot/intro/buildsgg.png'
+
+<details>
+  <summary>견적서 자랑 피드</summary>
+  `인스타그램`의 피드처럼 간단하게 견적서를 통해 맞춘 컴퓨터를 자랑할 수 있다.
+
+<div className="flex flex-row justify-between gap-5">
+  <Screenshot alt="instagram" src={InstagramScreenshot} caption="instagram" />
+  <Screenshot alt="buildsgg" src={BuildsggScreenshot} caption="buildsgg" />
+</div>
+<br />
+</details>
+
+<details>
+  <summary>동네에서 조립해줄 사람 구인</summary>
+  동네를 타게팅하는 여러 플랫폼처럼, 집근처에서 조립해줄 사람을 구인할 수 있다. 접근성이
+  좋은 컴퓨터 관련 커뮤니티가 없기 때문에 이 기능을 통해, 조립해줄 사람을 찾을 수도
+  있고, 컴퓨터에 문제가 생길 경우 질문도 할 수 있다.
+</details>
+
+<details>
+  <summary>견적서와 함께 글쓰기</summary>
+  저장 된 견적서를 글에 첨부할 수 있다. 글을 쓰는 사람은 견적서를 공유하거나 평가
+  받을 수 있고 해당 `견적서` 혹은 `부품`은 글의 내용과 글의 댓글이라는 데이터가 연결된다.
+  이를 통해 다른 기능을 구현할 수 있다.
+</details>
+
+<details>
+  <summary>견적서 검색</summary>
+  앞서 구현된 `견적서와 함께 글쓰기`를 통해 저장 된 데이터를 통해, 검색 기능을 구현할 수 있다.
+
+    - 완전히 같은 견적을 검색하진 않는다.
+    - 코어 부품을 포함한 견적을 검색한다.
+    - 부품 상세 페이지에서 부품에 관련 된 글을 볼 수 있다
+
+</details>
+
+<details>
+  <summary>부품 리뷰하기</summary>
+  부품을 리뷰한다.
+
+    - 모두가 리뷰할 수 있도록 할 것인가?
+    - `견적서 자랑 피드`를 시행한 사람들에 한해서만 리뷰할 수 있도록 할 것인가?
+    - 타당성 검사 필요
+
+</details>
+
+<details>
+  <summary>견적서 평가하기</summary>
+  견적서를 평가 받을 때, `이륙`이라는 단어를 쓰는데, 구매해도 좋다는 의미이다.
+  `견적서와 함께 글쓰기`에서 쓰여진 글에서 `이륙`을 누르면, 해당 견적서가 문제가 없다는
+  의미이다. `이륙`을 누르면, 해당 견적서의 `이륙` 수가 올라간다.
+
+`이륙` 외에도 `이륙허가 중`, `이륙`, `순항 중`, `격추`, `착륙` 등등 고려해봐도 될 듯
+
+</details>
+<details>
+  <summary>호환성 검사 기능 기여하기</summary>
+  부품의 호환성은 대개 `부품`이 가진 정보를 토대로, 대략적으로 검사 가능하다.
+  CPU의 소켓이 `LGA 1151`이고, 메인보드의 소켓이 `LGA 1151`이면 호환성이 있다.
+  이렇게 `소켓`끼리 검사하는 것은 쉽다. 하지만, 대략적인 검사이기 때문에,
+  어떤 `쿨러`와 어떤 `케이스`가 호환이 되는지는 알 수 없을 수 있다.
+  이런 부분을 해결하기 위해, 사용자가 어떤 부품들끼리 호환이 되는지 안 되는지에
+  대한 정보를 제공해주는 기능이 필요하다.
+</details>
+
+## 3. 개발 진행
+
+작성한 기능들 중 현재의 내가 구현이 가능한지 불가능한지 그 자체를 모르는 부분도 많았고,
+기술적으로 구현 가능한지 모르는 부분도 많았기 때문에, 실제 개발에 들어가기 전에 기술적으로
+구현이 가능한지 불가능한지를 파악하는 것을 선행했다.
+
+`견적서 자랑 피드`에서는 무한 스크롤로 피드를 불러오는데, 이때 생각한 피드는 아무리 많이 내려도
+최적화 된 상태를 유지해야 한다고 생각했기에 `virtualized window` 같은 기술을 사용해야 했다.
+`react-virtualized`를 통해 간단하게 구현을 해봤지만 해당 라이브러리에 대한 지원이 끊겼고
+버그도 많아 문제가 많았었다. 데모를 만들어봤지만 `DX`가 너무 별로기도 하고 라이브러리
+전반적으로 실제로 사용하기에는 무리가 있었기 때문에 다른 방법을 찾아야 했다.
+
+<Video
+  src="/pages/projects/electrokerot/intro/infinite-scroll.mp4"
+  autoPlay={false}
+/>
+
+부품 검색이 가능해야 하니 부품 검색 기능에 대해 생각하고 있었는데, 내가 가지고 있던 지식으론
+부품을 검색하는 기능을 구현하기에는 부족했다. 얼핏 들었던 `elasticsearch`를 사용해보려고 했는데
+러닝커브가 생각보다 높았고, 여기에 집중하기에는 시간이 부족했기 때문에, `elasticsearch`와 비슷한
+검색 기능을 제공하지만 좀 더 간단한 게 필요했다. 여기서 `Mongodb Atlas`의 `Full Text Search`를 알게 되었고,
+이를 통해 부품 검색 기능을 구현할 수 있었다.
+
+import SearchResultA from '/public/pages/projects/electrokerot/intro/search-result-2.png'
+import SearchResultB from '/public/pages/projects/electrokerot/intro/search-result-3.png'
+
+<Screenshot alt="검색 결과" src={SearchResultA} caption="검색 결과 A" />
+<Screenshot alt="검색 결과" src={SearchResultB} caption="검색 결과 B" />
+
+<br />
+이런 식으로 개발이 순탄하지 않을 것 같은 기능을 하나씩 구현해보면서, 기술적으로 구현이
+가능한지 불가능한지를 파악했다. 대부분의 기능은 구현이 가능했고 이를 통해 굳이 필요없거나
+과하게 기획 된 기능은 제외했다.
+
+프론트엔드, 백엔드, 서버, DB 등 모든 부분을 한 번에 모든 것을 할 순 없었다.
+개발 계획을 1~3차 혹은 그 이상까지 나누고, 1차에서는 초기 기획의 코어 기능 위주로 개발했다.
+
+## 4. 디자인
+
+일단 디자인을 먼저 시작했다. 디자인을 끝낸 뒤 개발을 시작하면, 개발하면서 지속적으로 디자인에 대해
+생각하지 않아도 되기 때문에 개발에 집중할 수 있다.
+
+여러 사이트를 참고하면서 디자인을 했고, `UX`에 대해 깊게 고민하면서 디자인을 했다. 가령, 모바일 웹에서 햄버거 메뉴를
+토글했을 때, 보통 네이티브앱에선 뒤로 가기를 통해 메뉴를 닫을 수 있다. 가끔 웹에서 뒤로 가기를 통해 메뉴를 닫는 경우도
+있긴 하지만 잘 보면, 전체 페이지가 뒤로 가기 때문에 메뉴 컴포넌트가 `unmount` 되면서 메뉴가 닫혔다고 생각하게 된다.
+이를 해결하기 위해, `useEmptyRoute`라는 훅을 이용해 이런 인터렉션이 필요한 컴포넌트에선 빈 라우트를 추가하고,
+뒤로 가기 혹은 닫기 동작에선 빈 라우트를 제거하는 방식으로 구현했다.
+
+로그인과 회원가입의 경우 모달을 이용했다. 보통 토글을 통해 모달을 열고 닫는데 이러면
+`url`을 통한 이동이 불가능하다. 이를 해결하기 위해 라우팅을 추가하고 데스크탑과 모바일에서
+`navigation histrory`를 다르게 관리해 각각의 디바이스에서 이용하는 사용자가
+직관적인 경험을 하게끔 했다.
+
+사용자가 로그인 페이지를 보다 홈으로 이동할 경우,
+데스크탑에선 모달 형태의 로그인창이 뒤로 가기를 통해 보여지면 안 된다고 생각했고,
+모바일에선 모달 형태가 아닌 페이지 형태로 보여지니 뒤로가기를 통해 로그인 페이지로
+다시 돌아갈 수 있어야 한다고 생각한다.
+
+import RoutingScreenshot from '/public/pages/projects/electrokerot/intro/routing.png'
+
+<details>
+  <summary>라우팅 조작 방법</summary>
+
+  <Screenshot alt="라우팅 방법" src={RoutingScreenshot} caption="라우팅 방법" />
+  <br/>
+</details>
+
+이런 마이크로 인터렉션 혹은 UX에 대해 고민하면서 디자인을 했고 개발을 하면서 더욱 개선해나갈 예정이다.
+
+## 5. 서버 (인프라)
+
+import InfraScreenshot from '/public/pages/projects/electrokerot/intro/infra.png'
+
+<Screenshot alt="인프라" src={InfraScreenshot} caption="인프라" />
+
+<br />
+서버는 두 가지 방식으로 구상했다.
+
+### 5.1 클라우드 컴퓨팅
+
+첫 번째는 `클라우드 컴퓨팅`을 이용하는 방식이다. `EC2` 혹은 기타 클라우드의 `Computed Machine/Engine`을 이용해 서버를 구축하고, `nginx`를 사용해 `리버스 프록시`를 구축한다.
+이를 통해, `cors`를 해결하기도 하고 `entry point`를 1개만 노출시킴으로써 기본적인 보안을 유지한다.
+
+이렇게 할 경우, `Horizontal Scaling`이 편할 것으로 생각된다. 하지만 어떤 클라우드 플랫폼의 서비스를 사용할지, 플랫폼마다 조금씩 다른 설정과 이에 따른 시간적 비용이 발생할 것이다.
+프리티어를 사용한다 할지라도 초기 설정이 상당히 필요하고, 중간에 발생하는 문제에 대한 트러블슈팅을 온전히 직접 해결해야 한다.
+
+### 5.2 클라우드 호스팅
+
+개발을 해나가면서 여러 프레임워크를 어쩔 수 없이 써보니 알게 된 사실인데, 마리 만들어진 `프레임워크` 혹은 `서비스`가 생각보다 너무 편하다는 것이다.
+프론트엔드를 `Vercel`을 통해 배포해보니 여러 가지 기능들이 기본적으로 제공되었고, 굳이 직접 구축해야 하는 필요성과 안정성을 느끼지 못 했다.
+
+`Vercel`을 통해 `web vital`이나 `analytics`를 쉽게 적용할 수 있었고, `CD`가 자동으로 되는 것도 큰 장점이었다.
+
+이렇게 되면 프론트엔드 뿐만 아니라 백엔드도 `Firebase`나 기타 플랫폼을 통해 서비스 하는게 더욱 유리할 것이라는 생각이 들었다.
+
+현재 인프라가 필요한 서비스는 다음과 같다.
+
+- 스크래퍼 서버 (Node.js)
+- 프론트엔드 서버
+- 백엔드 서버
+- 데이터베이스 서버
+
+모두 각각
+
+- Firebase
+- Vercel
+- Firebase
+- Mongodb Atlas
+
+을 통해 해결할 수 있다. 스크래퍼 서버의 경우, 성능이 좋은 서버가 필요하기 때문에 상용 클라우드나 프리티어를 통해 해결할 수 없다.
+
+결국, 전반적인 서비스에 필요한 인프라를 직접 클라우드를 대여해 구축하는 것이 아닌
+자동화 된 클라우드 호스팅을 통해 배포할 가능성이 커졌다.
+
+## 6. 데이터/수집
+
+서비스 기획과 함께 어떤 데이터를 어디서 수집하느냐도 중요했다. 만약 데이터가 없다면 애초에 불가능한 서비스이기 때문이다.
+데이터를 어떻게 수집하느냐도 문제이고 법적인 문제도 있다. 저작권 법률 상담과 함께 어떤 식으로 데이터를 수집할지 고민했다.
+대규모 데이터를 지속가능하게 수집하기 위해선 인터넷 상의 서버에 무리가 안 가게 그리고 지속적인 수집을 알아차리지 못 하게 해야 한다.
+
+단순한 API가 아닌 대규모 데이터 수집은 처음이라, 어떻게 프로그램을 짜야하는지 조차 감이 잡히지 않았다. 그래서
+스크래핑 프로그램의 플로우차트를 그려보고, 어떤 식으로 데이터를 수집할지 고민했다.
+
+import FlowChartScreenshot from '/public/pages/projects/electrokerot/intro/flowchart.png'
+
+<a
+  href="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Scraping%20flow%20chart#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1QKOj0Od5V-5mTXua15tJBE6SeQEo2Lpr%26export%3Ddownload"
+  target="_black"
+>
+  <Screenshot alt="플로우차트" src={FlowChartScreenshot} caption="플로우차트" />
+</a>
+
+## 7. 프론트엔드
+
+프론트엔드는 `React`를 사용했다. 현재 `Next.js`를 사용해봤기 때문에 추후에 `Next.js`를 사용할 수도 있겠지만,
+현재 서비스에 `SSG/SSR`이 필요한지 의문이고 프레임워크를 거치면 하나의 제약이 추가되는 것이기 때문에 일단은 `React`를 사용하기로 했다.
+
+`Provider`, `Hook`, `Lib` 등 공통으로 사용되는 기능들을 최대한 추상화하려고 했고, 아토믹 디자인 시스템이 아닌 컴포넌트 단위로 개발하려고 노력했다.
+컴포넌트 단위로 개발한 이유는, 프로젝트가 단 하나의 서비스이기 때문에 재사용 가능한 아토믹 컴포넌트나 디자인 시스템을 만들기 보다는 서비스에 맞는 컴포넌트를 만들기 위해서이다.
+
+컴포넌트 개발에는 스토리북을 사용해 격리 환경에서 개발했다. 테스팅은 따로 진행하지 않았고 추후에 필요한 경우에만 진행할 예정이다.
+다만, 라우팅의 경우 복잡한 경우의 수가 있기 때문에 테스트를 진행했다. `Cypress`를 사용해 테스트를 진행했다. 미디어의 뷰포트에 따라
+라우팅 작동 방식이 다르기 때문에 전체 디바이스에 대한 테스트를 진행하기 위해 `Cypress`에 개별 `Hook`을 만들어 테스트를 진행했다.
+
+<details>
+  <summary>스토리북</summary>
+  https://63dd20176a04b143f58e1507-doimbrkmbm.chromatic.com
+</details>
+
+<details>
+<summary>Cypress Media hook</summary>
+
+{" "}
+
+```ts media.cy.ts
+import { DeviceType, DeviceGroup, Viewports, getDeviceGroup } from 'hooks'
+
+type TestParams = {
+  device: Exclude<DeviceType, null>
+  deviceGroup: DeviceGroup
+}
+type Test = (params: TestParams) => void
+
+export function withMedia(test: Test, devices?: Array<DeviceType>) {
+  // Copy Viewports to avoid mutating it
+  const viewports = Object.assign({}, Viewports)
+
+  // If 'devices' is not provided, run test against all devices
+  devices = (
+    devices && devices?.length !== 0 ? devices : Object.keys(Viewports)
+  ) as Array<DeviceType>
+
+  devices.forEach(device => {
+    if (!device) {
+      return
+    }
+
+    // Type force casting: 'deviceGroup' will never be undefined even though it returns undefined when nothing matched
+    const deviceGroup = getDeviceGroup(device) as DeviceGroup
+
+    it(`${device}: `, () => {
+      // Change the viewport size to the device's size
+      cy.viewport(viewports[device].width, viewports[device].height)
+
+      // Run test under the device's viewport
+      test({
+        device,
+        deviceGroup
+      })
+    })
+  })
+}
+```
+
+</details>
+
+<details>
+  <summary>Cypress 테스트 영상</summary>
+  <Video src="public/pages/projects/electrokerot/intro/login.cy.ts.mp4" />
+</details>
+
+### 7.1 최저가 로직
+
+<details>
+  <summary>최저가 로직</summary>
+
+처음 최저가를 찾아주는 로직을 만들려고 했을 때, 전혀 감이 오지 않았다. 심지어 가능한가도 의문이 들었다.
+여러가지 알고리즘도 들춰보고 검색해봤지만 결국 전체 경우의 수를 다 구해보는 방법 외에는
+최저가를 찾아주는 방법이 없었다. 하지만 경우의 수가 너무 많았다. 예를 들어,
+
+3개의 부품이 있는데, 각각 [3곳, 4곳, 5곳]의 판매처가 있다고 가정하자. 이 경우의 수는 3 \* 4 \* 5 = 60이다.
+보통 7개의 부품이 있고 각각 15개 이상의 판매처가 있기 때문에 경우의 수는 15^7 = 3,874,204,841 이다.
+브라우저에서 최대 10,000,000을 넘어가는 연산이 실행되면 브라우저가 다운되는 것으로 파악되었다.
+
+결국 전체 경우의 수는 찾아야 하지만 10,000,000번의 연산을 넘기면 안 되니 전처리를 통해
+경우의 줄이는 방법을 이용했다. 모든 판매처를 다 구해보는 것은 효율적이지 못 하니, 각 부품마다
+최저가를 찾고 이 최저가에 택배 비용을 더해 이것보다 높은 가격을 가진 판매처를 제외하고 다시 최저가를 찾는 방법을 사용했다.
+택비 비용을 더 한 가격보다 비싼 가격의 부품은 그냥 최저가의 부품을 따로 시키면 되기 때문에, 최저가 묶음을 찾아주는
+목록에서 제외시켜도 된다. 이렇게 하면 경우의 수를 줄일 수 있었다.
+
+```js
+// Preprocess
+// 1. Find product with lowest price and shipping cost (=lowest_offer)
+// 2. Filter product with
+//      price greater than lowest_offer (lowest_offer <= product_price)
+//      price that is not lowest and that cannot be packaged or bundled (has only 1 overlapping vendor when ordering more than 2 parts)
+// 3. .. the more preprocessing logics, the less time to find feasible combinations ...
+
+// In real, these values are in one matrix
+// They can be separted into 3 matrixes like below or
+// just use as they are
+const product_price = [
+  [3000, 3000, 3500, 5000, 4000, 3000, 3500, 2500],
+  [3500, 4000, 4500, 5500, 5000, 3500, 4000, 3000],
+  [2000, 3000, 2500, 4500, 3000, 2000, 2500, 1500],
+  [1000, 1000, 3000, 3000, 3500, 1000, 3000, 2000],
+  [1000, 3000, 3000, 3000, 2500, 1000, 3000, 2000],
+  [2000, 3000, 2500, 4500, 3000],
+  [1000, 1000, 3000, 3000, 3500],
+  [1000, 3000, 3000, 3000, 2500],
+  [1000, 1000, 3000, 3000, 3500],
+  [2000, 3000, 2500, 4500, 3000]
+]
+const vendors = [
+  [3, 4, 2, 1, 0, 5, 7, 8],
+  [1, 7, 5, 2, 3, 4, 6, 0],
+  [5, 1, 0, 6, 7, 2, 3, 4],
+  [1, 3, 8, 5, 2, 4, 6, 7],
+  [1, 7, 5, 2, 3, 4, 6, 0],
+  [5, 1, 0, 6, 7],
+  [1, 3, 8, 5, 2],
+  [5, 1, 0, 6, 7],
+  [5, 1, 0, 6, 7],
+  [5, 1, 0, 6, 7]
+]
+const shipping_costs = {
+  0: 0,
+  1: 3000,
+  2: 0,
+  3: 0,
+  4: 2000,
+  5: 2000,
+  6: 3000,
+  7: 0,
+  8: 0,
+  9: 2500
+}
+
+// In the entire selected products list, which vendors sells the most products?
+// e.g. cpu: 'vendor A', 'vendor B', 'vendor C'
+//      memory: 'vendor A', 'vendor B'
+//      gpu: 'vendor A'
+// result: { 'vendor A': 3, 'vendor B': 2, 'vendor C': 1 }
+// Among the lowest products, selecting the product from 'vendor A' will
+// result in the lowest price
+const overlapping_vendors = vendors.reduce(
+  (vendorList, parts) =>
+    parts.reduce(
+      (vendorList, vendor) => ({
+        ...vendorList,
+        [vendor]: vendorList[vendor] + 1 || 1
+      }),
+      vendorList
+    ),
+  {}
+)
+
+// Returns the cost of the given products combination
+const getTotalCost = productsList => {
+  let productsCost = 0
+  const usedVendors = new Set()
+  productsList.forEach(product => {
+    const [price, vendor] = product
+    usedVendors.add(vendor)
+    productsCost += price
+  })
+  const shippingCost = Array.from(usedVendors).reduce(
+    (shippingCost, vendor) => shippingCost + +shipping_costs[vendor],
+    0
+  )
+  return productsCost + shippingCost
+}
+
+// Combine product price matrix and the shipping cost matrix
+const product_price_with_shipping = product_price.map((products, i) =>
+  products.map((price, j) => +price + shipping_costs[vendors[i][j]])
+)
+
+// Get rough estimate of the lowest price
+const priceFilter = product_price_with_shipping
+
+  // Iterate through each part category
+  .reduce((sum, products, i) => {
+    // Find the lowest price of the part category
+    const lowestPrice = Math.min(...products)
+    // Get the indexes of the products with lowest price
+    const lowestPriceIndexes = products
+      .map((price, j) => (price === lowestPrice ? j : undefined))
+      .filter(e => e !== undefined)
+
+    // Among the lowest price products, find the one with the most overlapping vendors
+    const lowestPriceIndexesSortedByMostOverlappingVendors =
+      lowestPriceIndexes.sort((a, b) => {
+        const aOverlappingVendors = overlapping_vendors[vendors[i][a]]
+        const bOverlappingVendors = overlapping_vendors[vendors[i][b]]
+        return bOverlappingVendors - aOverlappingVendors
+      })
+
+    // Pick product with the lowest price and the most overlapping vendors
+    return sum + products[lowestPriceIndexesSortedByMostOverlappingVendors[0]]
+  }, 0)
+
+// Variable to store all the combinations generated
+const generatedCombinations = []
+
+// Variable to tempoarily store the selected parts just like a cart
+const selectedParts = []
+
+// Core: Recursive function to find all the combinations
+function selectPart(currentPart = 0) {
+  if (product_price.length <= currentPart) {
+    const totalCost = getTotalCost(selectedParts)
+    if (totalCost <= priceFilter) {
+      generatedCombinations.push([...selectedParts])
+    }
+    return
+  }
+  for (let i = 0; i < product_price[currentPart].length; i++) {
+    selectedParts.push([product_price[currentPart][i], vendors[currentPart][i]])
+    selectPart(currentPart + 1)
+    selectedParts.pop()
+  }
+}
+
+// Get the total operations needed to find all the combinations
+const totalOperation = product_price.reduce(
+  (total, products) => total * products.length,
+  1
+)
+console.log(
+  `Total operation: ${String(totalOperation).replace(
+    /\B(?=(\d{3})+(?!\d))/g,
+    ','
+  )}`
+)
+
+// Measuring the time of calcuation
+console.time()
+selectPart()
+console.timeEnd()
+
+// Length of all the combinations
+console.log(generatedCombinations.length)
+
+// Get the feasible combinations
+const getFeasibleLists = result =>
+  result.filter(e => getTotalCost(e) <= priceFilter)
+const feasibleCombinations = getFeasibleLists(generatedCombinations)
+
+// Sort the combinations in ascending order of total cost
+const sortLists = list =>
+  list.sort((a, b) => {
+    return getTotalCost(a) - getTotalCost(b)
+  })
+const sortedCombinations = sortLists(feasibleCombinations)
+
+// Convert the combinations to numbers list
+const result = sortedCombinations.map(list => getTotalCost(list))
+
+// Print the result
+// Lowest price combinations
+console.log(sortedCombinations[0])
+// Lowest price
+console.log(result[0])
+```
+
+</details>
+
+## 8. 백엔드
+
+백엔드는 `nest.js`를 통해 구현했다. 처음엔 자주 사용하던 `Node.js` + `Express` 통해 하려고 했으나, 프로젝트 규모가
+크다 보니 어디서 무엇이 필요한지 애매했다. 필요한 기능과 필요할 법한 기능들을 찾아야 했고, 그러다 보니 자연스럽게 문서가 아주
+잘 작성되어 있는 `nest.js`를 선택하게 되었다.
+
+`nest.js` 문서를 처음부터 목차대로 따라하면 거의 모든 기능을 사용할 수 있었다. 과하지 않고 적당한 기능들이
+많아서, 내가 필요했는지 몰랐던 기능이나 필요했지만 더 편한 방법을 찾기도 했다.
+
+백엔드에서도 추상화할 수 있는 부분은 최대한 추상화하려고 노력했다. 가령, `repository`의 경우, `entity repository`를 만들어
+하위 `repository`들이 상속받아 사용할 수 있도록 했다. 이렇게 하면, 웬만한 `repository`들은 `entity repository`를 상속받아
+사용하면 되기 때문이다.
+
+<details>
+  <summary>entity repository</summary>
+
+```ts entity.repository.ts
+export abstract class EntityRepository<T> {
+  protected readonly collection: Collection
+  protected readonly classConstructor: ClassConstructor<T>
+
+  constructor(
+    db: Db,
+    collectionName: CollectionName,
+    classConstructor: ClassConstructor<T>
+  ) {
+    this.collection = db.collection(collectionName)
+    this.classConstructor = classConstructor
+  }
+
+  protected async create(entity: Partial<T>) {
+    return (await this.collection.insertOne(entity)).insertedId
+  }
+
+  protected async find(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      this.collection.find<T>(filter).toArray()
+    )
+  }
+
+  protected async findById(_id: ObjectId) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.findOne<T>({ _id })
+    )
+  }
+
+  protected async findOne(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.findOne<T>(filter)
+    )
+  }
+
+  protected async findMany(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.find<T>(filter).toArray()
+    )
+  }
+
+  protected async updateById(_id: ObjectId, entity: Partial<T>) {
+    return (await this.collection.updateOne({ _id }, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async updateOne(filter: Filter<Partial<T>>, entity: Partial<T>) {
+    return (await this.collection.updateOne(filter, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async updateMany(filter: Filter<Partial<T>>, entity: Partial<T>) {
+    return (await this.collection.updateMany(filter, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async deleteOne(filter: Filter<Partial<T>>) {
+    return (await this.collection.deleteOne(filter)).deletedCount
+  }
+
+  protected async countDocuments(filter: Filter<Partial<T>>) {
+    return await this.collection.countDocuments(filter)
+  }
+
+  protected async aggregate(pipeline: any[]) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.aggregate<T>(pipeline).toArray()
+    )
+  }
+}
+```
+
+</details>
+
+### 8.1. `TDD`
+
+`nest.js`를 처음 사용해보면서 `TDD`를 도업했는데, `TDD`를 하면서 이전과 전혀 다른 `DX`를 느꼈다.
+이 전에는 `Postman`이나 `Insomnia`를 통해 `API`를 하나 구현 할 때마다 `API`를 테스트하고, 조금씩 완성시켜 나갔는데
+이번엔 서버를 한 번도 올리지 않고 구축 된 테스트 환경 내에서 모든 `API`를 작성했다. 개발을 하면 `Postman` 같은 툴을 사용하려고
+개발과 테스트 사이에 컨텍스트 스윗칭을 자주 하는데, 이런 방법이 개발을 비효율적으로 만든다고 생각했다. `TDD`를 통해
+이러한 문제를 해결할 수 있었다.
+
+이전에는 `TDD`가 왜 필요한지 어렴풋이 알고만 있었는데, 이번 기회를 통해 `TDD`가 왜 필요한지 확실하게 알게 되었다. 앞으론 필요하다기 보다는
+없으면 개발하기가 너무 힘들 거 같다. 특히, 개발할 때는 개발 서버를 한 번도 올리지 않고 나중에 서버를 올렸을 때 모든게 한 번에 돌아가게 되는
+신기한 경험을 했다.
+
+프론트엔드와는 다르게 백엔드는 어디에 `TDD`를 적용해야하는지 보다 확실히 보여서 손쉽게 `TDD`를 적용할 수 있었다. 테스트는 비즈니스 로직이
+들어가는 `repository`나 `service`에 적용을 했고, `controller`에는 적용하지 않았다. `controller`에선 거의 `DTO`를 받고 `service`로 넘겨주는
+역할만 있었기 때문에 `TDD`를 적용하지 않았다. `DTO`의 검증은 `service`를 테스트할 때 같이 진행했다.
+
+import TestScreenShot from '/public/pages/projects/electrokerot/intro/test-all.png'
+import TestCoverageScreenShot from '/public/pages/projects/electrokerot/intro/test-coverage.png'
+
+<details>
+  <summary>전체 테스트 </summary>
+
+<Screenshot alt="전체 테스트" src={TestScreenShot} caption="전체 테스트" />
+<Screenshot
+  alt="테스트 커버리지"
+  src={TestCoverageScreenShot}
+  caption="테스트 커러비지"
+/>
+
+  <br/>
+</details>
+
+import TestRepositoryScreenShot from '/public/pages/projects/electrokerot/intro/test-repository.png'
+
+<details>
+  <summary>유닛 테스트 </summary>
+
+  <Screenshot
+    alt="유닛 테스트"
+    src={TestRepositoryScreenShot}
+    caption="유닛 테스트"
+  />
+</details>
+
+import TestIntegrationScreenShot from '/public/pages/projects/electrokerot/intro/test-integration.png'
+
+<details>
+
+<Screenshot
+  alt="통합 테스트"
+  src={TestIntegrationScreenShot}
+  caption="통합 테스트"
+/>
+
+  <summary>통합 테스트 </summary>
+</details>
