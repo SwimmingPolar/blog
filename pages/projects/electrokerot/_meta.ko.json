@@ -1,4 +1,7 @@
 {
+  "intro": {
+    "title": "소개"
+  },
   "frontend": {
     "title": "프론트엔드"
   },
