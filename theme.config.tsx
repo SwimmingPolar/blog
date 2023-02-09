@@ -100,11 +100,7 @@ const config: DocsThemeConfig = {
     }
   },
   footer: {
-<<<<<<< HEAD
     text: '2023 © YDH - 🎉 Sometimes it just happens'
-=======
-    text: '2023 © YDH - 🎉 sometime it just happens'
->>>>>>> ac7adb2d88bd78059438c95e33b49927200d3d3c
   }
 }
 
