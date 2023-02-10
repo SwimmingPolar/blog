@@ -7,7 +7,7 @@
 
 .logo-text {
   font-size: 1.1rem;
-  font-family: "Noto Sans Kr", sans-serif;
+  font-family: 'Noto Sans Kr', sans-serif;
   font-weight: bold;
   color: #444;
   word-break: keep-all;
@@ -15,11 +15,10 @@
 }
 
 .large-carrot {
-  transition: transform 0.15s ease-in-out;
   transform: scale(2.25) rotate(-10deg);
 }
 
 .small-carrot {
-  transition: transform 0.15s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   transform: scale(1.25);
 }

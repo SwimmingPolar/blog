@@ -28,29 +28,35 @@ const config: DocsThemeConfig = {
     const canonicalLocale = locale === 'ko' ? 'ko_KR' : 'en_US'
 
     const {
-      frontMatter: { title, description, keywords }
+      frontMatter: { title, description, keywords, ...rest }
     } = useConfig()
+
+    const restMeta =
+      rest &&
+      Object.keys(rest).length > 0 &&
+      Object.entries(rest).map(
+        ([key, value]: [key: string, value: string], index) => (
+          <meta key={index} name={key} content={value} />
+        )
+      )
 
     return (
       <>
         {/* General */}
-        <meta property="keywords" content={keywords ?? ''} />
+        <meta name="keywords" content={keywords ?? ''} />
         {/* Open Graph */}
-        {title && <meta property="og:title" content={title} />}
-        {description && (
-          <meta property="og:description" content={description} />
-        )}
-        <meta property="og:url" content={url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="YDH" />
-        <meta property="og:locale" content={canonicalLocale} />
+        <meta name="og:url" content={url} />
+        <meta name="og:type" content="website" />
+        <meta name="og:site_name" content="YDH" />
+        <meta name="og:locale" content={canonicalLocale} />
         {/* Twitter */}
-        {title && <meta property="twitter:title" content={title} />}
+        {title && <meta name="twitter:title" content={title} />}
         {description && (
-          <meta property="twitter:description" content={description} />
+          <meta name="twitter:description" content={description} />
         )}
-        <meta property="twitter:url" content={url} />
-        <meta property="twitter:card" content="summary" />
+        <meta name="twitter:url" content={url} />
+        <meta name="twitter:card" content="summary" />
+        {restMeta}
       </>
     )
   },
