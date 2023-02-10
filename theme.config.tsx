@@ -1,6 +1,7 @@
 import { Logo } from '@/components'
 import { useCurrentLanguage } from '@/hooks'
-import { DocsThemeConfig } from 'nextra-theme-docs/.'
+import { useRouter } from 'next/router'
+import { DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 
 const docsRepositoryBase =
   'https://github.com/SwimmingPolar/nextra-portfolio/blob/main'
@@ -14,7 +15,44 @@ const config: DocsThemeConfig = {
 
   // Github link the navbar
   project: {
-    link: 'https://github.com/SwimmingPolar/nextra-portfolio'
+    link: 'https://github.com/SwimmingPolar'
+  },
+
+  // Reset the head
+  head: () => {
+    const { asPath, defaultLocale, locale } = useRouter()
+    const url =
+      'https://ydh.vercel.app' +
+      (defaultLocale === locale ? asPath : `/${locale}${asPath}`)
+
+    const canonicalLocale = locale === 'ko' ? 'ko_KR' : 'en_US'
+
+    const {
+      frontMatter: { title, description, keywords }
+    } = useConfig()
+
+    return (
+      <>
+        {/* General */}
+        <meta property="keywords" content={keywords ?? ''} />
+        {/* Open Graph */}
+        {title && <meta property="og:title" content={title} />}
+        {description && (
+          <meta property="og:description" content={description} />
+        )}
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="YDH" />
+        <meta property="og:locale" content={canonicalLocale} />
+        {/* Twitter */}
+        {title && <meta property="twitter:title" content={title} />}
+        {description && (
+          <meta property="twitter:description" content={description} />
+        )}
+        <meta property="twitter:url" content={url} />
+        <meta property="twitter:card" content="summary" />
+      </>
+    )
   },
 
   // Page title
