@@ -1,16 +1,16 @@
 /* Styles for adjustiong layout of the default framework */
-@import "./layout.css";
+@import './layout.css';
 /* Styles for stolen nextra components */
-@import "./nextra.css";
+@import './nextra.css';
 
 * {
-  font-family: "Sawarabi Gothic", "Noto Sans Kr", sans-serif;
+  font-family: 'Sawarabi Gothic', 'Noto Sans Kr', sans-serif;
   word-break: keep-all;
 }
 
 /* Change the font-family of the link in the navbar only */
 .nextra-nav-container a span {
-  font-family: "Do hyeon";
+  font-family: 'Do hyeon';
   font-size: 18px;
 }
 
@@ -18,6 +18,13 @@
 .nextra-search input {
   background-color: rgba(0, 0, 0, 0.03);
 }
-html[style="color-scheme: dark;"] .nextra-search input {
+html[style='color-scheme: dark;'] .nextra-search input {
   background-color: rgba(249, 250, 251, 0.075);
+}
+
+div[dir='ltr'].home {
+  background-color: #fff;
+}
+html[style='color-scheme: dark;'] div[dir='ltr'].home {
+  background-color: #111;
 }
