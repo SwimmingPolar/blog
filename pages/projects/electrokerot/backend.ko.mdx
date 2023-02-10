@@ -1,0 +1,147 @@
+---
+title: Electrokerot 백엔드
+---
+
+import { Tree, Folder, File, Screenshot, Video } from '@/components'
+import '@code-hike/mdx/dist/index.css'
+
+# Electrokerot 백엔드
+
+원래는 `Node.js` + `Express`로 API 서버를 만드려고 했으나, `typescript`와 `TDD`를 적용할
+생각이었기 때문에, `Nest.js`를 사용하기로 했다.
+
+API 서버를 자체 개발해는데는 큰 어려움이 없었으나, `서버` 혹은 `백엔드`라는 로직을 구성할 때,
+어떤 구조로 짜야할지 고민이 많았다. 데이터베이스 스키마를 어떻게 설계해야할지, REST API 설계는
+어떻게 해야할지, `JWT`를 어떻게 사용해야할지 등등 많은 고민을 했다.
+
+아는 만큼 보인다는 말이 있는데, 그래서 그런가 백엔드는 잘 안 보였던 거 같다.. 적당히
+API를 만들고, 데이터베이스 스키마를 적당히 짜고, `JWT`를 적당히 사용하고 이런 식으로
+만들었던 것 같다. 다만 `TDD`를 적용했고 `typescript`를 사용했기 때문에, 코드의 안정성은
+높아졌다고 생각한다.
+
+## 1. API 설계
+
+API는 `REST API`를 사용했다. `GraphQL`이 더 맞다고 생각했지만, `GraphQL`을 사용해본 경험이
+없었고, 이번 프로젝득에 적용하기 위해 `GraphQL`까지 습득하기에는 시간이 부족했다.
+
+## 2. 데이터베이스
+
+데이터베이스의 경우, `MongoDB`를 사용했다. `MongoDB`는 `NoSQL`이기 때문에, 데이터베이스 스키마를
+설계할 때, `SQL`과는 다른 방식으로 설계해야한다. `SQL`은 테이블을 만들고, 테이블에 컬럼을
+추가하고, 컬럼에 데이터를 넣는 식으로 데이터를 저장한다. 하지만 `NoSQL`은 `Collection`을
+만들고, `Collection`에 `Document`를 추가하는 식으로 데이터를 저장한다.
+
+설계에서 비교적 자유롭기 때문에, 현재 프로젝트처럼 사전에 어떤 데이터가 필요할지 정형화되어 있지
+않은 경우에는 `NoSQL`이 더 적합하다고 생각했고, 이전에 사용경험도 있었기 때문에
+`MongoDB`를 채택했다. 특히 `MongoDB`의 클라우드 버전인 `Atlas`를 사용하면, `Full Text Search`를
+지원하는데 이는 `ElasticSearch`에서처럼 형태소분석을 지원해주기 때문에, 검색엔진을
+구현하기에도 좋다. 둘다 `Lucene`을 기반으로 만들어졌기 때문에, 나중에 `ElasticSearch`를
+사용하게 된다면, 그전에 미리 익숙해질 기회가 될 것 같다.
+
+### 2.1 DB Schema
+
+스키마를 구성할 때, 모델러 같은 툴을 검새해봤지만, 현재 프로젝트 규모에 맞게끔
+무료 버전을 지원하는 `MongoDB` 모델러가 없어서, 체험 버전을 사용해서 스키마를 구성했다.
+유지 가능한 스키마는 아니지만 대략적인 구조를 파악하는데는 도움이 되었다.
+
+import DbSchemaScreenshot from '/public/pages/projects/electrokerot/backend/db-schema.png'
+
+<Screenshot alt="db schema" src={DbSchemaScreenshot} caption="db schema" />
+
+### 2.2 DB Model
+
+API서버와 데이터베이스 통신에는 `ORM`이나 `ODM`을 따로 사용하지는 않았다. 처음엔
+`Prisma`를 사용해보려고 했지만, 스키마를 짜고나니 아직까지 지원하는 부분이
+부족하다고 생각했고, 현재 필요한 기능들을 `Entity`를 직접 만들어서 구현하는 것이
+더 편하지 않을까 생각했다.
+
+## 3. 기타
+
+### 3.1 Entity repository
+
+`repository`를 구성할 때, `entity repository`라는 추상화 된 인터페이스를 만들어서
+전체 `repository`에서 상속받았다. 이렇게 하면, `repository`를 추가할 때마다
+추가로 필요한 메서드만 구현하면 되기 때문에 작업할 양이 줄어들었다.
+
+<details>
+<summary>entity repository</summary>
+
+```ts entity.repository.ts
+abstract class EntityRepository<T> {
+  protected readonly collection: Collection
+  protected readonly classConstructor: ClassConstructor<T>
+
+  constructor(
+    db: Db,
+    collectionName: CollectionName,
+    classConstructor: ClassConstructor<T>
+  ) {
+    this.collection = db.collection(collectionName)
+    this.classConstructor = classConstructor
+  }
+
+  protected async create(entity: Partial<T>) {
+    return (await this.collection.insertOne(entity)).insertedId
+  }
+
+  protected async find(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      this.collection.find<T>(filter).toArray()
+    )
+  }
+
+  protected async findById(_id: ObjectId) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.findOne<T>({ _id })
+    )
+  }
+
+  protected async findOne(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.findOne<T>(filter)
+    )
+  }
+
+  protected async findMany(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.find<T>(filter).toArray()
+    )
+  }
+
+  protected async updateById(_id: ObjectId, entity: Partial<T>) {
+    return (await this.collection.updateOne({ _id }, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async updateOne(filter: Filter<Partial<T>>, entity: Partial<T>) {
+    return (await this.collection.updateOne(filter, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async updateMany(filter: Filter<Partial<T>>, entity: Partial<T>) {
+    return (await this.collection.updateMany(filter, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async deleteOne(filter: Filter<Partial<T>>) {
+    return (await this.collection.deleteOne(filter)).deletedCount
+  }
+
+  protected async countDocuments(filter: Filter<Partial<T>>) {
+    return await this.collection.countDocuments(filter)
+  }
+
+  protected async aggregate(pipeline: any[]) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.aggregate<T>(pipeline).toArray()
+    )
+  }
+}
+```
+
+</details>
