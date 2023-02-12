@@ -1,0 +1,88 @@
+---
+title: '기술 스택'
+---
+
+import {
+  TechStacks,
+  ContentTitle,
+  Tree,
+  Folder,
+  File,
+  Screenshot,
+  Video
+} from '@/components'
+
+<TechStacks />
+
+<div className="flex flex-col sm:flex-row">
+  <div className="flex-1 pl-10">
+    <ContentTitle title="사용해 본" />
+    <Tree>
+      <Folder name="기술 주머니" defaultOpen>
+        <Folder name="?" >
+          <File name="HTML/CSS" />
+        </Folder>
+        <Folder name="언어" defaultOpen>
+          <File name="Typescript" />
+          <File name="Bash Shell" />
+          <File name="Java" />
+          <File name="C" />
+        </Folder>
+        <Folder name="UI 라이브러리" defaultOpen>
+          <File name="React.js" />
+          <File name="MUI" />
+        </Folder>
+        <Folder name="프레임워크" defaultOpen>
+          <File name="Nest.js" />
+          <File name="Next.js" />
+        </Folder>
+        <Folder name="데이터베이스" >
+          <File name="MongoDB" />
+          <File name="Redis" />
+        </Folder>
+        <Folder name="라이브러리" >
+          <File name="Redux" />
+          <File name="Joi" />
+          <File name="Zod" />
+          <File name="Storybook" />
+          <File name="Puppeteer" />
+        </Folder>
+        <Folder name="TDD" >
+          <File name="Jest" />
+          <File name="Cypress" />
+          <File name="Chromatic" />
+          <File name="Supertest" />
+          <File name="Superagent" />
+        </Folder>
+        <Folder name="프로그램" >
+          <File name="Docker" />
+          <File name="Docker Swarm" />
+          <File name="Vscode" />
+          <File name="Vim" />
+          <File name="Figma" />
+          <File name="Nginx" />
+        </Folder>
+        <Folder name="클라우드 인프라" >
+          <File name="AWS" />
+          <File name="GCP" />
+          <File name="OCI" />
+        </Folder>
+        <Folder name="클라우드 서비스" >
+          <File name="Vercel" />
+          <File name="Chromatic" />
+        </Folder>
+      </Folder>
+    </Tree>
+  </div>
+
+  <div className="flex-1">
+    <ContentTitle title="스쳐지나 간" />
+    <Tree>
+      <Folder name="기술 주머니" defaultOpen>
+        <Folder name="UI 라이브러리" defaultOpen>
+          <File name="Tailwind" />
+        </Folder>
+      </Folder>
+    </Tree>
+  </div>
+</div>
