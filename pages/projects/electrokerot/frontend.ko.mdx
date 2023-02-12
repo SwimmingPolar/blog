@@ -229,3 +229,252 @@ export const useDeviceDetect = () => {
 개발이 어느 정도 진행이 되고 난 뒤에,
 `vercel`을 통해 `CI/CD`를 따로 구성하지 않아도 되고, `vercel`에서 제공하는
 `web vital`과 `analytics`를 사용할 수 있기 때문에 `vercel`을 사용하려고 한다.
+
+## 7. 리팩토링
+
+<iframe
+  style={{
+    border: '1px solid rgba(0, 0, 0, 0.1)'
+  }}
+  width="100%"
+  height={750}
+  src="https://stackblitz.com/edit/react-2vx54t?devToolsHeight=33&embed=1&file=src/App.js&hideExplorer=1&hideNavigation=1&view=preview"
+/>
+
+<i>콘솔 열기: Editor 클릭 후 Preview 클릭</i>
+
+**원본 코드**
+
+<CH.Spotlight>
+
+<CH.Code>
+
+```js logic.js focus=9:14
+function selectPart(currentPart = 0) {
+  if (product_price.length <= currentPart) {
+    const totalCost = getTotalCost(selectedParts)
+    if (totalCost <= priceFilter) {
+      generatedCombinations.push([...selectedParts])
+    }
+    return
+  }
+
+  for (let i = 0; i <CH.Code product_price[currentPart].length; i++) {
+    selectedParts.push([product_price[currentPart][i], vendors[currentPart][i]])
+    selectPart(currentPart + 1)
+    selectedParts.pop()
+  }
+}
+```
+
+---
+
+```js 부품목록 focus=12
+
+const product_price =
+  [3000, 3000, 3500, 5000, 4000, 3000, 3500, 2500],
+  [3500, 4000, 4500, 5500, 5000, 3500, 4000, 3000],
+  [2000, 3000, 2500, 4500, 3000, 2000, 2500, 1500],
+  [1000, 1000, 3000, 3000, 3500, 1000, 3000, 2000],
+  [1000, 3000, 3000, 3000, 2500, 1000, 3000, 2000],
+  [2000, 3000, 2500, 4500, 3000],
+  [1000, 1000, 3000, 3000, 3500],
+  [1000, 3000, 3000, 3000, 2500],
+  [1000, 1000, 3000, 3000, 3500],
+  [2000, 3000, 2500, 4500, 3000]
+]
+```
+
+</CH.Code>
+
+---
+
+다른 부품 카테고리 순회하기
+
+처음 함수가 시작되면, 카테고리의 첫 번째에 있는 부품을 선택한 후, 부품의 마지막 카테고리까지 선택하며 올라갑니다.
+다음 카테고리가 없다는 말은, 현재 조합이 완성되었다는 뜻이므로, 'generatedCombinations'에 추가합니다.
+
+<CH.Code>
+
+```js logic.js focus=2:8
+function selectPart(currentPart = 0) {
+  if (product_price.length <= currentPart) {
+    const totalCost = getTotalCost(selectedParts)
+    if (totalCost <= priceFilter) {
+      generatedCombinations.push([...selectedParts])
+    }
+    return
+  }
+
+  for (let i = 0; i <CH.Code product_price[currentPart].length; i++) {
+    selectedParts.push([product_price[currentPart][i], vendors[currentPart][i]])
+    selectPart(currentPart + 1)
+    selectedParts.pop()
+  }
+}
+```
+
+---
+
+```js 부품목록 focus=2[4:7],3[4:7],4[4:7],5[4:7],6[4:7],7[4:7],8[4:7],9[4:7],10[4:7],11[4:7]
+const product_price =
+  [3000, 3000, 3500, 5000, 4000, 3000, 3500, 2500],
+  [3500, 4000, 4500, 5500, 5000, 3500, 4000, 3000],
+  [2000, 3000, 2500, 4500, 3000, 2000, 2500, 1500],
+  [1000, 1000, 3000, 3000, 3500, 1000, 3000, 2000],
+  [1000, 3000, 3000, 3000, 2500, 1000, 3000, 2000],
+  [2000, 3000, 2500, 4500, 3000],
+  [1000, 1000, 3000, 3000, 3500],
+  [1000, 3000, 3000, 3000, 2500],
+  [1000, 1000, 3000, 3000, 3500],
+  [2000, 3000, 2500, 4500, 3000]
+]
+```
+
+</CH.Code>
+
+---
+
+같은 카테고리, 가격 다른 부품 순회하기
+
+같은 부품이지만 가격이 다른 부품을 선택하며 순회합니다.
+
+</CH.Spotlight>
+
+처음 코드를 작성할 때, 이 문제를 위한 알고리즘은 없다는 걸 알게 되었습니다.
+여기 너무 몰입한 나머지 최적화를 위한 알고리즘을 생각하지 못했습니다.
+문제 해결 알고리즘이 없는 것뿐이지 최적화를 위한 알고리즘은 존재합니다.
+심지어 이미 현재 코드에 존재하는 코드를 이용해 최적화를 할 수 있습니다.
+
+**리팩토링 #1**
+
+<CH.Section>
+
+```js logic.js focus=2:8
+function selectPart(currentPart = 0) {
+  if (product_price.length <= currentPart) {
+    const totalCost = getTotalCost(selectedParts)
+    if (totalCost <= priceFilter) {
+      generatedCombinations.push([...selectedParts])
+    }
+    return
+  }
+
+  for (let i = 0; i <CH.Code product_price[currentPart].length; i++) {
+    selectedParts.push([product_price[currentPart][i], vendors[currentPart][i]])
+    selectPart(currentPart + 1)
+    selectedParts.pop()
+  }
+}
+```
+
+완성된 조합을 배열에 추가하는 부분입니다. [초기 코드에서 `priceFilter`라는 대략적인 필터를 거쳤습니다.](focus://4[5:34])
+최적화라는고 따로 생각은 하지 않았고 비싼 연산 없이 구할 수는 있는 최저값보다 높은 가격은
+굳이 넣을 필요가 없다는 생각에 작성한 코드였습니다.
+
+잘 생각해보면 이런 재귀 트리를 타고 내려가는 과정에서, 만약 현재 조합의 가격이 `priceFilter`보다 높다면,
+이 조합은 더 이상 탐색할 필요가 없습니다. 왜냐하면, 이 조합의 하위 조합은 모두 `priceFilter`보다 높기 때문입니다.
+
+</CH.Section>
+
+```js logic.js focus=2:4
+function selectPart(currentPart = 0) {
+  if (getTotalCost(selectedParts) > priceFilter) {
+    return
+  }
+
+  if (product_price.length <= currentPart) {
+    const totalCost = getTotalCost(selectedParts)
+    if (totalCost <= priceFilter) {
+      generatedCombinations.push([...selectedParts])
+    }
+    return
+  }
+
+  for (let i = 0; i <CH.Code product_price[currentPart].length; i++) {
+    selectedParts.push([product_price[currentPart][i], vendors[currentPart][i]])
+    selectPart(currentPart + 1)
+    selectedParts.pop()
+  }
+}
+```
+
+이렇게 하면 트리를 내려가는 과정에서, `priceFilter`보다 높은 조합은 탐색하지 않게 됩니다.
+조금 더 개선해보자면, `getTotalCost`의 구현 방식에 따라 다르겠지만, 연산이 개입하기 때문에
+이를 최적화할 수 있습니다. 함수를 통해 값을 구하기 보다는 이전과 현재 재귀함수의 콜스택을 이용해 값을 가져오는 것이
+더 효율적입니다.
+
+```js logic.js focus=1[38:66],2,15,16,18[33:76]
+function selectPart(currentPart = 0, currentCombinationsPrice = 0) {
+  if (currentCombinationsPrice > priceFilter) return
+
+  if (product_price.length <= currentPart) {
+    // This takes more time than the below, why?
+    // if (currentCombinationsPrice <= priceFilter) {
+    const totalCost = getTotalCost(selectedParts)
+    if (totalCost <= priceFilter) {
+      generatedCombinations.push([...selectedParts])
+    }
+    return
+  }
+
+  for (let i = 0; i < product_price[currentPart].length; i++) {
+    const currentPartPrice = product_price[currentPart][i]
+    const currentPartVendor = vendors[currentPart][i]
+    selectedParts.push([currentPartPrice, currentPartVendor])
+    selectPart(currentPart + 1, currentCombinationsPrice + currentPartPrice)
+    selectedParts.pop()
+  }
+}
+```
+
+이렇게 하면 재귀 트리 순회의 과정에서 `깊이` 부분을 최적화 할 수 있습니다.
+
+**리팩토링 #2**
+
+잘 생각해보면 `깊이`를 순회할지 말지를 결정해서 최적화를 했다면, `넓이`를 순회할지 말지를 결정해서
+최적화를 할 수도 있습니다.
+
+```js logic.js focus=18:20
+function selectPart(currentPart = 0, currentCombinationsPrice = 0) {
+  if (currentCombinationsPrice > priceFilter) return
+
+  if (product_price.length <= currentPart) {
+    // This takes more time than the below, why?
+    // if (currentCombinationsPrice <= priceFilter) {
+    const totalCost = getTotalCost(selectedParts)
+    if (totalCost <= priceFilter) {
+      generatedCombinations.push([...selectedParts])
+    }
+    return
+  }
+
+  for (let i = 0; i <br product_price[currentPart].length; i++) {
+    const currentPartPrice = product_price[currentPart][i]
+    const currentPartVendor = vendors[currentPart][i]
+
+    if (currentCombinationsPrice + currentPartPrice > priceFilter) {
+      continue
+    }
+
+    selectedParts.push([currentPartPrice, currentPartVendor])
+    selectPart(currentPart + 1, currentCombinationsPrice + currentPartPrice)
+    selectedParts.pop()
+  }
+}
+```
+
+이 부분에서 현재 조합에 현재 부품을 더했을 때 `priceFilter`보다 높다면, 이 부품을 선택하지 않고
+다음 부품을 선택하도록 하면 됩니다. 그렇게 되면 현재 부품을 포함한 아래의 트리는 모두 탐색하지 않게 됩니다.
+
+처음에 이 문제에 적용할 수 있는 알고리즘이 없다는 사실에 너무 몰입한 나머지
+최적화 자체에 대해서도 생각하지 못했습니다. 사실 데이터에 대한 최적화는 생각했지만 연산 최적화는 생각하지 못했습니다. 😂
+
+<br />
+
+**100,000,000번의 연산 기준**
+| 코드 | 평균 시간 |
+| ---------- | --------- |
+| 원본 | 25초 |
+| 리팩토링#1 | 0.9초 |
+| 리팩토링#2 | 0.6초 |
