@@ -1,0 +1,3194 @@
+[
+  {
+    "_id": "634e819e5f7f75147ef5f87b",
+    "name": {
+      "fullName": "삼성전자 DDR4-3200",
+      "tag": "32GB"
+    },
+    "category": "memory",
+    "variants": [
+      "634e819e5f7f75147ef5f87d",
+      "634e819e5f7f75147ef5f87f",
+      "634e819e5f7f75147ef5f882"
+    ],
+    "sortOrder": 1666137572098,
+    "stock": true,
+    "details": {
+      "제조회사": {
+        "value": "삼성전자",
+        "type": "기본정보"
+      },
+      "등록년월": {
+        "value": "2020년 04월",
+        "type": "기본정보"
+      },
+      "사용 장치": {
+        "value": "데스크탑용",
+        "type": "기본정보"
+      },
+      "제품 분류": {
+        "value": "DDR4",
+        "type": "기본정보"
+      },
+      "메모리 규격": {
+        "value": "Dimm",
+        "type": "기본정보"
+      },
+      "메모리 용량": {
+        "value": "32GB",
+        "type": "기본정보"
+      },
+      "동작클럭(대역폭)": {
+        "value": "3200MHz (PC4-25600)",
+        "type": "기본정보"
+      },
+      "램개수": {
+        "value": "1개",
+        "type": "기본정보"
+      },
+      "히트싱크": {
+        "value": "미포함",
+        "type": "기본정보"
+      }
+    },
+    "vendors": {
+      "openMarket": [
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2515544808&package=0&setpc=0&r=16660895364290",
+          "price": "129490",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2491405301&package=0&setpc=0&r=16660895361405",
+          "price": "129500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C674875133&package=0&setpc=0&r=16660895369620",
+          "price": "129610",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C650586683&package=0&setpc=0&r=16660895364710",
+          "price": "129620",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2604173938&package=0&setpc=0&r=16660895367002",
+          "price": "129680",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C762589549&package=0&setpc=0&r=16660895366889",
+          "price": "129680",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B894798278&package=0&setpc=0&r=16660895362079",
+          "price": "129950",
+          "card": "",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1864503479&package=0&setpc=0&r=16660895369473",
+          "price": "129950",
+          "card": "",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2464305920&package=0&setpc=0&r=16660895361768",
+          "price": "130500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C624580476&package=0&setpc=0&r=16660895366482",
+          "price": "130500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C343995185&package=0&setpc=0&r=16660895363664",
+          "price": "132140",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C596376459&package=0&setpc=0&r=16660895369210",
+          "price": "132140",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2435937670&package=0&setpc=0&r=16660895367740",
+          "price": "132140",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2115736012&package=0&setpc=0&r=16660895368594",
+          "price": "132140",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C248794045&package=0&setpc=0&r=16660895368367",
+          "price": "132910",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1840217227&package=0&setpc=0&r=16660895369748",
+          "price": "133180",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B875793251&package=0&setpc=0&r=16660895364764",
+          "price": "133190",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C394563091&package=0&setpc=0&r=16660895369479",
+          "price": "133260",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B906669910&package=0&setpc=0&r=16660895364069",
+          "price": "133260",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1881899951&package=0&setpc=0&r=16660895368351",
+          "price": "133270",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2186756392&package=0&setpc=0&r=16660895368446",
+          "price": "133270",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1971655198&package=0&setpc=0&r=16660895366632",
+          "price": "133390",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "인터파크",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=ED910&safe_trade=4&fee_type=T&link_pcode=7333993579&package=0&setpc=0&r=16660895365152",
+          "price": "133600",
+          "card": "NH카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1834258716&package=0&setpc=0&r=16660895366853",
+          "price": "133790",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B870895914&package=0&setpc=0&r=16660895365941",
+          "price": "133790",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "롯데ON",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE309&safe_trade=4&fee_type=T&link_pcode=LO1468213904&package=0&setpc=0&r=16660895369313",
+          "price": "133900",
+          "card": "삼성카드",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C707307824&package=0&setpc=0&r=16660895362852",
+          "price": "134210",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2547765184&package=0&setpc=0&r=16660895361714",
+          "price": "134210",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "롯데ON",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE309&safe_trade=4&fee_type=T&link_pcode=LO1186885454&package=0&setpc=0&r=16660895364946",
+          "price": "134420",
+          "card": "삼성카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C349127672&package=0&setpc=0&r=16660895365130",
+          "price": "134490",
+          "card": "",
+          "shippingCost": "2500"
+        }
+      ],
+      "mall": [
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13525022570&package=0&setpc=0&r=16660895366624",
+          "price": "126432",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13525022498&package=0&setpc=0&r=16660895365913",
+          "price": "126432",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=11922995330&package=0&setpc=0&r=16660895369572",
+          "price": "126442",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0013378391&package=0&setpc=0&r=16660895368458",
+          "price": "127880",
+          "card": "전북카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0018913709&package=0&setpc=0&r=16660895368704",
+          "price": "128250",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13805142466&package=0&setpc=0&r=16660895361726",
+          "price": "129888",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "현대Hmall",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=ED907&safe_trade=4&fee_type=T&link_pcode=2109166388&package=0&setpc=0&r=16660895368036",
+          "price": "130670",
+          "card": "현대카드(~10/18)",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000062855016&package=0&setpc=0&r=16660895361560",
+          "price": "131076",
+          "card": "삼성카드",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000062855016&package=0&setpc=0&r=16660895367372",
+          "price": "131076",
+          "card": "삼성카드",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000056028157&package=0&setpc=0&r=16660895362738",
+          "price": "131130",
+          "card": "삼성카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000056028253&package=0&setpc=0&r=16660895368446",
+          "price": "131130",
+          "card": "삼성카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000056028253&package=0&setpc=0&r=16660895364556",
+          "price": "131130",
+          "card": "삼성카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "이마트인터넷쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE311&safe_trade=4&fee_type=T&link_pcode=1000056028157&package=0&setpc=0&r=16660895365670",
+          "price": "131130",
+          "card": "삼성카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0014744679&package=0&setpc=0&r=16660895368988",
+          "price": "131760",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "롯데홈쇼핑",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=ED903&safe_trade=4&fee_type=T&link_pcode=1583035580&package=0&setpc=0&r=16660895367324",
+          "price": "132390",
+          "card": "현대카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13965123066&package=0&setpc=0&r=16660895362015",
+          "price": "132719",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13981326822&package=0&setpc=0&r=16660895368540",
+          "price": "133095",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000289117476&package=0&setpc=0&r=16660895364425",
+          "price": "136710",
+          "card": "삼성카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "이마트인터넷쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=EE311&safe_trade=4&fee_type=T&link_pcode=1000289117544&package=0&setpc=0&r=16660895361536",
+          "price": "136710",
+          "card": "삼성카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000289117476&package=0&setpc=0&r=16660895364703",
+          "price": "136710",
+          "card": "삼성카드",
+          "shippingCost": "3000"
+        }
+      ],
+      "credit": [
+        {
+          "vendorName": "피시포올",
+          "vendorCode": "PO30C",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PO30C&safe_trade=4&fee_type=A&link_pcode=128275&package=0&setpc=0&r=16660895363738",
+          "price": "134250",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "초이스컴",
+          "vendorCode": "PV606",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PV606&safe_trade=4&fee_type=A&link_pcode=102948&package=0&setpc=0&r=16660895367175",
+          "price": "134260",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "아이티엔조이",
+          "vendorCode": "PP402",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PP402&safe_trade=4&fee_type=A&link_pcode=11028636&package=0&setpc=0&r=16660895368508",
+          "price": "134420",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴투유",
+          "vendorCode": "PO20D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PO20D&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895368620",
+          "price": "134680",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "엔코퍼레이션",
+          "vendorCode": "PR50B",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PR50B&safe_trade=4&fee_type=A&link_pcode=5565672116&package=0&setpc=0&r=16660895367481",
+          "price": "135240",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "아이스타피씨",
+          "vendorCode": "PR805",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PR805&safe_trade=4&fee_type=A&link_pcode=5565672116&package=0&setpc=0&r=16660895361561",
+          "price": "135400",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "COM25",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=COM25&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895367674",
+          "price": "142200",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "컴오아시스",
+          "vendorCode": "PV203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PV203&safe_trade=4&fee_type=A&link_pcode=5565672116&package=0&setpc=0&r=16660895365217",
+          "price": "157300",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "노트나인",
+          "vendorCode": "PD908",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PD908&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895367685",
+          "price": "179000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "주식회사 하나컴",
+          "vendorCode": "COMJ7",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=COMJ7&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895365068",
+          "price": "132500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "넷플피씨",
+          "vendorCode": "PG923",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PG923&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895362242",
+          "price": "140000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "PG650",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PG650&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895365747",
+          "price": "140000",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "메모리올",
+          "vendorCode": "PCA04",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PCA04&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895368081",
+          "price": "149000",
+          "card": "",
+          "shippingCost": "2750"
+        },
+        {
+          "vendorName": "www.myks.co.kr",
+          "vendorCode": "PG126",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PG126&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895368244",
+          "price": "151000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "한솔컴퓨터",
+          "vendorCode": "PF804",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PF804&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895366134",
+          "price": "160000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "구매가이드",
+          "vendorCode": "PS710",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PS710&safe_trade=3&fee_type=A&link_pcode=46558&package=0&setpc=0&r=16660895369475",
+          "price": "129000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "미라클PC",
+          "vendorCode": "PT602",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PT602&safe_trade=3&fee_type=A&link_pcode=80763&package=0&setpc=0&r=16660895362868",
+          "price": "129000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴킬",
+          "vendorCode": "PU301",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PU301&safe_trade=3&fee_type=A&link_pcode=106808&package=0&setpc=0&r=16660895362227",
+          "price": "129000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴나무",
+          "vendorCode": "PV207",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PV207&safe_trade=3&fee_type=A&link_pcode=122442&package=0&setpc=0&r=16660895361900",
+          "price": "129000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴튜브",
+          "vendorCode": "PU201",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PU201&safe_trade=3&fee_type=A&link_pcode=102948&package=0&setpc=0&r=16660895367898",
+          "price": "129740",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴센터",
+          "vendorCode": "PV604",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PV604&safe_trade=3&fee_type=A&link_pcode=102948&package=0&setpc=0&r=16660895366910",
+          "price": "129740",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "디스컴",
+          "vendorCode": "PO106",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PO106&safe_trade=3&fee_type=A&link_pcode=151693&package=0&setpc=0&r=16660895363084",
+          "price": "130000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "플레이피씨",
+          "vendorCode": "PTB11",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PTB11&safe_trade=3&fee_type=A&link_pcode=138049&package=0&setpc=0&r=16660895361363",
+          "price": "130510",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "제이디지탈몰",
+          "vendorCode": "PU827",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PU827&safe_trade=3&fee_type=A&link_pcode=124711&package=0&setpc=0&r=16660895361723",
+          "price": "131630",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "어사컴",
+          "vendorCode": "PRA0F",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PRA0F&safe_trade=3&fee_type=A&link_pcode=5565672116&package=0&setpc=0&r=16660895364336",
+          "price": "132100",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "다올시스템",
+          "vendorCode": "PU211",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PU211&safe_trade=3&fee_type=A&link_pcode=126683&package=0&setpc=0&r=16660895365252",
+          "price": "134000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴스클럽",
+          "vendorCode": "PL436",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PL436&safe_trade=3&fee_type=A&link_pcode=98377&package=0&setpc=0&r=16660895362100",
+          "price": "135000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "RocketPC",
+          "vendorCode": "PT203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PT203&safe_trade=3&fee_type=A&link_pcode=5565672116&package=0&setpc=0&r=16660895365711",
+          "price": "135500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "파란컴",
+          "vendorCode": "PO70D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PO70D&safe_trade=3&fee_type=A&link_pcode=99978&package=0&setpc=0&r=16660895368685",
+          "price": "136000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "타운컴",
+          "vendorCode": "PP901",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PP901&safe_trade=3&fee_type=A&link_pcode=122502&package=0&setpc=0&r=16660895363177",
+          "price": "140600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴베스트",
+          "vendorCode": "PP306",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PP306&safe_trade=3&fee_type=A&link_pcode=163281&package=0&setpc=0&r=16660895368813",
+          "price": "147280",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ],
+      "cash": [
+        {
+          "vendorName": "주식회사 하나컴",
+          "vendorCode": "COMJ7",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=COMJ7&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895365068",
+          "price": "132500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "넷플피씨",
+          "vendorCode": "PG923",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PG923&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895362242",
+          "price": "140000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "PG650",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PG650&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895365747",
+          "price": "140000",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "메모리올",
+          "vendorCode": "PCA04",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PCA04&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895368081",
+          "price": "149000",
+          "card": "",
+          "shippingCost": "2750"
+        },
+        {
+          "vendorName": "www.myks.co.kr",
+          "vendorCode": "PG126",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PG126&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895368244",
+          "price": "151000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "한솔컴퓨터",
+          "vendorCode": "PF804",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PF804&safe_trade=2&fee_type=S&link_pcode=11028636&package=0&setpc=0&r=16660895366134",
+          "price": "160000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "구매가이드",
+          "vendorCode": "PS710",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PS710&safe_trade=3&fee_type=A&link_pcode=46558&package=0&setpc=0&r=16660895369475",
+          "price": "129000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "미라클PC",
+          "vendorCode": "PT602",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PT602&safe_trade=3&fee_type=A&link_pcode=80763&package=0&setpc=0&r=16660895362868",
+          "price": "129000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴킬",
+          "vendorCode": "PU301",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PU301&safe_trade=3&fee_type=A&link_pcode=106808&package=0&setpc=0&r=16660895362227",
+          "price": "129000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴나무",
+          "vendorCode": "PV207",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PV207&safe_trade=3&fee_type=A&link_pcode=122442&package=0&setpc=0&r=16660895361900",
+          "price": "129000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴튜브",
+          "vendorCode": "PU201",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PU201&safe_trade=3&fee_type=A&link_pcode=102948&package=0&setpc=0&r=16660895367898",
+          "price": "129740",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴센터",
+          "vendorCode": "PV604",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PV604&safe_trade=3&fee_type=A&link_pcode=102948&package=0&setpc=0&r=16660895366910",
+          "price": "129740",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "디스컴",
+          "vendorCode": "PO106",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PO106&safe_trade=3&fee_type=A&link_pcode=151693&package=0&setpc=0&r=16660895363084",
+          "price": "130000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "플레이피씨",
+          "vendorCode": "PTB11",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PTB11&safe_trade=3&fee_type=A&link_pcode=138049&package=0&setpc=0&r=16660895361363",
+          "price": "130510",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "제이디지탈몰",
+          "vendorCode": "PU827",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PU827&safe_trade=3&fee_type=A&link_pcode=124711&package=0&setpc=0&r=16660895361723",
+          "price": "131630",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "어사컴",
+          "vendorCode": "PRA0F",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PRA0F&safe_trade=3&fee_type=A&link_pcode=5565672116&package=0&setpc=0&r=16660895364336",
+          "price": "132100",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "다올시스템",
+          "vendorCode": "PU211",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PU211&safe_trade=3&fee_type=A&link_pcode=126683&package=0&setpc=0&r=16660895365252",
+          "price": "134000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴스클럽",
+          "vendorCode": "PL436",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PL436&safe_trade=3&fee_type=A&link_pcode=98377&package=0&setpc=0&r=16660895362100",
+          "price": "135000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "RocketPC",
+          "vendorCode": "PT203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PT203&safe_trade=3&fee_type=A&link_pcode=5565672116&package=0&setpc=0&r=16660895365711",
+          "price": "135500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "파란컴",
+          "vendorCode": "PO70D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PO70D&safe_trade=3&fee_type=A&link_pcode=99978&package=0&setpc=0&r=16660895368685",
+          "price": "136000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "타운컴",
+          "vendorCode": "PP901",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PP901&safe_trade=3&fee_type=A&link_pcode=122502&package=0&setpc=0&r=16660895363177",
+          "price": "140600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴베스트",
+          "vendorCode": "PP306",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11028636&cmpnyc=PP306&safe_trade=3&fee_type=A&link_pcode=163281&package=0&setpc=0&r=16660895368813",
+          "price": "147280",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ]
+    },
+    "prices": [
+      {
+        "timestamp": "2022-10-18T10:40:36.975Z",
+        "value": "126432"
+      }
+    ],
+    "updatedAt": "2022-10-18T10:40:36.975Z"
+  },
+  {
+    "_id": "634e819e5f7f75147ef5f87d",
+    "name": {
+      "fullName": "삼성전자 DDR4-3200",
+      "tag": "16GB"
+    },
+    "category": "memory",
+    "variants": [
+      "634e819e5f7f75147ef5f87b",
+      "634e819e5f7f75147ef5f87f",
+      "634e819e5f7f75147ef5f882"
+    ],
+    "sortOrder": 1666137572098,
+    "stock": true,
+    "details": {
+      "제조회사": {
+        "value": "삼성전자",
+        "type": "기본정보"
+      },
+      "등록년월": {
+        "value": "2020년 07월",
+        "type": "기본정보"
+      },
+      "사용 장치": {
+        "value": "데스크탑용",
+        "type": "기본정보"
+      },
+      "제품 분류": {
+        "value": "DDR4",
+        "type": "기본정보"
+      },
+      "메모리 규격": {
+        "value": "Dimm",
+        "type": "기본정보"
+      },
+      "메모리 용량": {
+        "value": "16GB",
+        "type": "기본정보"
+      },
+      "동작클럭(대역폭)": {
+        "value": "3200MHz (PC4-25600)",
+        "type": "기본정보"
+      },
+      "램개수": {
+        "value": "1개",
+        "type": "기본정보"
+      },
+      "히트싱크": {
+        "value": "미포함",
+        "type": "기본정보"
+      }
+    },
+    "vendors": {
+      "openMarket": [
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2515543258&package=0&setpc=0&r=16660895639801",
+          "price": "62110",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2491429076&package=0&setpc=0&r=16660895632043",
+          "price": "62120",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C674873380&package=0&setpc=0&r=16660895632476",
+          "price": "62140",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C650587232&package=0&setpc=0&r=16660895639771",
+          "price": "62150",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C698931025&package=0&setpc=0&r=16660895638614",
+          "price": "62190",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2539459473&package=0&setpc=0&r=16660895634709",
+          "price": "62190",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C624396961&package=0&setpc=0&r=16660895632231",
+          "price": "62220",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2464108656&package=0&setpc=0&r=16660895635210",
+          "price": "62220",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C651678687&package=0&setpc=0&r=16660895636293",
+          "price": "62560",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2511330121&package=0&setpc=0&r=16660895633643",
+          "price": "62560",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1861762812&package=0&setpc=0&r=16660895632383",
+          "price": "62760",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B892662497&package=0&setpc=0&r=16660895636455",
+          "price": "62760",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C200100320&package=0&setpc=0&r=16660895633477",
+          "price": "62760",
+          "card": "",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1886931566&package=0&setpc=0&r=16660895636075",
+          "price": "62760",
+          "card": "",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2435935356&package=0&setpc=0&r=16660895635526",
+          "price": "62760",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C596374508&package=0&setpc=0&r=16660895631201",
+          "price": "62760",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C399164605&package=0&setpc=0&r=16660895638152",
+          "price": "62760",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2193047941&package=0&setpc=0&r=16660895637951",
+          "price": "62760",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C762588937&package=0&setpc=0&r=16660895636689",
+          "price": "63040",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2604173282&package=0&setpc=0&r=16660895632371",
+          "price": "63040",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C229245818&package=0&setpc=0&r=16660895631118",
+          "price": "63350",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1934966166&package=0&setpc=0&r=16660895638063",
+          "price": "63350",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2547764993&package=0&setpc=0&r=16660895631827",
+          "price": "63360",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C707307602&package=0&setpc=0&r=16660895636853",
+          "price": "63360",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B893133120&package=0&setpc=0&r=16660895633330",
+          "price": "63430",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1862310852&package=0&setpc=0&r=16660895636884",
+          "price": "63490",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2496235461&package=0&setpc=0&r=16660895632814",
+          "price": "63760",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1840216534&package=0&setpc=0&r=16660895635664",
+          "price": "63840",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B875792270&package=0&setpc=0&r=16660895634480",
+          "price": "63840",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1893184485&package=0&setpc=0&r=16660895637391",
+          "price": "63980",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ],
+      "mall": [
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13524999250&package=0&setpc=0&r=16660895632075",
+          "price": "60409",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13524999378&package=0&setpc=0&r=16660895638693",
+          "price": "60409",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=11922971654&package=0&setpc=0&r=16660895631633",
+          "price": "60538",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=11922971666&package=0&setpc=0&r=16660895636386",
+          "price": "60538",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13674974202&package=0&setpc=0&r=16660895631602",
+          "price": "61003",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13804498266&package=0&setpc=0&r=16660895635660",
+          "price": "62399",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0014744678&package=0&setpc=0&r=16660895632019",
+          "price": "61360",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0018913711&package=0&setpc=0&r=16660895638587",
+          "price": "61390",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0009587877&package=0&setpc=0&r=16660895635244",
+          "price": "59790",
+          "card": "전북카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=11916991358&package=0&setpc=0&r=16660895635587",
+          "price": "64340",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "롯데홈쇼핑",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=ED903&safe_trade=4&fee_type=T&link_pcode=1584444085&package=0&setpc=0&r=16660895636449",
+          "price": "62810",
+          "card": "KB국민카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1698336561_1698336561&package=0&setpc=0&r=16660895631658",
+          "price": "66500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "현대Hmall",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=ED907&safe_trade=4&fee_type=T&link_pcode=2109750868&package=0&setpc=0&r=16660895639713",
+          "price": "61940",
+          "card": "현대카드(~10/18)",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1992418941_1992418941&package=0&setpc=0&r=16660895636158",
+          "price": "66670",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000050470223&package=0&setpc=0&r=16660895638848",
+          "price": "67300",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000050470223&package=0&setpc=0&r=16660895634592",
+          "price": "67300",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "이마트인터넷쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=EE311&safe_trade=4&fee_type=T&link_pcode=1000050470223&package=0&setpc=0&r=16660895634507",
+          "price": "67300",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13543448026&package=0&setpc=0&r=16660895632463",
+          "price": "67460",
+          "card": "",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0018885778&package=0&setpc=0&r=16660895634961",
+          "price": "67490",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000049935961&package=0&setpc=0&r=16660895633723",
+          "price": "67500",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ],
+      "credit": [
+        {
+          "vendorName": "피시포올",
+          "vendorCode": "PO30C",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PO30C&safe_trade=4&fee_type=A&link_pcode=124193&package=0&setpc=0&r=16660895635010",
+          "price": "63820",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "초이스컴",
+          "vendorCode": "PV606",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PV606&safe_trade=4&fee_type=A&link_pcode=125721&package=0&setpc=0&r=16660895632366",
+          "price": "63860",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "아이스타피씨",
+          "vendorCode": "PR805",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PR805&safe_trade=4&fee_type=A&link_pcode=5565676481&package=0&setpc=0&r=16660895638502",
+          "price": "63900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴투유",
+          "vendorCode": "PO20D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PO20D&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895634945",
+          "price": "64250",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "아이티엔조이",
+          "vendorCode": "PP402",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PP402&safe_trade=4&fee_type=A&link_pcode=11790199&package=0&setpc=0&r=16660895632670",
+          "price": "64350",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "엔코퍼레이션",
+          "vendorCode": "PR50B",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PR50B&safe_trade=4&fee_type=A&link_pcode=5565676481&package=0&setpc=0&r=16660895635437",
+          "price": "66320",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "COM25",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=COM25&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895631250",
+          "price": "67600",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "컴오아시스",
+          "vendorCode": "PV203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PV203&safe_trade=4&fee_type=A&link_pcode=5565676481&package=0&setpc=0&r=16660895631003",
+          "price": "75000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "노트나인",
+          "vendorCode": "PD908",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PD908&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895637314",
+          "price": "89000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "주식회사 하나컴",
+          "vendorCode": "COMJ7",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=COMJ7&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895634924",
+          "price": "63500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "PG650",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PG650&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895631002",
+          "price": "65500",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "넷플피씨",
+          "vendorCode": "PG923",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PG923&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895638934",
+          "price": "70000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "www.myks.co.kr",
+          "vendorCode": "PG126",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PG126&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895631615",
+          "price": "74000",
+          "card": "",
+          "shippingCost": "3300"
+        },
+        {
+          "vendorName": "한솔컴퓨터",
+          "vendorCode": "PF804",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PF804&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895637957",
+          "price": "76000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "메모리올",
+          "vendorCode": "PCA04",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PCA04&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895636709",
+          "price": "81000",
+          "card": "",
+          "shippingCost": "2750"
+        },
+        {
+          "vendorName": "구매가이드",
+          "vendorCode": "PS710",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PS710&safe_trade=3&fee_type=A&link_pcode=52324&package=0&setpc=0&r=16660895633186",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴나무",
+          "vendorCode": "PV207",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PV207&safe_trade=3&fee_type=A&link_pcode=119592&package=0&setpc=0&r=16660895632852",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "다이스",
+          "vendorCode": "PRC10",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PRC10&safe_trade=3&fee_type=A&link_pcode=136519&package=0&setpc=0&r=16660895633583",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴베스트",
+          "vendorCode": "PP306",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PP306&safe_trade=3&fee_type=A&link_pcode=168209&package=0&setpc=0&r=16660895637283",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴킬",
+          "vendorCode": "PU301",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PU301&safe_trade=3&fee_type=A&link_pcode=106816&package=0&setpc=0&r=16660895637660",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴센터",
+          "vendorCode": "PV604",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PV604&safe_trade=3&fee_type=A&link_pcode=125721&package=0&setpc=0&r=16660895636180",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴튜브",
+          "vendorCode": "PU201",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PU201&safe_trade=3&fee_type=A&link_pcode=125721&package=0&setpc=0&r=16660895637509",
+          "price": "61900",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "미라클PC",
+          "vendorCode": "PT602",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PT602&safe_trade=3&fee_type=A&link_pcode=80441&package=0&setpc=0&r=16660895631828",
+          "price": "62000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "디스컴",
+          "vendorCode": "PO106",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PO106&safe_trade=3&fee_type=A&link_pcode=156290&package=0&setpc=0&r=16660895636931",
+          "price": "62560",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "제이디지탈몰",
+          "vendorCode": "PU827",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PU827&safe_trade=3&fee_type=A&link_pcode=151663&package=0&setpc=0&r=16660895635088",
+          "price": "62780",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "어사컴",
+          "vendorCode": "PRA0F",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PRA0F&safe_trade=3&fee_type=A&link_pcode=5565676481&package=0&setpc=0&r=16660895638538",
+          "price": "63200",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "서현컴",
+          "vendorCode": "PF412",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PF412&safe_trade=3&fee_type=A&link_pcode=167174&package=0&setpc=0&r=16660895636336",
+          "price": "63450",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "다올시스템",
+          "vendorCode": "PU211",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PU211&safe_trade=3&fee_type=A&link_pcode=120649&package=0&setpc=0&r=16660895635343",
+          "price": "63500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "RocketPC",
+          "vendorCode": "PT203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PT203&safe_trade=3&fee_type=A&link_pcode=5565676481&package=0&setpc=0&r=16660895633886",
+          "price": "64600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴스클럽",
+          "vendorCode": "PL436",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PL436&safe_trade=3&fee_type=A&link_pcode=102689&package=0&setpc=0&r=16660895639051",
+          "price": "65000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "파란컴",
+          "vendorCode": "PO70D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PO70D&safe_trade=3&fee_type=A&link_pcode=104822&package=0&setpc=0&r=16660895638691",
+          "price": "66000",
+          "card": "",
+          "shippingCost": "4000"
+        },
+        {
+          "vendorName": "플레이피씨",
+          "vendorCode": "PTB11",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PTB11&safe_trade=3&fee_type=A&link_pcode=141699&package=0&setpc=0&r=16660895634751",
+          "price": "67000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "타운컴",
+          "vendorCode": "PP901",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PP901&safe_trade=3&fee_type=A&link_pcode=128277&package=0&setpc=0&r=16660895633954",
+          "price": "67370",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ],
+      "cash": [
+        {
+          "vendorName": "주식회사 하나컴",
+          "vendorCode": "COMJ7",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=COMJ7&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895634924",
+          "price": "63500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "PG650",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PG650&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895631002",
+          "price": "65500",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "넷플피씨",
+          "vendorCode": "PG923",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PG923&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895638934",
+          "price": "70000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "www.myks.co.kr",
+          "vendorCode": "PG126",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PG126&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895631615",
+          "price": "74000",
+          "card": "",
+          "shippingCost": "3300"
+        },
+        {
+          "vendorName": "한솔컴퓨터",
+          "vendorCode": "PF804",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PF804&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895637957",
+          "price": "76000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "메모리올",
+          "vendorCode": "PCA04",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PCA04&safe_trade=2&fee_type=S&link_pcode=11790199&package=0&setpc=0&r=16660895636709",
+          "price": "81000",
+          "card": "",
+          "shippingCost": "2750"
+        },
+        {
+          "vendorName": "구매가이드",
+          "vendorCode": "PS710",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PS710&safe_trade=3&fee_type=A&link_pcode=52324&package=0&setpc=0&r=16660895633186",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴나무",
+          "vendorCode": "PV207",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PV207&safe_trade=3&fee_type=A&link_pcode=119592&package=0&setpc=0&r=16660895632852",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "다이스",
+          "vendorCode": "PRC10",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PRC10&safe_trade=3&fee_type=A&link_pcode=136519&package=0&setpc=0&r=16660895633583",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴베스트",
+          "vendorCode": "PP306",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PP306&safe_trade=3&fee_type=A&link_pcode=168209&package=0&setpc=0&r=16660895637283",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴킬",
+          "vendorCode": "PU301",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PU301&safe_trade=3&fee_type=A&link_pcode=106816&package=0&setpc=0&r=16660895637660",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴센터",
+          "vendorCode": "PV604",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PV604&safe_trade=3&fee_type=A&link_pcode=125721&package=0&setpc=0&r=16660895636180",
+          "price": "61600",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴튜브",
+          "vendorCode": "PU201",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PU201&safe_trade=3&fee_type=A&link_pcode=125721&package=0&setpc=0&r=16660895637509",
+          "price": "61900",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "미라클PC",
+          "vendorCode": "PT602",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PT602&safe_trade=3&fee_type=A&link_pcode=80441&package=0&setpc=0&r=16660895631828",
+          "price": "62000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "디스컴",
+          "vendorCode": "PO106",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PO106&safe_trade=3&fee_type=A&link_pcode=156290&package=0&setpc=0&r=16660895636931",
+          "price": "62560",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "제이디지탈몰",
+          "vendorCode": "PU827",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PU827&safe_trade=3&fee_type=A&link_pcode=151663&package=0&setpc=0&r=16660895635088",
+          "price": "62780",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "어사컴",
+          "vendorCode": "PRA0F",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PRA0F&safe_trade=3&fee_type=A&link_pcode=5565676481&package=0&setpc=0&r=16660895638538",
+          "price": "63200",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "서현컴",
+          "vendorCode": "PF412",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PF412&safe_trade=3&fee_type=A&link_pcode=167174&package=0&setpc=0&r=16660895636336",
+          "price": "63450",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "다올시스템",
+          "vendorCode": "PU211",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PU211&safe_trade=3&fee_type=A&link_pcode=120649&package=0&setpc=0&r=16660895635343",
+          "price": "63500",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "RocketPC",
+          "vendorCode": "PT203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PT203&safe_trade=3&fee_type=A&link_pcode=5565676481&package=0&setpc=0&r=16660895633886",
+          "price": "64600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴스클럽",
+          "vendorCode": "PL436",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PL436&safe_trade=3&fee_type=A&link_pcode=102689&package=0&setpc=0&r=16660895639051",
+          "price": "65000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "파란컴",
+          "vendorCode": "PO70D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PO70D&safe_trade=3&fee_type=A&link_pcode=104822&package=0&setpc=0&r=16660895638691",
+          "price": "66000",
+          "card": "",
+          "shippingCost": "4000"
+        },
+        {
+          "vendorName": "플레이피씨",
+          "vendorCode": "PTB11",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PTB11&safe_trade=3&fee_type=A&link_pcode=141699&package=0&setpc=0&r=16660895634751",
+          "price": "67000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "타운컴",
+          "vendorCode": "PP901",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11790199&cmpnyc=PP901&safe_trade=3&fee_type=A&link_pcode=128277&package=0&setpc=0&r=16660895633954",
+          "price": "67370",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ]
+    },
+    "prices": [
+      {
+        "timestamp": "2022-10-18T10:40:36.975Z",
+        "value": "59790"
+      }
+    ],
+    "updatedAt": "2022-10-18T10:40:36.975Z"
+  },
+  {
+    "_id": "634e819e5f7f75147ef5f87f",
+    "name": {
+      "fullName": "삼성전자 DDR4-3200",
+      "tag": "8GB"
+    },
+    "category": "memory",
+    "variants": [
+      "634e819e5f7f75147ef5f87b",
+      "634e819e5f7f75147ef5f87d",
+      "634e819e5f7f75147ef5f882"
+    ],
+    "sortOrder": 1666137572098,
+    "stock": true,
+    "details": {
+      "제조회사": {
+        "value": "삼성전자",
+        "type": "기본정보"
+      },
+      "등록년월": {
+        "value": "2020년 06월",
+        "type": "기본정보"
+      },
+      "사용 장치": {
+        "value": "데스크탑용",
+        "type": "기본정보"
+      },
+      "제품 분류": {
+        "value": "DDR4",
+        "type": "기본정보"
+      },
+      "메모리 규격": {
+        "value": "Dimm",
+        "type": "기본정보"
+      },
+      "메모리 용량": {
+        "value": "8GB",
+        "type": "기본정보"
+      },
+      "동작클럭(대역폭)": {
+        "value": "3200MHz (PC4-25600)",
+        "type": "기본정보"
+      },
+      "램개수": {
+        "value": "1개",
+        "type": "기본정보"
+      },
+      "히트싱크": {
+        "value": "미포함",
+        "type": "기본정보"
+      }
+    },
+    "vendors": {
+      "openMarket": [
+        {
+          "vendorName": "11번가",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TH201&safe_trade=4&fee_type=T&link_pcode=4639746847&package=0&setpc=0&r=16660895189041",
+          "price": "29280",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "11번가",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TH201&safe_trade=4&fee_type=T&link_pcode=4681243190&package=0&setpc=0&r=16660895187526",
+          "price": "29450",
+          "card": "신한카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C674871554&package=0&setpc=0&r=16660895184391",
+          "price": "29680",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C650589920&package=0&setpc=0&r=16660895184673",
+          "price": "29690",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2515541643&package=0&setpc=0&r=16660895188698",
+          "price": "29690",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2491439483&package=0&setpc=0&r=16660895187083",
+          "price": "29700",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2507656719&package=0&setpc=0&r=16660895187522",
+          "price": "29730",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C666768871&package=0&setpc=0&r=16660895183241",
+          "price": "29730",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2075308413&package=0&setpc=0&r=16660895184918",
+          "price": "30090",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2438427533&package=0&setpc=0&r=16660895187400",
+          "price": "30160",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C598829963&package=0&setpc=0&r=16660895181833",
+          "price": "30160",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "롯데ON",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE309&safe_trade=4&fee_type=T&link_pcode=LO1210271832&package=0&setpc=0&r=16660895188208",
+          "price": "30410",
+          "card": "삼성카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C681485935&package=0&setpc=0&r=16660895186785",
+          "price": "30570",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2521878624&package=0&setpc=0&r=16660895182907",
+          "price": "30570",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2464103128&package=0&setpc=0&r=16660895189401",
+          "price": "30640",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C624392706&package=0&setpc=0&r=16660895188800",
+          "price": "30640",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B892662523&package=0&setpc=0&r=16660895184686",
+          "price": "30870",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C596371566&package=0&setpc=0&r=16660895184552",
+          "price": "30870",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2435932764&package=0&setpc=0&r=16660895182393",
+          "price": "30870",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1861762836&package=0&setpc=0&r=16660895185380",
+          "price": "30870",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2070288407&package=0&setpc=0&r=16660895183120",
+          "price": "30980",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C309518901&package=0&setpc=0&r=16660895181428",
+          "price": "30980",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2537789981&package=0&setpc=0&r=16660895182828",
+          "price": "31000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B875792350&package=0&setpc=0&r=16660895186640",
+          "price": "31000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=B875792189&package=0&setpc=0&r=16660895182147",
+          "price": "31040",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1840216447&package=0&setpc=0&r=16660895187288",
+          "price": "31080",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C255118414&package=0&setpc=0&r=16660895189664",
+          "price": "31160",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=1882194356&package=0&setpc=0&r=16660895182016",
+          "price": "31160",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2547765135&package=0&setpc=0&r=16660895186740",
+          "price": "31160",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C707307736&package=0&setpc=0&r=16660895183173",
+          "price": "31160",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ],
+      "mall": [
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13524992302&package=0&setpc=0&r=16660895186225",
+          "price": "29205",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13524992430&package=0&setpc=0&r=16660895188606",
+          "price": "29205",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13804498274&package=0&setpc=0&r=16660895189087",
+          "price": "29601",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=11922965642&package=0&setpc=0&r=16660895185051",
+          "price": "29610",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=11922965722&package=0&setpc=0&r=16660895188043",
+          "price": "29610",
+          "card": "KB국민카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13674974190&package=0&setpc=0&r=16660895183684",
+          "price": "29700",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0018913713&package=0&setpc=0&r=16660895184889",
+          "price": "30400",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0014744683&package=0&setpc=0&r=16660895181684",
+          "price": "30730",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0009587056&package=0&setpc=0&r=16660895184471",
+          "price": "31010",
+          "card": "신한카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1698336585_1698336585&package=0&setpc=0&r=16660895181084",
+          "price": "32000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=11916991286&package=0&setpc=0&r=16660895189080",
+          "price": "32076",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=11916991186&package=0&setpc=0&r=16660895186515",
+          "price": "32076",
+          "card": "KB국민카드",
+          "shippingCost": "2400"
+        },
+        {
+          "vendorName": "롯데홈쇼핑",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=ED903&safe_trade=4&fee_type=T&link_pcode=1583035065&package=0&setpc=0&r=16660895183925",
+          "price": "32390",
+          "card": "카카오 페이 카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=13543369954&package=0&setpc=0&r=16660895183100",
+          "price": "32570",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "현대Hmall",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=ED907&safe_trade=4&fee_type=T&link_pcode=2109166350&package=0&setpc=0&r=16660895186012",
+          "price": "32600",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1992418112_1992418112&package=0&setpc=0&r=16660895188152",
+          "price": "32620",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000050271766&package=0&setpc=0&r=16660895187846",
+          "price": "32900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "이마트인터넷쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=EE311&safe_trade=4&fee_type=T&link_pcode=1000050271766&package=0&setpc=0&r=16660895181171",
+          "price": "32900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000050271766&package=0&setpc=0&r=16660895189349",
+          "price": "32900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "티몬",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=TN920&safe_trade=4&fee_type=T&link_pcode=7522803950&package=0&setpc=0&r=16660895188818",
+          "price": "32940",
+          "card": "",
+          "shippingCost": "2500"
+        }
+      ],
+      "credit": [
+        {
+          "vendorName": "피시포올",
+          "vendorCode": "PO30C",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PO30C&safe_trade=4&fee_type=A&link_pcode=128312&package=0&setpc=0&r=16660895183359",
+          "price": "31240",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "아이스타피씨",
+          "vendorCode": "PR805",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PR805&safe_trade=4&fee_type=A&link_pcode=5565675679&package=0&setpc=0&r=16660895184167",
+          "price": "31300",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "초이스컴",
+          "vendorCode": "PV606",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PV606&safe_trade=4&fee_type=A&link_pcode=122169&package=0&setpc=0&r=16660895187896",
+          "price": "31450",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "아이티엔조이",
+          "vendorCode": "PP402",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PP402&safe_trade=4&fee_type=A&link_pcode=11541857&package=0&setpc=0&r=16660895186462",
+          "price": "31450",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴투유",
+          "vendorCode": "PO20D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PO20D&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895188372",
+          "price": "31550",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "엔코퍼레이션",
+          "vendorCode": "PR50B",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PR50B&safe_trade=4&fee_type=A&link_pcode=5565675679&package=0&setpc=0&r=16660895186722",
+          "price": "31910",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "수암컴퓨터",
+          "vendorCode": "PU808",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PU808&safe_trade=4&fee_type=A&link_pcode=128408&package=0&setpc=0&r=16660895185091",
+          "price": "32150",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "COM25",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=COM25&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895185129",
+          "price": "33500",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "컴오아시스",
+          "vendorCode": "PV203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PV203&safe_trade=4&fee_type=A&link_pcode=5565675679&package=0&setpc=0&r=16660895185148",
+          "price": "38000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "노트나인",
+          "vendorCode": "PD908",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PD908&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895186195",
+          "price": "49000",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ],
+      "cash": [
+        {
+          "vendorName": "www.myks.co.kr",
+          "vendorCode": "PG126",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PG126&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895181313",
+          "price": "30200",
+          "card": "",
+          "shippingCost": "3300"
+        },
+        {
+          "vendorName": "주식회사 하나컴",
+          "vendorCode": "COMJ7",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=COMJ7&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895183626",
+          "price": "31700",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "PG650",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PG650&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895185956",
+          "price": "32400",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "넷플피씨",
+          "vendorCode": "PG923",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PG923&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895184453",
+          "price": "35000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "한솔컴퓨터",
+          "vendorCode": "PF804",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PF804&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895183581",
+          "price": "37000",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "메모리올",
+          "vendorCode": "PCA04",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PCA04&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895181186",
+          "price": "40000",
+          "card": "",
+          "shippingCost": "2750"
+        },
+        {
+          "vendorName": "아이컴스",
+          "vendorCode": "PKB48",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PKB48&safe_trade=2&fee_type=S&link_pcode=11541857&package=0&setpc=0&r=16660895183461",
+          "price": "43000",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴킬",
+          "vendorCode": "PU301",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PU301&safe_trade=3&fee_type=A&link_pcode=106814&package=0&setpc=0&r=16660895187629",
+          "price": "30200",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "구매가이드",
+          "vendorCode": "PS710",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PS710&safe_trade=3&fee_type=A&link_pcode=49726&package=0&setpc=0&r=16660895185568",
+          "price": "30200",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "다이스",
+          "vendorCode": "PRC10",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PRC10&safe_trade=3&fee_type=A&link_pcode=140092&package=0&setpc=0&r=16660895187876",
+          "price": "30200",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "미라클PC",
+          "vendorCode": "PT602",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PT602&safe_trade=3&fee_type=A&link_pcode=80444&package=0&setpc=0&r=16660895189945",
+          "price": "30200",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴나무",
+          "vendorCode": "PV207",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PV207&safe_trade=3&fee_type=A&link_pcode=122383&package=0&setpc=0&r=16660895185786",
+          "price": "30200",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴튜브",
+          "vendorCode": "PU201",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PU201&safe_trade=3&fee_type=A&link_pcode=122169&package=0&setpc=0&r=16660895185391",
+          "price": "30400",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴센터",
+          "vendorCode": "PV604",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PV604&safe_trade=3&fee_type=A&link_pcode=122169&package=0&setpc=0&r=16660895183124",
+          "price": "30400",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "제이디지탈몰",
+          "vendorCode": "PU827",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PU827&safe_trade=3&fee_type=A&link_pcode=143818&package=0&setpc=0&r=16660895186982",
+          "price": "30890",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "어사컴",
+          "vendorCode": "PRA0F",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PRA0F&safe_trade=3&fee_type=A&link_pcode=5565675679&package=0&setpc=0&r=16660895189951",
+          "price": "30900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "플레이피씨",
+          "vendorCode": "PTB11",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PTB11&safe_trade=3&fee_type=A&link_pcode=137881&package=0&setpc=0&r=16660895187807",
+          "price": "31180",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "타운컴",
+          "vendorCode": "PP901",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PP901&safe_trade=3&fee_type=A&link_pcode=125716&package=0&setpc=0&r=16660895189361",
+          "price": "31210",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "디스컴",
+          "vendorCode": "PO106",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PO106&safe_trade=3&fee_type=A&link_pcode=156543&package=0&setpc=0&r=16660895182434",
+          "price": "31640",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "다올시스템",
+          "vendorCode": "PU211",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PU211&safe_trade=3&fee_type=A&link_pcode=126650&package=0&setpc=0&r=16660895184405",
+          "price": "31800",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "RocketPC",
+          "vendorCode": "PT203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PT203&safe_trade=3&fee_type=A&link_pcode=5565675679&package=0&setpc=0&r=16660895181368",
+          "price": "31900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴베스트",
+          "vendorCode": "PP306",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PP306&safe_trade=3&fee_type=A&link_pcode=166426&package=0&setpc=0&r=16660895186618",
+          "price": "32900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "파란컴",
+          "vendorCode": "PO70D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=11541857&cmpnyc=PO70D&safe_trade=3&fee_type=A&link_pcode=100985&package=0&setpc=0&r=16660895186938",
+          "price": "33000",
+          "card": "",
+          "shippingCost": "4000"
+        }
+      ]
+    },
+    "prices": [
+      {
+        "timestamp": "2022-10-18T10:40:36.975Z",
+        "value": "29205"
+      }
+    ],
+    "updatedAt": "2022-10-18T10:40:36.975Z"
+  },
+  {
+    "_id": "634e819e5f7f75147ef5f882",
+    "name": {
+      "fullName": "삼성전자 DDR4-3200",
+      "tag": "4GB"
+    },
+    "category": "memory",
+    "variants": [
+      "634e819e5f7f75147ef5f87b",
+      "634e819e5f7f75147ef5f87d",
+      "634e819e5f7f75147ef5f87f"
+    ],
+    "sortOrder": 1666137572098,
+    "stock": true,
+    "details": {
+      "제조회사": {
+        "value": "삼성전자",
+        "type": "기본정보"
+      },
+      "등록년월": {
+        "value": "2020년 06월",
+        "type": "기본정보"
+      },
+      "사용 장치": {
+        "value": "데스크탑용",
+        "type": "기본정보"
+      },
+      "제품 분류": {
+        "value": "DDR4",
+        "type": "기본정보"
+      },
+      "메모리 규격": {
+        "value": "Dimm",
+        "type": "기본정보"
+      },
+      "메모리 용량": {
+        "value": "4GB",
+        "type": "기본정보"
+      },
+      "동작클럭(대역폭)": {
+        "value": "3200MHz (PC4-25600)",
+        "type": "기본정보"
+      },
+      "램개수": {
+        "value": "1개",
+        "type": "기본정보"
+      },
+      "히트싱크": {
+        "value": "미포함",
+        "type": "기본정보"
+      }
+    },
+    "vendors": {
+      "openMarket": [
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2392583427&package=0&setpc=0&r=16660895531610",
+          "price": "23570",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C555961539&package=0&setpc=0&r=16660895536453",
+          "price": "23570",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "11번가",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TH201&safe_trade=4&fee_type=T&link_pcode=3952297963&package=0&setpc=0&r=16660895537173",
+          "price": "23670",
+          "card": "신한카드",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "인터파크",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED910&safe_trade=4&fee_type=T&link_pcode=8011275097&package=0&setpc=0&r=16660895539916",
+          "price": "23840",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2283756369&package=0&setpc=0&r=16660895536898",
+          "price": "23890",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "옥션",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE715&safe_trade=4&fee_type=T&link_pcode=C659052057&package=0&setpc=0&r=16660895533826",
+          "price": "23900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "쿠팡",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TP40F&safe_trade=4&fee_type=T&link_pcode=P5760085928&package=0&setpc=0&r=16660895532037",
+          "price": "24200",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "가이드컴",
+          "vendorCode": "TT4450",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TT4450&safe_trade=4&fee_type=N&link_pcode=5343776656&package=0&setpc=0&r=16660895536137",
+          "price": "24230",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "롯데ON",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE309&safe_trade=4&fee_type=T&link_pcode=LO1480965883&package=0&setpc=0&r=16660895533560",
+          "price": "24320",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "롯데ON",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE309&safe_trade=4&fee_type=T&link_pcode=LO1451900273&package=0&setpc=0&r=16660895535740",
+          "price": "24330",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "11번가",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TH201&safe_trade=4&fee_type=T&link_pcode=3519771487&package=0&setpc=0&r=16660895537355",
+          "price": "24380",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "피씨사자",
+          "vendorCode": "TV41E8",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TV41E8&safe_trade=4&fee_type=N&link_pcode=6567606031&package=0&setpc=0&r=16660895535602",
+          "price": "24390",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "샵다나와",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TNB0E&safe_trade=4&fee_type=T&link_pcode=23569015&package=0&setpc=0&r=16660895539743",
+          "price": "24410",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "인터파크",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED910&safe_trade=4&fee_type=T&link_pcode=8714738913&package=0&setpc=0&r=16660895535756",
+          "price": "24490",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "인터파크",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED910&safe_trade=4&fee_type=T&link_pcode=10026957482&package=0&setpc=0&r=16660895537629",
+          "price": "24490",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "11번가",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TH201&safe_trade=4&fee_type=T&link_pcode=3284147304&package=0&setpc=0&r=16660895535485",
+          "price": "24610",
+          "card": "신한카드",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "드래곤컴퓨터",
+          "vendorCode": "TV6133",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TV6133&safe_trade=4&fee_type=N&link_pcode=6809332595&package=0&setpc=0&r=16660895532209",
+          "price": "24620",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴센터",
+          "vendorCode": "TT347F",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TT347F&safe_trade=4&fee_type=N&link_pcode=5484766257&package=0&setpc=0&r=16660895531641",
+          "price": "24620",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴튜브",
+          "vendorCode": "TU511D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TU511D&safe_trade=4&fee_type=N&link_pcode=5436415312&package=0&setpc=0&r=16660895539345",
+          "price": "24620",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "롯데ON",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE309&safe_trade=4&fee_type=T&link_pcode=LO1468213953&package=0&setpc=0&r=16660895534499",
+          "price": "24700",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "인터파크",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED910&safe_trade=4&fee_type=T&link_pcode=7868988593&package=0&setpc=0&r=16660895535880",
+          "price": "24800",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "쿠팡",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TP40F&safe_trade=4&fee_type=T&link_pcode=P5165078775&package=0&setpc=0&r=16660895534342",
+          "price": "24850",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "인터파크",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED910&safe_trade=4&fee_type=T&link_pcode=9169399109&package=0&setpc=0&r=16660895536284",
+          "price": "24850",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "베이스캠프샵",
+          "vendorCode": "TT61F6",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TT61F6&safe_trade=4&fee_type=N&link_pcode=6053154573&package=0&setpc=0&r=16660895539807",
+          "price": "24860",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "인터파크",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED910&safe_trade=4&fee_type=T&link_pcode=7854654440&package=0&setpc=0&r=16660895534554",
+          "price": "24890",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "롯데ON",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE309&safe_trade=4&fee_type=T&link_pcode=LO1712814016&package=0&setpc=0&r=16660895538793",
+          "price": "25100",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "롯데ON",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE309&safe_trade=4&fee_type=T&link_pcode=LO1595345632&package=0&setpc=0&r=16660895539166",
+          "price": "25190",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "엠지컴퓨터",
+          "vendorCode": "TT8185",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TT8185&safe_trade=4&fee_type=N&link_pcode=5538976796&package=0&setpc=0&r=16660895536521",
+          "price": "25240",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "디스컴시스템",
+          "vendorCode": "TUB242",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TUB242&safe_trade=4&fee_type=N&link_pcode=6479245207&package=0&setpc=0&r=16660895533233",
+          "price": "25280",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "G마켓",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE128&safe_trade=4&fee_type=T&link_pcode=2510161301&package=0&setpc=0&r=16660895536312",
+          "price": "25480",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ],
+      "mall": [
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1990465274_1990465274&package=0&setpc=0&r=16660895538766",
+          "price": "24450",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1698333745_1698333745&package=0&setpc=0&r=16660895536145",
+          "price": "24560",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1818692052_1818692052&package=0&setpc=0&r=16660895532641",
+          "price": "24740",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000062854813&package=0&setpc=0&r=16660895533476",
+          "price": "25111",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "하이마트 쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TJ418&safe_trade=4&fee_type=T&link_pcode=0013378405&package=0&setpc=0&r=16660895535717",
+          "price": "25340",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000060073294&package=0&setpc=0&r=16660895533756",
+          "price": "25360",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000060073418&package=0&setpc=0&r=16660895534804",
+          "price": "25360",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000060073294&package=0&setpc=0&r=16660895539935",
+          "price": "25360",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000062854813&package=0&setpc=0&r=16660895531502",
+          "price": "25623",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000289117466&package=0&setpc=0&r=16660895532591",
+          "price": "26500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000289117539&package=0&setpc=0&r=16660895532035",
+          "price": "26500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "이마트인터넷쇼핑몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=EE311&safe_trade=4&fee_type=T&link_pcode=1000289117539&package=0&setpc=0&r=16660895534168",
+          "price": "26500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000289117466&package=0&setpc=0&r=16660895535919",
+          "price": "26500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1602509683_1602509683&package=0&setpc=0&r=16660895533625",
+          "price": "26580",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000100809809&package=0&setpc=0&r=16660895531969",
+          "price": "27090",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "위메프",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN729&safe_trade=4&fee_type=T&link_pcode=1702338212_1702338212&package=0&setpc=0&r=16660895538997",
+          "price": "27300",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000093729144&package=0&setpc=0&r=16660895532785",
+          "price": "27450",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000064735476&package=0&setpc=0&r=16660895536216",
+          "price": "27568",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "신세계몰",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=ED901&safe_trade=4&fee_type=T&link_pcode=1000093729144&package=0&setpc=0&r=16660895537868",
+          "price": "28010",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "SSG.COM",
+          "vendorCode": "",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=TN118&safe_trade=4&fee_type=T&link_pcode=1000405656584&package=0&setpc=0&r=16660895532880",
+          "price": "28050",
+          "card": "",
+          "shippingCost": "3000"
+        }
+      ],
+      "credit": [
+        {
+          "vendorName": "초이스컴",
+          "vendorCode": "PV606",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PV606&safe_trade=4&fee_type=A&link_pcode=130548&package=0&setpc=0&r=16660895539641",
+          "price": "23540",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "피시포올",
+          "vendorCode": "PO30C",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PO30C&safe_trade=4&fee_type=A&link_pcode=128319&package=0&setpc=0&r=16660895532147",
+          "price": "23670",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "엔코퍼레이션",
+          "vendorCode": "PR50B",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PR50B&safe_trade=4&fee_type=A&link_pcode=5565683774&package=0&setpc=0&r=16660895539090",
+          "price": "23730",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "아이티엔조이",
+          "vendorCode": "PP402",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PP402&safe_trade=4&fee_type=A&link_pcode=13122602&package=0&setpc=0&r=16660895531355",
+          "price": "23870",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴투유",
+          "vendorCode": "PO20D",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PO20D&safe_trade=2&fee_type=S&link_pcode=13122602&package=0&setpc=0&r=16660895538594",
+          "price": "24120",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "아이스타피씨",
+          "vendorCode": "PR805",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PR805&safe_trade=4&fee_type=A&link_pcode=5565683774&package=0&setpc=0&r=16660895534396",
+          "price": "24900",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "COM25",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=COM25&safe_trade=2&fee_type=S&link_pcode=13122602&package=0&setpc=0&r=16660895536798",
+          "price": "25000",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "컴오아시스",
+          "vendorCode": "PV203",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PV203&safe_trade=4&fee_type=A&link_pcode=5565683774&package=0&setpc=0&r=16660895537098",
+          "price": "30400",
+          "card": "",
+          "shippingCost": "2500"
+        }
+      ],
+      "cash": [
+        {
+          "vendorName": "www.myks.co.kr",
+          "vendorCode": "PG126",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PG126&safe_trade=2&fee_type=S&link_pcode=13122602&package=0&setpc=0&r=16660895538944",
+          "price": "20000",
+          "card": "",
+          "shippingCost": "3300"
+        },
+        {
+          "vendorName": "근호컴",
+          "vendorCode": "PG650",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PG650&safe_trade=2&fee_type=S&link_pcode=13122602&package=0&setpc=0&r=16660895535392",
+          "price": "24200",
+          "card": "",
+          "shippingCost": "2700"
+        },
+        {
+          "vendorName": "주식회사 하나컴",
+          "vendorCode": "COMJ7",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=COMJ7&safe_trade=2&fee_type=S&link_pcode=13122602&package=0&setpc=0&r=16660895533172",
+          "price": "24300",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "메모리올",
+          "vendorCode": "PCA04",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PCA04&safe_trade=2&fee_type=S&link_pcode=13122602&package=0&setpc=0&r=16660895538832",
+          "price": "27500",
+          "card": "",
+          "shippingCost": "2750"
+        },
+        {
+          "vendorName": "컴튜브",
+          "vendorCode": "PU201",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PU201&safe_trade=3&fee_type=A&link_pcode=130548&package=0&setpc=0&r=16660895535068",
+          "price": "22600",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴센터",
+          "vendorCode": "PV604",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PV604&safe_trade=3&fee_type=A&link_pcode=130548&package=0&setpc=0&r=16660895534114",
+          "price": "22600",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "컴킬",
+          "vendorCode": "PU301",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PU301&safe_trade=3&fee_type=A&link_pcode=106819&package=0&setpc=0&r=16660895538451",
+          "price": "22700",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "제이디지탈몰",
+          "vendorCode": "PU827",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PU827&safe_trade=3&fee_type=A&link_pcode=155326&package=0&setpc=0&r=16660895531046",
+          "price": "23170",
+          "card": "",
+          "shippingCost": "2500"
+        },
+        {
+          "vendorName": "플레이피씨",
+          "vendorCode": "PTB11",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PTB11&safe_trade=3&fee_type=A&link_pcode=143046&package=0&setpc=0&r=16660895537567",
+          "price": "23180",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "미라클PC",
+          "vendorCode": "PT602",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PT602&safe_trade=3&fee_type=A&link_pcode=83973&package=0&setpc=0&r=16660895533559",
+          "price": "23300",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "어사컴",
+          "vendorCode": "PRA0F",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PRA0F&safe_trade=3&fee_type=A&link_pcode=5565683774&package=0&setpc=0&r=16660895531649",
+          "price": "23500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "컴나무",
+          "vendorCode": "PV207",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PV207&safe_trade=3&fee_type=A&link_pcode=122741&package=0&setpc=0&r=16660895534283",
+          "price": "23500",
+          "card": "",
+          "shippingCost": "3000"
+        },
+        {
+          "vendorName": "디스컴",
+          "vendorCode": "PO106",
+          "url": "https://prod.danawa.com/bridge/loadingBridge.html?cate1=861&cate2=874&cate3=56243&cate4=0&pcode=13122602&cmpnyc=PO106&safe_trade=3&fee_type=A&link_pcode=168248&package=0&setpc=0&r=16660895539008",
+          "price": "23510",
+          "card": "",
+          "shippingCost": "2500"
+        }
+      ]
+    },
+    "prices": [
+      {
+        "timestamp": "2022-10-18T10:40:36.975Z",
+        "value": "20000"
+      }
+    ],
+    "updatedAt": "2022-10-18T10:40:36.975Z"
+  }
+]

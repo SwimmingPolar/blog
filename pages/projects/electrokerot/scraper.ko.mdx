@@ -6,11 +6,19 @@ keywords: '프로젝트, 프론트엔드, 백엔드, 서버, DB, react, nest.js,
 
 # Electrokerot 스크래퍼
 
-import { Tree, Folder, File, Screenshot, Video } from '@/components'
+import {
+  JsonFormatter,
+  Tree,
+  Folder,
+  File,
+  Screenshot,
+  Video
+} from '@/components'
 
 import InfraScreenshot from '/public/pages/projects/electrokerot/scraper/infra.png'
 import FlowChartScreenshot from '/public/pages/projects/electrokerot/scraper/flowchart.png'
 import ScraperStructureScreenshot from '/public/pages/projects/electrokerot/scraper/scraper-structure.png'
+import '@code-hike/mdx/dist/index.css'
 
 ## 1. 스크래퍼 인프라
 
@@ -89,10 +97,115 @@ Scraper에서 받은 요청을 Crawler로 보내고, 그 응답을 가지고 db�
 `Updater`와 `Crawler`가 현재 상태에서 한 번에 처리할 수 있는 요청도 정해져 있기 때문에,
 해당 비율에 따라 인스턴스 수를 조절하는 것이 효율적이다.
 
-## 3. 기타 세부 사항
+## 3. 실행 방법
+
+스크래퍼는 총 다음과 같은 프로세스가 실행되어야 한다.
+
+- MongoDB
+- Redis
+- Scraper
+- Updater
+- Crawler
+- Tor
+
+이렇게 동시에 실행해야 하는 프로세스들이 많기 때문에 하나하나 실행하기에는 번거로웠다.
+그래서 스크립트를 통해 한 번에 실행할 수 있도록 만들었다.
 
 <details>
-  <summary>기타 세부 사항</summary>
+  <summary>build-push-deploy.sh</summary>
+
+```sh build-push-deploy.sh
+  #! /bin/bash
+
+  # check local registry status
+  wget --no-verbose --tries=1 --spider 127.0.0.1:5000/v2/_catalog > /dev/null 2>&1
+  if [ $? -eq 4 ]; then
+    echo " - Creating local registry service"
+    docker service create --name registry --publish 5000:5000 registry:2 2>/dev/null
+
+    if [ $? -ne 0 ]; then
+      echo "Failed to create local registry"
+      exit 1
+    fi
+  fi
+
+  # build images
+  echo " - Building images"
+  docker compose build 2>/dev/null
+  if [ $? -ne 0 ]; then
+    echo "Build failed"
+    exit 1
+  fi
+
+  # push images
+  echo " - Pushing images"
+  docker compose push 2>/dev/null
+  if [ $? -ne 0 ]; then
+    echo "Push failed"
+    exit 1
+  fi
+
+  # init docker swarm
+  echo " - Initializing docker swarm"
+  docker swarm init > /dev/null 2>/dev/null
+  if [[ $? != 0 && $? != 1 ]]; then
+    echo "Swarm init failed"
+    exit 1
+  fi
+
+  SERVICE_NAME=collector
+  # deploy services
+  echo " - Deploying services under stack name: $SERVICE_NAME"
+  docker stack deploy -c docker-compose.yml $SERVICE_NAME 2>/dev/null
+  if [ $? -ne 0 ]; then
+    echo "Deploy failed"
+    exit 1
+  fi
+  echo " - Deployment completed"
+
+  IFS=
+  echo "Press Enter to check service status"
+  read -s -n 1 key
+  if [[ $key = "" ]]; then
+    watch -n 1 docker stack services $SERVICE_NAME
+  fi
+```
+
+</details>
+
+import ScraperDeployScreenshot from '/public/pages/projects/electrokerot/scraper/scraper-deploy.png'
+import ScraperStatsScreenshot from '/public/pages/projects/electrokerot/scraper/scraper-stats.png'
+import ScraperStandbyScreenshot from '/public/pages/projects/electrokerot/scraper/scraper-standby.png'
+
+<details>
+<summary>실행 과정</summary>
+
+**실행**
+
+<Screenshot alt="실행" src={ScraperDeployScreenshot} />
+
+**상태**
+
+<Screenshot alt="상태" src={ScraperStatsScreenshot} />
+
+**대기**
+
+<Screenshot alt="대기" src={ScraperStandbyScreenshot} />
+
+<br />
+
+</details>
+
+<details>
+<summary>데이터</summary>
+
+<JsonFormatter />
+</details>
+
+## 4. 기타 세부 사항
+
+<details>
+<summary>기타 세부 사항</summary>
 
 **스크래핑 속도 조절**
 
