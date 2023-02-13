@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { useSwr } from '@/hooks'
+import { useLocalStorage, useSwr } from '@/hooks'
 
 export type ContactData = {
   names: {
@@ -13,6 +13,7 @@ export type ContactData = {
 }
 
 export const useLoadContact = () => {
+  const { localStorage } = useLocalStorage()
   // Contact data
   const [contact, setContact] = useState<ContactData | null>(null)
   // Set the short token if it exists in localStorage
@@ -28,7 +29,7 @@ export const useLoadContact = () => {
     // This will render the ReCapcha component
     setToken(null)
     // Remove the token from the localStorage
-    global?.localStorage?.removeItem('token')
+    localStorage?.removeItem('token')
   }
 
   const handleTokenChange = useCallback((token: string | null) => {
@@ -37,7 +38,7 @@ export const useLoadContact = () => {
 
   // Set the token on the localStorage on mount
   useEffect(() => {
-    const token = global?.localStorage?.getItem('token')
+    const token = localStorage?.getItem('token')
     if (token) {
       setToken(token)
     }

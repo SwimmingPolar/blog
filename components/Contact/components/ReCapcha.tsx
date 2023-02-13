@@ -8,7 +8,7 @@ import {
   useState
 } from 'react'
 import ReCAPTCHA from 'react-google-recaptcha'
-import { useSwr } from '@/hooks'
+import { useLocalStorage, useSwr } from '@/hooks'
 
 type ReCapchaProps = {
   handleClose: () => void
@@ -16,6 +16,7 @@ type ReCapchaProps = {
 }
 
 export const ReCapcha = ({ handleClose, handleTokenChange }: ReCapchaProps) => {
+  const { localStorage } = useLocalStorage()
   const [recapchaToken, setRecapchaToken] = useState<string | null>(null)
 
   const ref = useRef<ReCAPTCHA>(null)
@@ -38,7 +39,7 @@ export const ReCapcha = ({ handleClose, handleTokenChange }: ReCapchaProps) => {
       // Set the token so that the contact info can be fetched
       handleTokenChange(data?.token)
       // Save the token to the localStorage
-      global?.localStorage?.setItem('token', data?.token)
+      localStorage?.setItem('token', data?.token)
       // Close the modal
       handleClose()
     }
@@ -48,7 +49,7 @@ export const ReCapcha = ({ handleClose, handleTokenChange }: ReCapchaProps) => {
   if (error) {
     console.log('reset')
     handleTokenChange(null)
-    global?.localStorage?.removeItem('token')
+    localStorage?.removeItem('token')
     // Close the modal
   }
 
