@@ -19,6 +19,5 @@
 }
 
 .small-carrot {
-  transition: transform 0.1s ease-in-out;
   transform: scale(1.25);
 }

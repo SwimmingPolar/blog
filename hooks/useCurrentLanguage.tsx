@@ -1,11 +1,11 @@
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
 
-type SupportedLanguage = "en" | "ko";
+type SupportedLanguage = 'en' | 'ko'
 
-type UseCurrentLanguage = Record<SupportedLanguage, string>;
+type UseCurrentLanguage = Record<SupportedLanguage, string>
 
 export const useCurrentLanguage = (props: UseCurrentLanguage) => {
-  const router = useRouter();
-  const language = (router.locale ? router.locale : "ko") as SupportedLanguage;
-  return props[language];
-};
+  const router = useRouter()
+  const language = (router.locale ? router.locale : 'ko') as SupportedLanguage
+  return props?.[language] ?? undefined
+}

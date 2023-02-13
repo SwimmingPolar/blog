@@ -18,7 +18,7 @@
   pointer-events: none;
   user-select: none;
   background-color: white;
-  background-image: url('../../public/home-banner.jpg');
+  background-image: url('../../public/pages/home/home-banner.jpg');
   background-position-x: right;
   background-position-y: bottom;
   background-repeat: no-repeat;

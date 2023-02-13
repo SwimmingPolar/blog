@@ -12,7 +12,9 @@ const withNextra = nextra({
   },
   defaultShowCopyCode: true,
   mdxOptions: {
-    remarkPlugins: [[remarkCodeHike, { theme, lineNumbers: true }]]
+    remarkPlugins: [
+      [remarkCodeHike, { theme, lineNumbers: true, showCopyButton: true }]
+    ]
   }
 })
 
@@ -22,12 +24,17 @@ module.exports = withNextra({
     locales: ['ko', 'en'],
     defaultLocale: 'ko'
   },
-  reactStrictMode: true,
   eslint: {
     // Eslint behaves weirdly in this monorepo.
     ignoreDuringBuilds: true
   },
   compiler: {
     styledComponents: true
+  },
+  env: {
+    RECAPCHA_SITE_KEY: process.env.RECAPCHA_SITE_KEY,
+    RECAPCHA_BACKEND_KEY: process.env.RECAPCHA_BACKEND_KEY,
+    CONTACT: process.env.CONTACT,
+    FIREBASE_SECRET_KEY: process.env.FIREBASE_SECRET_KEY
   }
 })

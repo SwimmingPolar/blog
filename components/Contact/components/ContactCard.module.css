@@ -1,0 +1,77 @@
+.blur {
+  filter: blur(3px);
+  cursor: default;
+}
+
+.small-header {
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Noto Sans Kr', sans-serif;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  width: fit-content;
+  padding: 0px 15px;
+  text-shadow: 0 1px 0px rgb(255 255 255 / 10%);
+  margin-bottom: 2rem;
+  user-select: none;
+  pointer-events: none;
+}
+() => handleCopy(phone)
+.content {
+  margin-left: 5%;
+}
+
+.name {
+  font-size: 2.25rem;
+  font-family: 'Noto Sans Kr', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  user-select: none;
+  pointer-events: none;
+  width: fit-content;
+}
+.name.blur {
+  filter: blur(7px);
+}
+
+.age {
+  font-size: 0.75rem;
+  margin-bottom: 1.25rem;
+  user-select: none;
+  pointer-events: none;
+  width: fit-content;
+}
+
+.contact-list {
+  padding-bottom: 10px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-right: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  width: fit-content;
+  user-select: none;
+}
+
+.img.blur {
+  filter: blur(2px);
+}
+.img.revealed {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.revealed {
+  cursor: pointer;
+  pointer-events: auto;
+}
