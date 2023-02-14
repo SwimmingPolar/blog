@@ -1,6 +1,6 @@
-import { useRenderOnHome } from '@/hooks'
+import { usePathname } from '@/hooks'
 import Image from 'next/image'
-import { useEffect, useRef } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import styles from './index.module.css'
 import carrotSvg from '/public/carrot.svg'
 import { throttle } from 'lodash'
@@ -8,7 +8,8 @@ import { throttle } from 'lodash'
 export const Logo = () => {
   const boxRef = useRef<HTMLImageElement>(null)
   const carrotRef = useRef<HTMLImageElement>(null)
-  const isOnHome = useRenderOnHome()
+  const { currentPath } = usePathname()
+  const isHome = useMemo(() => currentPath === 'home', [currentPath])
 
   useEffect(() => {
     // Scroll event bound position controlling often makes
@@ -24,14 +25,14 @@ export const Logo = () => {
       const containerTop = container?.getBoundingClientRect().top ?? 1
       const isSticked = containerTop === 0
 
-      if (isOnHome && isSticked) {
+      if (isHome && isSticked) {
         carrotRef.current.classList.add(styles['small-carrot'])
       } else {
         carrotRef.current.classList.remove(styles['small-carrot'])
       }
     })
 
-    if (isOnHome) {
+    if (isHome) {
       ;['scroll', 'resize'].forEach(event => {
         window.addEventListener(event, handleScroll)
       })
@@ -41,7 +42,7 @@ export const Logo = () => {
         window.removeEventListener(event, handleScroll)
       })
     }
-  }, [isOnHome])
+  }, [isHome])
 
   return (
     <div ref={boxRef} className={styles.box}>
@@ -50,8 +51,7 @@ export const Logo = () => {
         src={carrotSvg}
         alt="carrot"
         className={
-          (isOnHome ? styles['large-carrot'] : styles['small-carrot']) +
-          ' carrot'
+          (isHome ? styles['large-carrot'] : styles['small-carrot']) + ' carrot'
         }
         ref={carrotRef}
       />

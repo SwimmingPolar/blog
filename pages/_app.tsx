@@ -1,32 +1,21 @@
 import { HomeBanner } from '@/components'
-import { useRenderOnHome } from '@/hooks'
+import { useMarkPathname } from '@/hooks'
 import { AppProps } from 'next/app'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Analytics } from '@vercel/analytics/react'
 
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }: AppProps) {
-  const isOnHome = useRenderOnHome()
+  // Return locale and route and
+  // mark them on the root element
+  const { currentPath } = useMarkPathname()
 
-  // When on home page, show the footer at the bottom
-  useEffect(() => {
-    // Content container
-    const container = document.querySelector('#__next div[dir="ltr"]')
-    if (isOnHome) {
-      container?.classList.add('home')
-    }
-
-    return () => {
-      if (isOnHome) {
-        container?.classList.remove('home')
-      }
-    }
-  }, [isOnHome])
+  const isHome = useMemo(() => currentPath === 'home', [currentPath])
 
   return (
     <>
-      {isOnHome ? <HomeBanner /> : null}
+      {isHome ? <HomeBanner /> : null}
       <Component {...pageProps} />
       <Analytics />
     </>
