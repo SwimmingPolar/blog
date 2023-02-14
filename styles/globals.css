@@ -38,3 +38,8 @@ div[dir='ltr'].home .nextra-banner-container {
 div[dir='ltr'].home .nextra-sidebar-container {
   z-index: 17;
 }
+
+/* Hide banner on korean page */
+div[dir='ltr'].ko .nextra-banner-container {
+  display: none;
+}

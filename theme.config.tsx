@@ -147,11 +147,11 @@ const config: DocsThemeConfig = {
     text: '2023 © YDH - 🎉 Sometimes it just happens'
   },
   banner: {
-    key: 'nextra-video-bug',
+    key: 'banner-english-translation-on-progress',
     text: () => {
       const text = useCurrentLanguage({
-        ko: '현재 동영상은 Nextra 버그 때문에 다음 패치까지 재생되지 않습니다. 🙏',
-        en: `I'm currently working on English translations. 🙏`
+        ko: '',
+        en: `English translation is on progress 🙏`
       })
       return <>{text}</>
     }
