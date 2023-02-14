@@ -45,7 +45,7 @@ export const Logo = () => {
 
   return (
     <div ref={boxRef} className={styles.box}>
-      <h3 className={styles['logo-text']}>DONG HEON</h3>
+      <h3 className={styles['logo-text']}>YDH</h3>
       <Image
         src={carrotSvg}
         alt="carrot"
