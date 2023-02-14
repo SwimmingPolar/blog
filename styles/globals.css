@@ -42,4 +42,8 @@ div[dir='ltr'].home .nextra-sidebar-container {
 /* Hide banner on korean page */
 div[dir='ltr'].ko .nextra-banner-container {
   display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  top: -9999px;
 }
