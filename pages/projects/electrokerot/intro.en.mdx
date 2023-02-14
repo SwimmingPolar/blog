@@ -1,0 +1,846 @@
+---
+title: ElectroKerot Intro.
+description: ElectroKerot Project Review - Intro.
+keywords: 'project, frontend, backend, server, db, react, nest.js, next.js, docker, scraping, portfolio'
+---
+
+import { Tree, Folder, File, Screenshot, Video } from '@/components'
+import '@code-hike/mdx/dist/index.css'
+
+# ElectroKerot Intro.
+
+## 1. Concepts Behind
+
+When building a personal computer, there are few options in Korea, such as
+`Danawa`, `Happy Shopping`, and `CompuZone`. Personally, I often buy parts from
+`Danawa`, and they have different prices for card and cash. The price varies
+depending on the payment method, and the lowest price is mostly paid via
+cash. However, if you choose the lowest price for each part, the total price
+usually goes up.
+
+This is because the prices vary slightly from store to store, and shipping
+costs are added to each part even though they are the same vendors. To solve
+this, you can group each part into smaller groups, taking into account the
+lowest price and shipping costs, and individually select the group that offers
+the potentially lowest price. If you buy parts individually from the group that
+offers the potentially lowest price, you can expect a price difference of up
+to 10% to 15%. The average personal computer costs between $700 and $1500,
+that's quite a lot to save.
+
+I wanted to create a service that would provide the lowest price without
+doing such wasteful and repetitive calculations.
+
+## 2. Detailed Concepts
+
+When I started planning, I didn't know what was possible and what wasn't,
+so I planned as many features as possible. The scope of features in a project
+often constantly expands as time goes, so I tried to think of as many
+possibilities as possible from the beginning and proceeded with planning
+in a way that gradually reduces them.
+
+**Concept**
+
+It's a service with community features that evolve around data called <b>`parts`</b>.
+Parts can be aggregated to create another piece of data called <b>`builds`</b>. It can be
+optimized to make it the lowest cost. You can also review and share parts and builds.
+
+<Tree>
+  <Folder name="Initial Concepts Planned" defaultOpen>
+    <Folder name="Parts/Builds Features" defaultOpen>
+      <File name="Parts filter" />
+      <File name="Parts comparison" />
+      <File name="Builds comparison" />
+      <File name="Builds live link share" />
+      <File name="Compatibilities check" />
+    </Folder>
+    <Folder name="Community Features" defaultOpen>
+      <File name="Builds Feed" />
+      <File name="Recruit nearby builder" />
+      <File name="Write with a build" />
+      <File name="Search a build" />
+      <File name="Review a build" />
+      <File name="Review a part" />
+      <File name="Contribute to parts compatibilities check" />
+    </Folder>
+  </Folder>
+</Tree>
+
+### 2.1 Featuers Manifest
+
+import FeatureScreenshot1 from '/public/pages/projects/electrokerot/intro/features-1.png'
+import FeatureScreenshot2 from '/public/pages/projects/electrokerot/intro/features-2.png'
+
+<details>
+  <summary>Features Manifest</summary>
+
+  <a href="https://docs.google.com/spreadsheets/d/196G_DE5IRNsc88Js4wjGy93mHLVd_W_XJ6hn0z9BYy4/edit?usp=sharing" target="_blank">
+    <Screenshot src={FeatureScreenshot1} alt="Features Manifest 1" caption="Features Manifest 1"/>
+    <Screenshot src={FeatureScreenshot2} alt="Features Manifest 2" caption="Features Manifest 2"/>
+  </a>
+  <br/>
+</details>
+
+**Builds Features**
+
+import PartFilterAScreenshot from '/public/pages/projects/electrokerot/intro/part-filter-1.png'
+import PartFilterBScreenshot from '/public/pages/projects/electrokerot/intro/part-filter-2.png'
+import SearchResultScreenshot from '/public/pages/projects/electrokerot/intro/search-result-1.png'
+
+<details>
+  <summary>Parts filter</summary>
+  Should be able to filter parts by name, tag and details
+
+<div className="flex flex-row gap-5">
+  <Screenshot alt="Parts Filter A" src={PartFilterAScreenshot} />
+  <Screenshot alt="Parts Filter B" src={PartFilterBScreenshot} />
+</div>
+
+    - Should be able to process synonyms. (samsung, semsung)
+
+<Screenshot
+  alt="Search Result"
+  src={SearchResultScreenshot}
+  caption="Search Result"
+/>
+
+    - Should be able to filter by part name and its tag (name: DDR4, tag: 4GB,8GB,...)
+    - Should be able to share filters by url (query, page, selected filters)
+    - Should be persisted internally
+
+<br />
+
+</details>
+
+import SelectPartsScreenshot from '/public/pages/projects/electrokerot/intro/select-parts.png'
+import ComparePartsScreenshot from '/public/pages/projects/electrokerot/intro/compare-parts.png'
+
+<details>
+  <summary>Parts Comparison</summary>
+  Should be able to compare selected parts in the parts list. Due to viewport 
+  limits, parts can be selected up to three and can be shared via URL. The 
+  user can access the comparison component by url rather than toggling state internally.
+
+<div className="flex flex-row gap-5">
+  <Screenshot alt="Select Parts to Compare" src={SelectPartsScreenshot} />
+  <Screenshot alt="Compare Parts" src={ComparePartsScreenshot} />
+</div>
+<br />
+</details>
+
+import CompareBuilds from '/public/pages/projects/electrokerot/intro/compare-builds.png'
+
+<details>
+  <summary>Builds Comparison</summary>
+  Price optimization can be performed during the comparison. Due to viewports 
+  limits, builds can be selected up to three  and can be shared via URL. Status
+  This should be implemented by using a URL to compare, not a toggle. The 
+  user can access the comparison component by url rather than toggling state internally.
+
+<Screenshot alt="Compare Builds" src={CompareBuilds} />
+<br/>
+</details>
+
+<details>
+  <summary>Builds Live Link Share</summary>
+  If the quote holder makes changes to the quote, the changes are propagated over
+  the socket. People viewing that live link can see the changes in real time. And
+  get quick feedback when seeking build advices.
+</details>
+
+<details>
+  <summary>Compatibilities Check</summary>
+  When selecting a part, it will do a basic compatibility check. Filtering out incompatible
+  parts. Automatically apply a filter per part to filter out incompatible parts.
+  This feature needs second opinion and be evaluted if it's necessary. This can be
+  annoying in some ways, as it automatically applies the filter rather than allowing
+  the user to select it.
+</details>
+
+**Community Features**
+
+import InstagramScreenshot from '/public/pages/projects/electrokerot/intro/instagram.png'
+import BuildsggScreenshot from '/public/pages/projects/electrokerot/intro/buildsgg.png'
+
+<details>
+  <summary>Builds Feed</summary>
+  Show case your customized computer with a quote as easily as your Instagram feed.
+
+<div className="flex flex-row justify-between gap-5">
+  <Screenshot alt="instagram" src={InstagramScreenshot} caption="instagram" />
+  <Screenshot alt="buildsgg" src={BuildsggScreenshot} caption="buildsgg" />
+</div>
+<br />
+</details>
+
+<details>
+  <summary>Recruit nearby builder</summary>
+  Like many neighborhood-targeted platforms, you can get someone to build near your
+  home. There aren't so much user friendly computer communities, so with this feature,
+  people can easiliy find someone to build it for themselves, and ask questions if
+  they run into problems their computer or builds.
+</details>
+
+<details>
+  <summary>Write with a build</summary>
+  People can attach a saved build to a post. The author can share the build and people
+  can rate the build. There will be new data association between builds and posts
+  and the post's comments. This allows other features to be implemented as well.
+</details>
+
+<details>
+  <summary>Search a build</summary>
+  With the data generated by the previously implemented `Write with a build`, we can implement a search function.
+
+    - Do not search for exactly matching build rather sparsely match the build.
+    - Search for approximate builds that include core parts.
+    - On the part detail page, you can see the posts related to the part
+
+</details>
+
+<details>
+  <summary>Review a part</summary>
+  Review a part.
+
+    - Do I want everyone to be able to review even without credentials?
+    - Should we only allow reviews for people who have enabled the build showcase?
+    - Need second thought about this feature
+
+</details>
+
+<details>
+  <summary>견적서 평가하기</summary>
+  견적서를 평가받을 때, `이륙`이라는 단어를 쓰는데, 구매해도 좋다는 의미이다.
+  `견적서와 함께 글쓰기`에서 쓰인 글에서 `이륙`을 누르면, 해당 견적서가 문제가 없고
+  구성에 동의한다는 의미이다. `이륙`을 누르면, 해당 견적서의 `이륙` 수가 올라간다.
+
+`이륙` 외에도 `이륙허가 중`, `이륙`, `순항 중`, `격추`, `착륙` 등등 고려해봐도 될 듯
+
+</details>
+<details>
+  <summary>호환성 검사 기능 기여하기</summary>
+  부품의 호환성은 대개 `부품`이 가진 정보를 토대로, 대략적으로 검사할 수 있다.
+  CPU의 소켓이 `LGA 1151`이고, 메인보드의 소켓이 `LGA 1151`이면 호환성이 있다.
+  이렇게 `소켓`끼리 검사하기는 쉽다. 하지만 대략적인 검사이기 때문에,
+  어떤 `쿨러`와 어떤 `케이스`가 호환이 되는지는 알 수 없을 수 있다.
+  이런 부분을 해결하기 위해, 사용자가 어떤 부품들끼리 호환이 되는지 안 되는지에
+  대한 정보를 제공해주는 기능이 필요하다.
+</details>
+
+## 3. 개발 진행
+
+기획 당시, 작성한 기능 중 현재의 내가 구현할 수 있는지 불가능한지 그 여부를 모르는 부분도 많았고,
+기술적으로 구현 가능한지 모르는 부분도 많았기 때문에, 실제 개발에 들어가기 전에 기술적으로
+구현이 가능한지 불가능한지를 파악하는 것을 선행했다.
+
+`견적서 자랑 피드`에서는 무한 스크롤로 피드를 불러오는데, 이때 생각한 피드는 아무리 많이 내려도
+최적화된 상태를 유지해야 한다고 생각했기에 `virtualized window` 같은 기술을 사용해야 했다.
+`react-virtualized`를 통해 간단하게 구현을 해봤지만, 해당 라이브러리에 대한 지원이 끊겼고
+버그도 많아 문제가 많았었다. 데모를 만들어봤지만 `DX`가 너무 별로기도 하고 라이브러리
+전반적으로 실제로 사용하기에는 무리가 있었기 때문에 다른 방법을 찾아야 했다.
+
+대략적인 구현은 되어있지만, 안정성 문제로 다른 라이브러리를 찾아야 했다. ([Virtuoso](https://virtuoso.dev/))
+
+<Video
+  src="/pages/projects/electrokerot/intro/infinite-scroll.mp4"
+  autoPlay={false}
+/>
+
+부품 검색 기능을 구현해야 했는데, 내가 가지고 있던 `Javascript` 지식으론
+부품을 검색하는 기능을 구현하기에는 부족했다. `Elasticsearch`을 들어봤기에 이를 사용해보려고 했으나
+러닝커브가 생각보다 가팔랐고, 여기에 집중하기에는 시간이 부족했기 때문에, `Elasticsearch`가
+제공하는 기술과 비슷하지만 좀 더 간단한 게 필요했다. 여기서 `Mongodb Atlas`의 `Full Text Search`를 알게 되었고,
+이를 통해 부품 검색 기능을 구현할 수 있었다.
+
+import SearchResultA from '/public/pages/projects/electrokerot/intro/search-result-2.png'
+import SearchResultB from '/public/pages/projects/electrokerot/intro/search-result-3.png'
+
+<Screenshot alt="검색 결과" src={SearchResultA} caption="검색 결과 A" />
+<Screenshot alt="검색 결과" src={SearchResultB} caption="검색 결과 B" />
+
+<br />
+이런 식으로 이전에 개발해보지 않았던 기능을 미리 하나씩 구현해보면서, 기술적으로
+구현이 가능한지 불가능한지를 파악했다. 대부분 기능은 구현이 가능했고 이런 과정을
+통해 굳이 필요 없거나 과하게 기획된 기능은 제외했다.
+
+프론트엔드, 백엔드, 서버, DB 등 모든 부분을 한 번에 모든 것을 할 순 없었다.
+개발 계획을 1~3차 혹은 그 이상까지 나누고, 1차에서는 초기 기획의 코어 기능 위주로 개발했다.
+
+## 4. 디자인/설계
+
+일단 디자인을 먼저 시작했다. 디자인을 끝낸 뒤 개발을 시작하면, 개발하면서 지속해서 디자인에 대해
+생각하지 않아도 되기 때문에 개발에 집중할 수 있다.
+
+여러 사이트를 참고하면서 디자인을 했고, `UX`에 대해 고민하면서 디자인을 했다. 가령, 모바일 웹에서 햄버거 메뉴를
+토글했을 때, 보통 네이티브앱에선 `뒤로 가기`를 통해 메뉴를 닫을 수 있다. 가끔 웹에서 `뒤로 가기`를 통해 메뉴를 닫는 경우도
+있긴 하지만 잘 보면, 전체 페이지가 뒤로 이동하기 때문에 메뉴 컴포넌트가 `unmount` 되면서 메뉴가 닫혔다고 생각하게 된다.
+이를 해결하기 위해, `useEmptyRoute`라는 훅을 이용해 이런 인터렉션이 필요한 컴포넌트에선 빈 라우트를 추가하고,
+뒤로 가기 혹은 닫기 동작에선 빈 라우트를 제거하는 방식으로 구현했다.
+
+로그인과 회원가입의 경우 모달을 이용했다. 보통 토글을 통해 모달을 열고 닫는데 이러면
+`url`을 통한 이동이 불가능하다. 이를 해결하기 위해 라우팅을 추가하고 데스크탑과 모바일에서
+`navigation histrory`를 다르게 관리해 각각의 디바이스에서 이용하는 사용자가
+직관적인 경험을 하게끔 했다.
+
+사용자가 로그인 페이지를 보다 홈으로 이동할 경우,
+데스크탑에선 모달 형태의 로그인창이 뒤로 가기를 통해 보이면 안 된다고 생각했고,
+모바일에선 모달이 아닌 전체 페이지 형태로 보이니 뒤로가기를 통해 로그인 페이지로
+다시 돌아갈 수 있어야 한다고 생각했다.
+
+import RoutingScreenshot from '/public/pages/projects/electrokerot/intro/routing.png'
+
+<details>
+  <summary>라우팅 조작 방법</summary>
+
+  <Screenshot alt="라우팅 방법" src={RoutingScreenshot} caption="라우팅 방법" />
+  <br/>
+</details>
+
+이런 마이크로 인터렉션 혹은 UX에 대해 고민하면서 디자인을 했고 개발을 하면서 더욱 개선해나갈 예정이다.
+
+### 4.1 화면 목록
+
+import ScreenScreenshot from '/public/pages/projects/electrokerot/intro/screens.png'
+
+<details>
+  <summary>화면 목록</summary>
+
+  <a href="https://docs.google.com/spreadsheets/d/1IJKUP3dYORn2mg41o9ELPgvmpAfVIdwI4SDdrtG_bH0/edit?usp=sharing" target="_blank">
+    <Screenshot src={ScreenScreenshot} alt="화면 목록" caption="화면 목록"/>
+  </a>
+  <br/>
+</details>
+
+### 4.2 피그마
+
+<iframe
+  style={{
+    border: '1px solid rgba(0, 0, 0, 0.1)'
+  }}
+  width="100%"
+  height={450}
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FyUbylOrbedjLHi4OS5qrFm%2FElectroKerot%3Fnode-id%3D0%253A1%26t%3DIL680lOBewWorxpS-1"
+></iframe>
+
+## 5. 서버 (인프라)
+
+import InfraScreenshot from '/public/pages/projects/electrokerot/intro/infra.png'
+
+<Screenshot alt="인프라" src={InfraScreenshot} caption="인프라" />
+
+<br />
+서버는 두 가지 방식으로 구상했다.
+
+### 5.1 클라우드 컴퓨팅
+
+첫 번째는 `클라우드 컴퓨팅`을 직접 운용하는 방식이다. `EC2` 혹은 기타 클라우드의 `Computed Machine/Engine`을 이용해 서버를 구축하고, `nginx`를 사용해 `리버스 프록시`를 구축한다.
+이를 통해, `cors`를 해결하기도 하고 `entry point`를 1개만 노출함으로써 기본적인 보안을 유지한다.
+
+이렇게 할 경우, `Horizontal Scaling`이 편할 것으로 생각된다. 하지만 어떤 클라우드 플랫폼의 서비스를 사용할지, 플랫폼마다 조금씩 다른 설정과 이에 따른 시간적 비용이 발생할 것이다.
+프리티어를 사용한다 할지라도 초기 설정이 상당히 필요하고, 중간에 발생하는 문제에 대한 트러블슈팅을 온전히 직접 해결해야 한다.
+
+### 5.2 클라우드 호스팅 서비스
+
+클라우드 컴퓨팅과 말은 비슷하지만, 클라우드 서버를 대여해주는 것이 아닌 배포 자체를 서비스해주는 클라우드 서비스를 이용하는 경우이다.
+
+개발을 해나가면서 여러 프레임워크를 어쩔 수 없이 써보니 알게 된 사실인데, 미리 만들어진 `프레임워크` 혹은 `서비스`가 생각보다 너무 편하다는 것이다.
+프론트엔드를 `Vercel`을 통해 배포해보니 여러 가지 기능들이 기본적으로 제공되었고, 굳이 직접 구축해야 하는 필요성과 안정성을 느끼지 못했다.
+
+`Vercel`을 통해 `web vital`이나 `analytics`를 쉽게 적용할 수 있었고, `CD`가 자동으로 되는 것도 큰 장점이었다.
+
+이렇게 되면 프론트엔드 뿐만 아니라 백엔드도 `Firebase`나 기타 플랫폼을 통해 서비스 하는 게 더욱 유리할 것이라는 생각이 들었다.
+
+현재 인프라가 필요한 서비스는 다음과 같다.
+
+- 스크래퍼 서버 (Node.js)
+- 프론트엔드 서버
+- 백엔드 서버
+- 데이터베이스 서버
+
+스크래퍼 서버의 경우, 성능이 좋은 서버가 필요하여 상용 클라우드나 프리티어를 통해 해결할 수 없다.
+
+결국, 전반적인 서비스에 필요한 인프라를 직접 클라우드를 대여해 구축하는 것이 아닌
+자동화 된 클라우드 호스팅을 통해 배포할 가능성이 커졌다.
+
+## 6. 데이터/수집
+
+서비스 기획과 함께 어떤 데이터를 어디서 수집하느냐도 중요했다. 만약 데이터가 없다면 애초에 불가능한 서비스이기 때문이다.
+데이터를 어떻게 수집하느냐도 문제이고 법적인 문제도 있다. 저작권 법률 상담과 함께 어떤 식으로 데이터를 수집할지 고민했다.
+대규모 데이터를 지속 가능하게 수집하기 위해선 대상이 되는 상용 서버에 무리가 안 가게 그리고 지속적인 수집을 알아차리지 못하게 해야 했다.
+
+단순한 API가 아닌 대규모 데이터 수집은 처음이라, 어떻게 프로그램을 짜야 하는지 조차 감이 잡히지 않았다. 그래서
+스크래핑 프로그램의 플로우차트를 그려보고, 어떤 식으로 데이터를 수집할지 고민했다.
+
+하나의 프로그램으로 모든 과정을 처리하지 않았던 이유에는
+
+- 수집할 데이터의 범위는?
+- 중간에 만약 프로그램이 멈춘다면?
+- 속도 조절은 어떻게 할 것인가?
+- 데이터를 어떻게 저장할 것인가?
+- 수집한 데이터가 저장되기 전에 프로그램이 멈추면?
+- `css selector`를 통해 naive하게 데이터를 수집하는데 `selector`가 바뀐다면?
+
+등등 여러 변수가 생각났었는데, 이를 모두 한 프로그램에서 처리하려고 하니 너무 복잡해지고, 유지보수가 어려워질 것으로 생각했다.
+하나의 기능을 여러 파이프라인으로 나눠 복잡한 과정은 해결했지만, 현재에도 데이터 수집 자체를 `css selector`를 통하기 때문에
+변화에 취약하다는 문제가 있다.
+
+import FlowChartScreenshot from '/public/pages/projects/electrokerot/intro/flowchart.png'
+
+<a
+  href="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Scraping%20flow%20chart#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1QKOj0Od5V-5mTXua15tJBE6SeQEo2Lpr%26export%3Ddownload"
+  target="_black"
+>
+  <Screenshot alt="플로우차트" src={FlowChartScreenshot} caption="플로우차트" />
+</a>
+
+## 7. 프론트엔드
+
+프론트엔드는 `react`를 사용했다. 글을 쓰는 현재에는 `next.js`를 사용해봤기 때문에 다음에 `next.js`를 사용할 수도 있겠지만,
+현재 서비스에 `SSG/SSR`이 필요한지 의문이고 프레임워크를 거치면 하나의 제약이 추가되는 것이기 때문에 일단은 `react`를 유지하기로 했다.
+
+`Provider`, `Hook`, `Lib` 등 공통으로 사용되는 기능들을 최대한 추상화하려고 했고, 아토믹 디자인 시스템이 아닌 컴포넌트 단위로 개발하려고 노력했다.
+컴포넌트 단위로 개발한 이유는, 현재 프로젝트가 단 하나의 서비스이기 때문에 재사용 가능한 아토믹 컴포넌트나 디자인 시스템이 필요하기보다는
+서비스에 필요한 컴포넌트를 개발하는 것이 더 중요하다고 생각했다.
+
+컴포넌트 개발에는 스토리북을 사용해 격리 환경에서 개발했다. 테스팅은 따로 진행하지 않았고 추후에 필요한 경우에만 진행할 예정이다.
+다만, 라우팅의 경우 복잡한 경우의 수가 있기 때문에 테스트를 진행했다. `Cypress`를 사용해 테스트를 진행했다. 미디어의 뷰포트에 따라
+라우팅 작동 방식이 달라서 전체 디바이스에 대한 테스트를 진행하기 위해 `Cypress`에 개별 `Hook`을 만들어 테스트를 진행했다.
+
+<details>
+  <summary>스토리북</summary>
+  https://63dd20176a04b143f58e1507-jxwkpuhvzu.chromatic.com/
+</details>
+
+<details>
+<summary>Cypress Media hook</summary>
+
+```ts media.cy.ts
+type TestParams = {
+  device: Exclude<DeviceType, null>
+  deviceGroup: DeviceGroup
+}
+type Test = (params: TestParams) => void
+
+export function withMedia(test: Test, devices?: Array<DeviceType>) {
+  // Copy Viewports to avoid mutating it
+  const viewports = Object.assign({}, Viewports)
+
+  // If 'devices' is not provided, run test against all devices
+  devices = (
+    devices && devices?.length !== 0 ? devices : Object.keys(Viewports)
+  ) as Array<DeviceType>
+
+  devices.forEach(device => {
+    if (!device) {
+      return
+    }
+
+    // Type force casting: 'deviceGroup' will never be undefined even though it returns undefined when nothing matched
+    const deviceGroup = getDeviceGroup(device) as DeviceGroup
+
+    it(`${device}: `, () => {
+      // Change the viewport size to the device's size
+      cy.viewport(viewports[device].width, viewports[device].height)
+
+      // Run test under the device's viewport
+      test({
+        device,
+        deviceGroup
+      })
+    })
+  })
+}
+```
+
+</details>
+
+<details>
+  <summary>Cypress 테스트 영상</summary>
+  <Video src="/pages/projects/electrokerot/intro/login.cy.ts.mp4" />
+</details>
+
+### 7.1 최저가 로직
+
+<details>
+  <summary>최저가 로직</summary>
+
+    처음 최저가를 찾아주는 로직을 만들려고 했을 때, 전혀 감이 오지 않았다. 심지어 가능한가도 의문이 들었다.
+    여러 가지 알고리즘도 들춰보고 검색해봤지만 결국 전체 경우의 수를 다 구해보는 방법 외에는
+    최저가를 찾아주는 방법이 없었다.
+
+    하지만 경우의 수가 너무 많았다. 예를 들어, 3개의 부품이 있는데, 각각 [3곳, 4곳, 5곳]의 판매처가 있다고 가정하자. 이 경우의 수는 3 \* 4 \* 5 = 60이다.
+    보통 7개의 부품이 있고 각각 15개 이상의 판매처가 있으니 경우의 수는 15^7 = 3,874,204,841 이다.
+    현재 로직으로는 브라우저에서 최대 10,000,000을 넘어가는 연산이 실행되면 브라우저가 다운되는 것으로 파악되었다. 테스트를 진행한
+    컴퓨터 스펙에 따라 다르겠지만 일단 현재 기준으로, 10,000,000번의 연산을 넘기면 안 된다는 것을 알 수 있었다.
+    이 이상은 시간을 너무 많이 잡아먹는다. 대략 5초 이상 걸리기 때문에 이 범위를 넘어서지 않게끔 파라미터를 조절해야 한다.
+
+    결국 전체 경우의 수는 찾아야 하지만 10,000,000번의 연산을 넘기면 안 되니 전처리를 통해
+    경우의 줄이는 방법을 이용했다. 파라미터로 전체 판매처를 다 고려하는 것은 효율적이지 못 하니, 부품마다
+    최저가를 찾고 이 최저가에 택배 비용을 더해 이것보다 높은 가격을 가진 판매처를 제외하고 최저가를 찾는 방법을 사용했다.
+    택배 비용을 더 한 가격보다 비싼 가격의 부품은 그냥 최저가의 부품을 따로 시키면 되기 때문에, 최저가 묶음을 찾아주는
+    목록에서 제외해도 된다. 이렇게 하면 경우의 수를 줄일 수 있었다.
+
+    ```ts
+      // Preprocess
+      // 1. Find product with lowest price and shipping cost (=lowest_offer)
+      // 2. Filter product with
+      //    price greater than lowest_offer (lowest_offer <= product_price)
+      //    price that is not lowest and that cannot be packaged or bundled (has only 1 overlapping vendor when ordering more than 2 parts)
+      // 3. The more preprocessing logics, the less time to find feasible combinations ...
+
+      // In real, these values are in one matrix
+      // They can be separted into 3 matrixes like below or
+      // just use as they are
+      const product_price = [
+        [3000, 3000, 3500, 5000, 4000, 3000, 3500, 2500],
+        [3500, 4000, 4500, 5500, 5000, 3500, 4000, 3000],
+        [2000, 3000, 2500, 4500, 3000, 2000, 2500, 1500],
+        [1000, 1000, 3000, 3000, 3500, 1000, 3000, 2000],
+        [1000, 3000, 3000, 3000, 2500, 1000, 3000, 2000],
+        [2000, 3000, 2500, 4500, 3000],
+        [1000, 1000, 3000, 3000, 3500],
+        [1000, 3000, 3000, 3000, 2500],
+        [1000, 1000, 3000, 3000, 3500],
+        [2000, 3000, 2500, 4500, 3000]
+      ]
+      const vendors = [
+        [3, 4, 2, 1, 0, 5, 7, 8],
+        [1, 7, 5, 2, 3, 4, 6, 0],
+        [5, 1, 0, 6, 7, 2, 3, 4],
+        [1, 3, 8, 5, 2, 4, 6, 7],
+        [1, 7, 5, 2, 3, 4, 6, 0],
+        [5, 1, 0, 6, 7],
+        [1, 3, 8, 5, 2],
+        [5, 1, 0, 6, 7],
+        [5, 1, 0, 6, 7],
+        [5, 1, 0, 6, 7]
+      ]
+      const shipping_costs = {
+        0: 0,
+        1: 3000,
+        2: 0,
+        3: 0,
+        4: 2000,
+        5: 2000,
+        6: 3000,
+        7: 0,
+        8: 0,
+        9: 2500
+      }
+
+      // In the entire selected products list, which vendors sells the most products?
+      // e.g. cpu: 'vendor A', 'vendor B', 'vendor C'
+      //      memory: 'vendor A', 'vendor B'
+      //      gpu: 'vendor A'
+      // result: { 'vendor A': 3, 'vendor B': 2, 'vendor C': 1 }
+      // Among the lowest products, selecting the product from 'vendor A' will
+      // result in the lowest price
+      const overlapping_vendors = vendors.reduce(
+        (vendorList, parts) =>
+          parts.reduce(
+            (vendorList, vendor) => ({
+              ...vendorList,
+              [vendor]: vendorList[vendor] + 1 || 1
+            }),
+            vendorList
+          ),
+        {}
+      )
+
+      // Returns the cost of the given products combination
+      const getTotalCost = productsList => {
+        let productsCost = 0
+        const usedVendors = new Set()
+        productsList.forEach(product => {
+          const [price, vendor] = product
+          usedVendors.add(vendor)
+          productsCost += price
+        })
+        const shippingCost = Array.from(usedVendors).reduce(
+          (shippingCost, vendor) => shippingCost + +shipping_costs[vendor],
+          0
+        )
+        return productsCost + shippingCost
+      }
+
+      // Combine product price matrix and the shipping cost matrix
+      const product_price_with_shipping = product_price.map((products, i) =>
+        products.map((price, j) => +price + shipping_costs[vendors[i][j]])
+      )
+
+      // Get rough estimate of the lowest price
+      const priceFilter = product_price_with_shipping
+
+        // Iterate through each part category
+        .reduce((sum, products, i) => {
+          // Find the lowest price of the part category
+          const lowestPrice = Math.min(...products)
+          // Get the indexes of the products with lowest price
+          const lowestPriceIndexes = products
+            .map((price, j) => (price === lowestPrice ? j : undefined))
+            .filter(e => e !== undefined)
+
+          // Among the lowest price products, find the one with the most overlapping vendors
+          const lowestPriceIndexesSortedByMostOverlappingVendors =
+            lowestPriceIndexes.sort((a, b) => {
+              const aOverlappingVendors = overlapping_vendors[vendors[i][a]]
+              const bOverlappingVendors = overlapping_vendors[vendors[i][b]]
+              return bOverlappingVendors - aOverlappingVendors
+            })
+
+          // Pick product with the lowest price and the most overlapping vendors
+          return sum + products[lowestPriceIndexesSortedByMostOverlappingVendors[0]]
+        }, 0)
+
+      // Variable to store all the combinations generated
+      const generatedCombinations = []
+
+      // Variable to tempoarily store the selected parts just like a cart
+      const selectedParts = []
+
+      // Core: Recursive function to find all the combinations
+      function selectPart(currentPart = 0) {
+        if (product_price.length <= currentPart) {
+          const totalCost = getTotalCost(selectedParts)
+          if (totalCost <= priceFilter) {
+            generatedCombinations.push([...selectedParts])
+          }
+          return
+        }
+        for (let i = 0; i < product_price[currentPart].length; i++) {
+          selectedParts.push([product_price[currentPart][i], vendors[currentPart][i]])
+          selectPart(currentPart + 1)
+          selectedParts.pop()
+        }
+      }
+
+      // Get the total operations needed to find all the combinations
+      const totalOperation = product_price.reduce(
+        (total, products) => total * products.length,
+        1
+      )
+      console.log(
+        `Total operation: ${String(totalOperation).replace(
+          /\B(?=(\d{3})+(?!\d))/g,
+          ','
+        )}`
+      )
+
+      // Measuring the time of calcuation
+      console.time()
+      selectPart()
+      console.timeEnd()
+
+      // Length of all the combinations
+      console.log(generatedCombinations.length)
+
+      // Get the feasible combinations
+      const getFeasibleLists = result =>
+        result.filter(e => getTotalCost(e) <= priceFilter)
+      const feasibleCombinations = getFeasibleLists(generatedCombinations)
+
+      // Sort the combinations in ascending order of total cost
+      const sortLists = list =>
+        list.sort((a, b) => {
+          return getTotalCost(a) - getTotalCost(b)
+        })
+      const sortedCombinations = sortLists(feasibleCombinations)
+
+      // Convert the combinations to numbers list
+      const result = sortedCombinations.map(list => getTotalCost(list))
+
+      // Print the result
+      // Lowest price combinations
+      console.log(sortedCombinations[0])
+      // Lowest price
+      console.log(result[0])
+    ```
+
+</details>
+
+### 7.2 리팩토링
+
+[최저가 로직 리팩토링](http://localhost:3000/projects/electrokerot/frontend#7-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81)
+
+## 8. 백엔드
+
+백엔드는 `nest.js`를 통해 구현했다. 처음엔 자주 사용하던 `Node.js` + `Express` 통해 하려고 했으나, 프로젝트 규모가
+크다 보니 어디서 무엇이 필요한지 모호했다. 필요한 기능과 필요할 법한 기능들을 찾아야 했고, 그러다 보니 자연스럽게 문서가 아주
+잘 작성된 `nest.js`를 선택하게 되었다.
+
+`nest.js` 문서를 처음부터 목차대로 따라 하면 거의 모든 기능을 사용할 수 있었다. 과하지 않고 적당한 기능들이
+많아서, 내가 필요했는지 몰랐던 기능이나 원래 알았지만 더 편한 방법을 찾기도 했다.
+
+백엔드에서도 추상화할 수 있는 부분은 최대한 추상화하려고 노력했다. 가령, `repository`의 경우, `entity repository`를 만들어
+하위 `repository`들이 상속받아 사용할 수 있도록 했다. 이렇게 하면, 웬만한 `repository`들은 `entity repository`를 상속받아
+사용하면 되기 때문이다.
+
+<details>
+<summary>entity repository</summary>
+
+```ts entity.repository.ts
+abstract class EntityRepository<T> {
+  protected readonly collection: Collection
+  protected readonly classConstructor: ClassConstructor<T>
+
+  constructor(
+    db: Db,
+    collectionName: CollectionName,
+    classConstructor: ClassConstructor<T>
+  ) {
+    this.collection = db.collection(collectionName)
+    this.classConstructor = classConstructor
+  }
+
+  protected async create(entity: Partial<T>) {
+    return (await this.collection.insertOne(entity)).insertedId
+  }
+
+  protected async find(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      this.collection.find<T>(filter).toArray()
+    )
+  }
+
+  protected async findById(_id: ObjectId) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.findOne<T>({ _id })
+    )
+  }
+
+  protected async findOne(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.findOne<T>(filter)
+    )
+  }
+
+  protected async findMany(filter: Filter<Partial<T>>) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.find<T>(filter).toArray()
+    )
+  }
+
+  protected async updateById(_id: ObjectId, entity: Partial<T>) {
+    return (await this.collection.updateOne({ _id }, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async updateOne(filter: Filter<Partial<T>>, entity: Partial<T>) {
+    return (await this.collection.updateOne(filter, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async updateMany(filter: Filter<Partial<T>>, entity: Partial<T>) {
+    return (await this.collection.updateMany(filter, { $set: entity }))
+      .modifiedCount
+  }
+
+  protected async deleteOne(filter: Filter<Partial<T>>) {
+    return (await this.collection.deleteOne(filter)).deletedCount
+  }
+
+  protected async countDocuments(filter: Filter<Partial<T>>) {
+    return await this.collection.countDocuments(filter)
+  }
+
+  protected async aggregate(pipeline: any[]) {
+    return plainToInstance(
+      this.classConstructor,
+      await this.collection.aggregate<T>(pipeline).toArray()
+    )
+  }
+}
+```
+
+</details>
+
+API의 개수가 처음 계획했던 것보다 많아졌다. 그래서 `Swagger`를 통해 `API`를 문서화했다.
+개발을 여러 싸이클로 나눴기 때문에, 문서도 여러 개로 나눴다.
+
+문서화는 inline으로 하지 않았고, 따로 `yaml` 파일을 만들어서 `Swagger`에 `yaml` 파일을 넣어서 문서화했다.
+inline으로 문서화하면 문서가 코드에 동기화되어 관리가 편하긴 하겠지만
+비즈니스 로직 코드와 문서화 코드가 섞여서 가독성이 떨어진다고 생각했다.
+
+import SwaggerDocScreenshot from '/public/pages/projects/electrokerot/intro/swagger-doc.png'
+
+<details>
+  <summary>Swagger API</summary>
+
+  <a href="https://app.swaggerhub.com/apis-docs/SwimmingPolar/electrokerot/0.0.1" target="_blank">
+    <Screenshot alt="API 문서" src={SwaggerDocScreenshot} caption="API 문서" />
+  </a>
+  <br/>
+  </details>
+
+### 8.1. `TDD`
+
+`CI/CD`를 위해 자료를 찾다 보니 프로젝트 `TDD`가 적용되지 않은 상태에서 `CI/CD`를 도입하는 건
+아무 의미가 없다는 것을 알게 되었다. 그래서 `TDD`를 도입했다.
+`nest.js`를 사용하면서 `TDD`를 통해 작업했는데, `TDD`를 하면서 이전과 전혀 다른 `DX`를 느꼈다.
+이 전에는 `Postman`이나 `Insomnia`를 통해 `API`를 하나 구현할 때마다 `API`를 테스트하고, 조금씩 완성해 나갔는데
+이번엔 서버를 한 번도 올리지 않고 구축된 테스트 환경 내에서 모든 `API`를 작성했다. 웹개발을 하다 보면 `Postman` 같은 툴을 사용하려고
+개발과 테스트 사이에 컨텍스트 스윗칭을 자주 하는데, 이런 방법이 개발을 비효율적으로 만든다고 생각했다. `TDD`를 통해
+이러한 문제를 해결할 수 있었다.
+
+이전에는 `TDD`가 왜 필요한지 어렴풋이 알고만 있었는데, 이번 기회를 통해 `TDD`가 왜 필요한지 확실하게 알게 되었다. 앞으론 필요하다기보다는
+없으면 개발하기가 너무 힘들 거 같다. 특히, 개발할 때는 개발 서버를 한 번도 올리지 않고 나중에 서버를 올렸을 때 모든게 한 번에 돌아가게 되는
+신기한 경험을 했다.
+
+프론트엔드와는 다르게 백엔드는 어디에 `TDD`를 적용해야 하는지 보다 확실히 보여서 손쉽게 `TDD`를 적용할 수 있었다. 테스트는 비즈니스 로직이
+들어가는 `repository`나 `service`에 적용을 했고, `controller`에는 적용하지 않았다. `controller`에선 거의 `DTO`를 받고 `service`로 넘겨주는
+역할만 있었기 때문에 `TDD`를 적용하지 않았다. `DTO`의 검증은 `service`를 테스트할 때 같이 진행했다.
+
+import TestScreenShot from '/public/pages/projects/electrokerot/intro/test-all.png'
+import TestCoverageScreenShot from '/public/pages/projects/electrokerot/intro/test-coverage.png'
+
+<details>
+  <summary>전체 테스트 </summary>
+
+  <Screenshot alt="전체 테스트" src={TestScreenShot} caption="전체 테스트" />
+  <Screenshot
+    alt="테스트 커버리지"
+    src={TestCoverageScreenShot}
+    caption="테스트 커러비지"
+  />
+  <br/>
+</details>
+
+import TestRepositoryScreenShot from '/public/pages/projects/electrokerot/intro/test-repository.png'
+
+<details>
+  <summary>유닛 테스트 </summary>
+
+  <Screenshot
+    alt="유닛 테스트"
+    src={TestRepositoryScreenShot}
+    caption="유닛 테스트"
+  />
+  <br/>
+</details>
+
+import TestIntegrationScreenShot from '/public/pages/projects/electrokerot/intro/test-integration.png'
+
+<details>
+  <summary>통합 테스트 </summary>
+
+  <Screenshot
+    alt="통합 테스트"
+    src={TestIntegrationScreenShot}
+    caption="통합 테스트"
+  />
+  <br />
+</details>
+
+## 9. 깃플로우
+
+- release
+- main
+- develop
+- features/작업명
+
+이렇게 4개의 브랜치를 사용했다. `release` 브랜치는 배포를 위한 브랜치로, `main` 브랜치에 머지되면 배포가 진행된다. `main` 브랜치는 배포된 코드만
+들어가는 브랜치이다. `develop` 브랜치는 개발을 위한 브랜치로, `features/작업명` 브랜치에서 작업이 완료되면 `develop` 브랜치로 머지된다.
+`features/작업명`에서 작업을 진행하다가 중간에 `develop` 브랜치에 있는 코드를 가져와야 할 때는 `git merge --squash`를 사용해서 커밋로그를 정리했다.

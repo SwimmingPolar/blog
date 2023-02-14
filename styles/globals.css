@@ -22,9 +22,19 @@ html[style='color-scheme: dark;'] .nextra-search input {
   background-color: rgba(249, 250, 251, 0.075);
 }
 
+/* Home page background color */
 div[dir='ltr'].home {
   background-color: #fff;
 }
+/* Home page background color: dark mode */
 html[style='color-scheme: dark;'] div[dir='ltr'].home {
   background-color: #111;
+}
+
+/* Banner */
+div[dir='ltr'].home .nextra-banner-container {
+  z-index: 16;
+}
+div[dir='ltr'].home .nextra-sidebar-container {
+  z-index: 17;
 }

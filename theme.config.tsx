@@ -151,7 +151,7 @@ const config: DocsThemeConfig = {
     text: () => {
       const text = useCurrentLanguage({
         ko: '현재 동영상은 Nextra 버그 때문에 다음 패치까지 재생되지 않습니다. 🙏',
-        en: 'Due to a bug in Nextra, the video will not play until the next patch. 🙏'
+        en: `I'm currently working on English translations. 🙏`
       })
       return <>{text}</>
     }
