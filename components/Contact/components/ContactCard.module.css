@@ -33,7 +33,7 @@
   width: fit-content;
 }
 .name.blur {
-  filter: blur(7px);
+  filter: blur(9px);
 }
 
 .age {

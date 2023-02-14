@@ -119,14 +119,24 @@ export const ContactInfo = ({ token, contact }: ContactInfoProps) => {
     }
   }, [phone, requestPhoneNumberText, contact])
 
+  // Dummy text
+  const contactText = useCurrentLanguage({
+    en: 'Contact',
+    ko: '연락처'
+  })
+  const dummyName = useCurrentLanguage({
+    en: 'DONGDONG YOSI',
+    ko: '우동집'
+  })
+
   return (
     <div className={styles.box}>
       <div className={styles['small-header']}>
-        <span>연락처</span>
+        <span>{contactText}</span>
       </div>
       <div className={styles.content}>
         <div className={styles.name}>
-          <Skeleton text={name} alterText="우동집" className={styles.name} />
+          <Skeleton text={name} alterText={dummyName} className={styles.name} />
         </div>
         <div className={styles.age}>
           <Skeleton

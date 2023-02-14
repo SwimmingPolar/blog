@@ -14,6 +14,77 @@ import {
 
 <TechStacks />
 
-<ContentTitle title="Had project" />
+<div className="flex flex-col sm:flex-row">
+  <div className="flex-1 pl-5">
+    <ContentTitle title="Had project" />
+    <Tree>
+      <Folder name="Tech Pocket" defaultOpen>
+        <Folder name="?" >
+          <File name="HTML/CSS" />
+        </Folder>
+        <Folder name="Language" defaultOpen>
+          <File name="Typescript" />
+          <File name="Bash Shell" />
+          <File name="Java" />
+          <File name="C" />
+        </Folder>
+        <Folder name="UI Libraries" defaultOpen>
+          <File name="React.js" />
+          <File name="MUI" />
+        </Folder>
+        <Folder name="Frameworks" defaultOpen>
+          <File name="Nest.js" />
+          <File name="Next.js" />
+        </Folder>
+        <Folder name="Databases" >
+          <File name="MongoDB" />
+          <File name="Redis" />
+        </Folder>
+        <Folder name="Libraries" >
+          <File name="Redux" />
+          <File name="Joi" />
+          <File name="Zod" />
+          <File name="Storybook" />
+          <File name="Puppeteer" />
+        </Folder>
+        <Folder name="TDD" >
+          <File name="Jest" />
+          <File name="Cypress" />
+          <File name="Chromatic" />
+          <File name="Supertest" />
+          <File name="Superagent" />
+        </Folder>
+        <Folder name="Program/Software" >
+          <File name="Docker" />
+          <File name="Docker Swarm" />
+          <File name="Vscode" />
+          <File name="Vim" />
+          <File name="Figma" />
+          <File name="Nginx" />
+        </Folder>
+        <Folder name="Cloud Service" >
+          <File name="MongDB Atlas" />
+          <File name="Vercel" />
+          <File name="Chromatic" />
+          <File name="Firebase" />
+        </Folder>
+      </Folder>
+    </Tree>
+  </div>
 
-<ContentTitle title="Had brief moment" />
+  <div className="flex-1 pl-5">
+    <ContentTitle title="Had brief moment" />
+    <Tree>
+      <Folder name="Tech Pocket" defaultOpen>
+        <Folder name="UI Libraries" defaultOpen>
+          <File name="Tailwind" />
+        </Folder>
+        <Folder name="Cloud Infra." defaultOpen>
+          <File name="AWS" />
+          <File name="GCP" />
+          <File name="OCI" />
+        </Folder>
+      </Folder>
+    </Tree>
+  </div>
+</div>
