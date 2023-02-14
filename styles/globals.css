@@ -47,3 +47,7 @@ div[dir='ltr'].ko .nextra-banner-container {
   height: 0;
   top: -9999px;
 }
+
+div[dir='ltr'].ko .nextra-banner-container ~ div.nextra-nav-container {
+  top: 0;
+}
