@@ -1,16 +1,20 @@
-import { NextApiRequest, NextApiResponse } from 'next'
 import { tokensCollection } from '@/db'
 import { getContactInfo } from '@/lib'
+import { NextApiRequest, NextApiResponse } from 'next'
+
+export const isExpired = (timestamp: string) => {
+  const fiveMinutesAgo = new Date().getTime() - 1000 * 60 * 5
+  return parseInt(timestamp) < fiveMinutesAgo
+}
 
 // Assess all tokens in the database and
 // remove any that are older than 5 minutes
 export const pruneDatabase = async () => {
   const tokens = await tokensCollection.get()
   tokens.forEach(async token => {
-    const { timestamp } = token.data()
-    const fiveMinutesAgo = new Date().getTime() - 1000 * 60 * 5
+    const { timestamp } = token?.data()
 
-    if (timestamp < fiveMinutesAgo) {
+    if (isExpired(timestamp)) {
       await token.ref.delete()
     }
   })
@@ -19,13 +23,10 @@ export const pruneDatabase = async () => {
 export default async function (req: NextApiRequest, res: NextApiResponse) {
   const { token } = req.query as { token: string }
 
-  // Assess all tokens in the database before
-  // checking if the token is valid
-  await pruneDatabase()
+  const isValidToken = (await tokensCollection.doc(token).get()).data()
+  const isExpiredToken = isValidToken && isExpired(isValidToken.timestamp)
 
-  const isValidToken = await tokensCollection.doc(token).get()
-
-  if (isValidToken) {
+  if (!isExpiredToken) {
     const contact = getContactInfo()
     delete contact.phone
 
@@ -33,4 +34,9 @@ export default async function (req: NextApiRequest, res: NextApiResponse) {
   } else {
     res.status(400).json({ message: 'Token is invalid' })
   }
+
+  // Schedule the next prune
+  setTimeout(() => {
+    pruneDatabase()
+  })
 }
