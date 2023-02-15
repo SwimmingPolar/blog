@@ -41,7 +41,7 @@ import SketchScreenshot from '/public/pages/projects/electrokerot/intro/sketch.p
 개발 범위가 지속해서 넓어지는 경우가 많았기 때문에, 처음부터 최대한 많은
 가능성을 생각해두고, 점차 줄여나가는 방식으로 기획을 진행했다.
 
-**컨셉**
+### **컨셉**
 
 <b>`부품`</b>이라는 데이터를 중심으로 돌아가는 커뮤니티 기능을 가진 서비스이다.
 부품을 모아 <b>`견적`</b>이라는 또 다른 데이터를 만들 수 있다. 이 견적서는 부품의
@@ -69,7 +69,7 @@ import SketchScreenshot from '/public/pages/projects/electrokerot/intro/sketch.p
   </Folder>
 </Tree>
 
-### 2.1 기능 설명서
+### 기능 설명서
 
 import FeatureScreenshot1 from '/public/pages/projects/electrokerot/intro/features-1.png'
 import FeatureScreenshot2 from '/public/pages/projects/electrokerot/intro/features-2.png'
@@ -84,11 +84,11 @@ import FeatureScreenshot2 from '/public/pages/projects/electrokerot/intro/featur
   <br/>
 </details>
 
-**견적서 기능**
-
 import PartFilterAScreenshot from '/public/pages/projects/electrokerot/intro/part-filter-1.png'
 import PartFilterBScreenshot from '/public/pages/projects/electrokerot/intro/part-filter-2.png'
 import SearchResultScreenshot from '/public/pages/projects/electrokerot/intro/search-result-1.png'
+
+### 기능 상세
 
 <details>
   <summary>부품 필터링</summary>
@@ -293,7 +293,7 @@ import RoutingScreenshot from '/public/pages/projects/electrokerot/intro/routing
 
 이런 마이크로 인터렉션 혹은 UX에 대해 고민하면서 디자인을 했고 개발을 하면서 더욱 개선해나갈 예정이다.
 
-### 4.1 화면 목록
+### 화면 목록
 
 import ScreenScreenshot from '/public/pages/projects/electrokerot/intro/screens.png'
 
@@ -306,7 +306,7 @@ import ScreenScreenshot from '/public/pages/projects/electrokerot/intro/screens.
   <br/>
 </details>
 
-### 4.2 피그마
+### 피그마
 
 <iframe
   style={{
@@ -326,7 +326,7 @@ import InfraScreenshot from '/public/pages/projects/electrokerot/intro/infra.png
 <br />
 서버는 두 가지 방식으로 구상했다.
 
-### 5.1 클라우드 컴퓨팅
+### 클라우드 컴퓨팅
 
 첫 번째는 `클라우드 컴퓨팅`을 직접 운용하는 방식이다. `EC2` 혹은 기타 클라우드의 `Computed Machine/Engine`을 이용해 서버를 구축하고, `nginx`를 사용해 `리버스 프록시`를 구축한다.
 이를 통해, `cors`를 해결하기도 하고 `entry point`를 1개만 노출함으로써 기본적인 보안을 유지한다.
@@ -334,7 +334,7 @@ import InfraScreenshot from '/public/pages/projects/electrokerot/intro/infra.png
 이렇게 할 경우, `Horizontal Scaling`이 편할 것으로 생각된다. 하지만 어떤 클라우드 플랫폼의 서비스를 사용할지, 플랫폼마다 조금씩 다른 설정과 이에 따른 시간적 비용이 발생할 것이다.
 프리티어를 사용한다 할지라도 초기 설정이 상당히 필요하고, 중간에 발생하는 문제에 대한 트러블슈팅을 온전히 직접 해결해야 한다.
 
-### 5.2 클라우드 호스팅 서비스
+### 클라우드 호스팅 서비스
 
 클라우드 컴퓨팅과 말은 비슷하지만, 클라우드 서버를 대여해주는 것이 아닌 배포 자체를 서비스해주는 클라우드 서비스를 이용하는 경우이다.
 
@@ -381,11 +381,28 @@ import InfraScreenshot from '/public/pages/projects/electrokerot/intro/infra.png
 
 import FlowChartScreenshot from '/public/pages/projects/electrokerot/intro/flowchart.png'
 
+### 플로우차트
+
 <a
   href="https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Scraping%20flow%20chart#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1QKOj0Od5V-5mTXua15tJBE6SeQEo2Lpr%26export%3Ddownload"
   target="_black"
 >
   <Screenshot alt="플로우차트" src={FlowChartScreenshot} caption="플로우차트" />
+</a>
+
+import ScraperStructureScreenshot from '/public/pages/projects/electrokerot/intro/structure.png'
+
+### 스크래퍼 구조
+
+<a
+  href="https://docs.google.com/spreadsheets/d/196G_DE5IRNsc88Js4wjGy93mHLVd_W_XJ6hn0z9BYy4/edit?usp=sharing"
+  target="_black"
+>
+  <Screenshot
+    alt="스크래퍼 구조"
+    src={ScraperStructureScreenshot}
+    caption="스크래퍼 구조"
+  />
 </a>
 
 ## 7. 프론트엔드
@@ -401,10 +418,14 @@ import FlowChartScreenshot from '/public/pages/projects/electrokerot/intro/flowc
 다만, 라우팅의 경우 복잡한 경우의 수가 있기 때문에 테스트를 진행했다. `Cypress`를 사용해 테스트를 진행했다. 미디어의 뷰포트에 따라
 라우팅 작동 방식이 달라서 전체 디바이스에 대한 테스트를 진행하기 위해 `Cypress`에 개별 `Hook`을 만들어 테스트를 진행했다.
 
+### 스토리북
+
 <details>
   <summary>스토리북</summary>
   https://63dd20176a04b143f58e1507-jxwkpuhvzu.chromatic.com/
 </details>
+
+### Cypress
 
 <details>
 <summary>Cypress Media hook</summary>
@@ -454,7 +475,7 @@ export function withMedia(test: Test, devices?: Array<DeviceType>) {
   <Video src="https://res.cloudinary.com/do1z0ciw0/video/upload/v1676404543/login.cy.ts_ljcsof.mp4" />
 </details>
 
-### 7.1 최저가 로직
+### 최저가 로직
 
 <details>
   <summary>최저가 로직</summary>
@@ -653,7 +674,7 @@ export function withMedia(test: Test, devices?: Array<DeviceType>) {
 
 </details>
 
-### 7.2 리팩토링
+### 리팩토링
 
 [최저가 로직 리팩토링](http://localhost:3000/projects/electrokerot/frontend#7-%EB%A6%AC%ED%8C%A9%ED%86%A0%EB%A7%81)
 
@@ -771,7 +792,7 @@ import SwaggerDocScreenshot from '/public/pages/projects/electrokerot/intro/swag
   <br/>
   </details>
 
-### 8.1. `TDD`
+### `TDD`
 
 `CI/CD`를 위해 자료를 찾다 보니 프로젝트 `TDD`가 적용되지 않은 상태에서 `CI/CD`를 도입하는 건
 아무 의미가 없다는 것을 알게 되었다. 그래서 `TDD`를 도입했다.
@@ -792,6 +813,8 @@ import SwaggerDocScreenshot from '/public/pages/projects/electrokerot/intro/swag
 import TestScreenShot from '/public/pages/projects/electrokerot/intro/test-all.png'
 import TestCoverageScreenShot from '/public/pages/projects/electrokerot/intro/test-coverage.png'
 
+#### 테스트 커버리지
+
 <details>
   <summary>전체 테스트 </summary>
 
@@ -806,6 +829,8 @@ import TestCoverageScreenShot from '/public/pages/projects/electrokerot/intro/te
 
 import TestRepositoryScreenShot from '/public/pages/projects/electrokerot/intro/test-repository.png'
 
+#### 유닛 테스트
+
 <details>
   <summary>유닛 테스트 </summary>
 
@@ -819,6 +844,8 @@ import TestRepositoryScreenShot from '/public/pages/projects/electrokerot/intro/
 
 import TestIntegrationScreenShot from '/public/pages/projects/electrokerot/intro/test-integration.png'
 
+#### 통합 테스트
+
 <details>
   <summary>통합 테스트 </summary>
 
@@ -830,7 +857,7 @@ import TestIntegrationScreenShot from '/public/pages/projects/electrokerot/intro
   <br />
 </details>
 
-## 9. 깃플로우
+## 9. 깃플로우 전략
 
 - release
 - main
