@@ -1,74 +1,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>ydh.vercel.app/contact.en</loc>
+    <loc>https://ydh.vercel.app/en/contact</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/contact.ko</loc>
+    <loc>https://ydh.vercel.app/contact</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/index.en</loc>
+    <loc>https://ydh.vercel.app/en</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/index.ko</loc>
+    <loc>https://ydh.vercel.app</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/stacks.en</loc>
+    <loc>https://ydh.vercel.app/en/stacks</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/stacks.ko</loc>
+    <loc>https://ydh.vercel.app/stacks</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/electrokerot/backend.en</loc>
+    <loc>https://ydh.vercel.app/en/projects/electrokerot/backend</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/electrokerot/backend.ko</loc>
+    <loc>https://ydh.vercel.app/projects/electrokerot/backend</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/electrokerot/frontend.en</loc>
+    <loc>https://ydh.vercel.app/en/projects/electrokerot/frontend</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/electrokerot/frontend.ko</loc>
+    <loc>https://ydh.vercel.app/projects/electrokerot/frontend</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/electrokerot/intro.en</loc>
+    <loc>https://ydh.vercel.app/en/projects/electrokerot/intro</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/electrokerot/intro.ko</loc>
+    <loc>https://ydh.vercel.app/projects/electrokerot/intro</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/electrokerot/scraper.en</loc>
+    <loc>https://ydh.vercel.app/en/projects/electrokerot/scraper</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/electrokerot/scraper.ko</loc>
+    <loc>https://ydh.vercel.app/projects/electrokerot/scraper</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/nextra-portfolio/intro.en</loc>
+    <loc>https://ydh.vercel.app/en/projects/nextra-portfolio/intro</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/nextra-portfolio/intro.ko</loc>
+    <loc>https://ydh.vercel.app/projects/nextra-portfolio/intro</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/nextra-portfolio/settings.en</loc>
+    <loc>https://ydh.vercel.app/en/projects/nextra-portfolio/settings</loc>
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>ydh.vercel.app/projects/nextra-portfolio/settings.ko</loc>
+    <loc>https://ydh.vercel.app/projects/nextra-portfolio/settings</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>

@@ -5,11 +5,29 @@ const fsImport = import('fs')
 const globbyImport = import('globby')
 
 function addPage(page) {
-  const path = page.replace('pages', '').replace('.js', '').replace('.mdx', '')
-  const route = path === '/index' ? '' : path
+  // Set default locale
+  const defaultLocale = 'ko'
+
+  // Parse the path
+  const relativePath = page
+    .replace('pages', '')
+    .replace('.js', '')
+    .replace('.mdx', '')
+
+  // Parsr relative path and get path and locale separately
+  const [path, localeToken] = relativePath.split('.').filter(Boolean)
+
+  // Handle index path
+  let route = path === '/index' ? '' : path
+
+  // Remove default locale from path
+  const locale = localeToken === defaultLocale ? '' : '/' + localeToken
+
+  // Construct full path with locale
+  route = process.env.WEBSITE_URL + locale + route
 
   return `  <url>
-    <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
+    <loc>${route}</loc>
     <changefreq>hourly</changefreq>
   </url>`
 }
