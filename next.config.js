@@ -32,9 +32,16 @@ module.exports = withNextra({
     styledComponents: true
   },
   env: {
-    RECAPCHA_SITE_KEY: process.env.RECAPCHA_SITE_KEY,
-    RECAPCHA_BACKEND_KEY: process.env.RECAPCHA_BACKEND_KEY,
-    CONTACT: process.env.CONTACT,
-    FIREBASE_SECRET_KEY: process.env.FIREBASE_SECRET_KEY
+    RECAPCHA_SITE_KEY: process.env.RECAPCHA_SITE_KEY || '',
+    RECAPCHA_BACKEND_KEY: process.env.RECAPCHA_BACKEND_KEY || '',
+    CONTACT: process.env.CONTACT || '',
+    FIREBASE_SECRET_KEY: process.env.FIREBASE_SECRET_KEY || ''
+  },
+  webpack: (config, { dev, isServer }) => {
+    if (isServer) {
+      process.env.WEBSITE_URL = 'ydh.vercel.app'
+      require('./modules/generate-sitemap.js')
+    }
+    return config
   }
 })
