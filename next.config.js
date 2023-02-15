@@ -39,7 +39,7 @@ module.exports = withNextra({
   },
   webpack: (config, { dev, isServer }) => {
     if (isServer) {
-      process.env.WEBSITE_URL = 'ydh.vercel.app'
+      process.env.WEBSITE_URL = 'https://ydh.vercel.app'
       require('./modules/generate-sitemap.js')
     }
     return config
