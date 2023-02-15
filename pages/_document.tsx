@@ -12,7 +12,7 @@ export default function Document() {
         />
         <meta
           name="google-site-verification"
-          content="A1r4Sqi5OONxnLT3NynLkjy3TbSG5KbNuGVdI72MLbg"
+          content="xyAmgKZFgAnyRJ1I-D6egceWDOj-68wwCQ8vKZspCEY"
         />
       </Head>
       <body>
