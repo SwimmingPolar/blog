@@ -145,17 +145,17 @@ const config: DocsThemeConfig = {
   },
   footer: {
     text: '2023 © YDH - 🎉 Sometimes it just happens'
-  },
-  banner: {
-    key: 'banner-english-translation-on-progress',
-    text: () => {
-      const text = useCurrentLanguage({
-        ko: '',
-        en: `English translation is on progress 🙏`
-      })
-      return <>{text}</>
-    }
   }
+  // banner: {
+  //   key: 'banner-english-translation-on-progress',
+  //   text: () => {
+  //     const text = useCurrentLanguage({
+  //       ko: '',
+  //       en: `English translation is on progress 🙏`
+  //     })
+  //     return <>{text}</>
+  //   }
+  // }
 }
 
 export default config
