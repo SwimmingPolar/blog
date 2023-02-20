@@ -55,20 +55,4 @@
     <loc>https://ydh.vercel.app/projects/electrokerot/scraper</loc>
     <changefreq>hourly</changefreq>
   </url>
-  <url>
-    <loc>https://ydh.vercel.app/en/projects/nextra-portfolio/intro</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://ydh.vercel.app/projects/nextra-portfolio/intro</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://ydh.vercel.app/en/projects/nextra-portfolio/settings</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://ydh.vercel.app/projects/nextra-portfolio/settings</loc>
-    <changefreq>hourly</changefreq>
-  </url>
 </urlset>

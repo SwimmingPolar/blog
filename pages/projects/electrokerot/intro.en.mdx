@@ -335,46 +335,6 @@ import ScreenScreenshot from '/public/pages/projects/electrokerot/intro/screens.
   src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FyUbylOrbedjLHi4OS5qrFm%2FElectroKerot%3Fnode-id%3D0%253A1%26t%3DIL680lOBewWorxpS-1"
 ></iframe>
 
-## 5. 서버 (인프라)
-
-import InfraScreenshot from '/public/pages/projects/electrokerot/intro/infra.png'
-
-<Screenshot alt="인프라" src={InfraScreenshot} caption="인프라" />
-
-<br />
-서버는 두 가지 방식으로 구상했다.
-
-### 클라우드 컴퓨팅
-
-첫 번째는 `클라우드 컴퓨팅`을 직접 운용하는 방식이다. `EC2` 혹은 기타 클라우드의 `Computed Machine/Engine`을 이용해 서버를 구축하고, `nginx`를 사용해 `리버스 프록시`를 구축한다.
-이를 통해, `cors`를 해결하기도 하고 `entry point`를 1개만 노출함으로써 기본적인 보안을 유지한다.
-
-이렇게 할 경우, `Horizontal Scaling`이 편할 것으로 생각된다. 하지만 어떤 클라우드 플랫폼의 서비스를 사용할지, 플랫폼마다 조금씩 다른 설정과 이에 따른 시간적 비용이 발생할 것이다.
-프리티어를 사용한다 할지라도 초기 설정이 상당히 필요하고, 중간에 발생하는 문제에 대한 트러블슈팅을 온전히 직접 해결해야 한다.
-
-### 클라우드 호스팅 서비스
-
-클라우드 컴퓨팅과 말은 비슷하지만, 클라우드 서버를 대여해주는 것이 아닌 배포 자체를 서비스해주는 클라우드 서비스를 이용하는 경우이다.
-
-개발을 해나가면서 여러 프레임워크를 어쩔 수 없이 써보니 알게 된 사실인데, 미리 만들어진 `프레임워크` 혹은 `서비스`가 생각보다 너무 편하다는 것이다.
-프론트엔드를 `Vercel`을 통해 배포해보니 여러 가지 기능들이 기본적으로 제공되었고, 굳이 직접 구축해야 하는 필요성과 안정성을 느끼지 못했다.
-
-`Vercel`을 통해 `web vital`이나 `analytics`를 쉽게 적용할 수 있었고, `CD`가 자동으로 되는 것도 큰 장점이었다.
-
-이렇게 되면 프론트엔드 뿐만 아니라 백엔드도 `Firebase`나 기타 플랫폼을 통해 서비스 하는 게 더욱 유리할 것이라는 생각이 들었다.
-
-현재 인프라가 필요한 서비스는 다음과 같다.
-
-- 스크래퍼 서버 (Node.js)
-- 프론트엔드 서버
-- 백엔드 서버
-- 데이터베이스 서버
-
-스크래퍼 서버의 경우, 성능이 좋은 서버가 필요하여 상용 클라우드나 프리티어를 통해 해결할 수 없다.
-
-결국, 전반적인 서비스에 필요한 인프라를 직접 클라우드를 대여해 구축하는 것이 아닌
-자동화 된 클라우드 호스팅을 통해 배포할 가능성이 커졌다.
-
 ## 6. 데이터/수집
 
 서비스 기획과 함께 어떤 데이터를 어디서 수집하느냐도 중요했다. 만약 데이터가 없다면 애초에 불가능한 서비스이기 때문이다.

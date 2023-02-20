@@ -9,61 +9,23 @@ import '@code-hike/mdx/dist/index.css'
 
 # Electrokerot 백엔드
 
-원래는 `Node.js` + `Express`로 API 서버를 만들려고 했으나, `typescript`와 `TDD`를 적용할
-생각이었기 때문에, `Nest.js`를 사용하기로 했다.
+## 1. 개요
+
+백엔드는 `Nest.js`를 통해 구현했습니다. 처음엔 자주 사용하던 `Node.js` + `Express` 통해 하려고 했으나, 프로젝트 규모가
+크다 보니 어디서 무엇이 필요한지 모호했습니다. 필요한 기능과 필요할 법한 기능들을 찾아야 했고, 그러다 보니 자연스럽게 문서가 아주
+잘 작성된 `Nest.js`를 선택하게 되었습니다.
+
+`Nest.js` 문서를 처음부터 목차대로 따라 하면 거의 모든 기능을 사용할 수 있었습니다. 과하지 않고 적당한 기능들이
+많아서, 필요했는지 몰랐던 기능이나 원래 알았지만 더 편한 방법을 찾기도 했습니다.
 
 API 서버를 자체 개발하는 건 큰 어려움이 없었으나, `서버` 혹은 `백엔드`라는 로직을 구성할 때,
-어떤 구조로 짜야 할지 고민이 많았다. 데이터베이스 스키마를 어떻게 설계해야 할지, REST API 설계는
-어떻게 해야할지, `JWT`를 어떻게 사용해야 할지 등등 많은 고민을 했다.
+어떤 구조로 짜야 할지 고민이 많았습니다.
 
-아는 만큼 보인다는 말이 있는데, 그래서 그런가 백엔드는 잘 안 보였던 거 같다.. 적당히
-API를 만들고, 데이터베이스 스키마를 적당히 짜고, `JWT`를 적당히 사용하고 이런 식으로
-만들었던 것 같다. 다만 `TDD`를 적용했고 `typescript`를 사용했기 때문에, 코드의 안정성은
-높아졌다고 생각한다.
+백엔드에서도 추상화할 수 있는 부분은 최대한 추상화하려고 노력했습니다. 가령, `repository`의 경우, `entity repository`를 만들어
+하위 `repository`들이 상속받아 사용할 수 있도록 했습니다. 이렇게 하면, 웬만한 `repository`들은 `entity repository`를 상속받아
+사용하면 되기 때문에, `repository`를 추가할 때마다 추가로 필요한 메서드만 구현하면 되기 때문에 작업할 양이 줄어들었습니다.
 
-## 1. API 설계
-
-API는 `REST API`를 사용했다. `GraphQL`이 더 맞는다고 생각했지만, `GraphQL`을 사용해본 경험이
-없었고, 이번 프로젝트에 적용하기 위해 `GraphQL`까지 습득하기에는 시간이 부족했다.
-
-## 2. 데이터베이스
-
-데이터베이스의 경우, `MongoDB`를 사용했다. `MongoDB`는 `NoSQL`이기 때문에, 데이터베이스 스키마를
-설계할 때, `SQL`과는 다른 방식으로 설계해야 한다. `SQL`은 테이블을 만들고, 테이블에 컬럼을
-추가하고, 컬럼에 데이터를 넣는 식으로 데이터를 저장한다. 하지만 `NoSQL`은 `Collection`을
-만들고, `Collection`에 `Document`를 추가하는 식으로 데이터를 저장한다.
-
-현재 프로젝트처럼 사전에 어떤 데이터가 필요할지 정형화되어 있지
-않았을 때 `NoSQL`이 더 적합하다고 생각했고, 이전에 사용경험도 있었기 때문에
-`MongoDB`를 채택했다. 특히 `MongoDB`의 클라우드 버전인 `Atlas`를 사용하면, `Full Text Search`를
-지원하는데 이는 `ElasticSearch`에서처럼 형태소분석을 지원해주기 때문에, 검색엔진을
-구현하기에도 좋다. 둘 다 `Lucene`을 기반으로 만들어졌기 때문에, 나중에 `ElasticSearch`를
-사용하게 된다면, 그전에 미리 익숙해질 기회가 될 것 같다.
-
-### 2.1 DB Schema
-
-스키마를 구성할 때, 모델러 같은 툴을 검사해봤지만, 현재 프로젝트 규모에 맞게끔
-무료 버전을 지원하는 `MongoDB` 모델러가 없어서, 체험 버전을 사용해서 스키마를 구성했다.
-유지 가능한 스키마는 아니지만, 대략적인 구조를 파악하는 데는 도움이 되었다.
-
-import DbSchemaScreenshot from '/public/pages/projects/electrokerot/backend/db-schema.png'
-
-<Screenshot alt="db schema" src={DbSchemaScreenshot} caption="db schema" />
-
-### 2.2 DB Model
-
-API서버와 데이터베이스 통신에는 `ORM`이나 `ODM`을 따로 사용하지는 않았다. 처음엔
-`Prisma`를 사용해보려고 했지만, 스키마를 짜고 나니 아직 지원하는 부분이
-부족하다고 생각했고, 현재 필요한 기능들을 `Entity`를 직접 만들어서 구현하는 것이
-더 편하지 않을까 생각했다.
-
-## 3. 기타
-
-### 3.1 Entity repository
-
-`repository`를 구성할 때, `entity repository`라는 추상화된 인터페이스를 만들어서
-전체 `repository`에서 상속받았다. 이렇게 하면, `repository`를 추가할 때마다
-추가로 필요한 메서드만 구현하면 되기 때문에 작업할 양이 줄어들었다.
+### Entity repository
 
 <details>
 <summary>entity repository</summary>
@@ -146,4 +108,163 @@ abstract class EntityRepository<T> {
 }
 ```
 
+</details>
+
+### 인프라
+
+import InfraScreenshot from '/public/pages/projects/electrokerot/intro/infra.png'
+
+<Screenshot alt="인프라" src={InfraScreenshot} caption="인프라" />
+
+<br />
+서버는 두 가지 방식으로 구상했습니다.
+
+#### 클라우드 컴퓨팅
+
+첫 번째는 `클라우드 컴퓨팅`을 직접 운용하는 방식입니다. `EC2` 혹은 기타 클라우드의 `Computed Machine/Engine`을 이용해 서버를 구축하고, `nginx`를 사용해 `리버스 프록시`를 구축하는 방식입니다.
+이를 통해, `cors`를 해결하기도 하고 `entry point`를 1개만 노출함으로써 기본적인 보안에 도움이 됩니다.
+
+이렇게 할 경우, `Horizontal Scaling`이 편할 것으로 생각됩니다. 하지만 어떤 클라우드 플랫폼의 서비스를 사용할지, 플랫폼마다 조금씩 다른 설정과 이에 따른 시간적 비용이 발생할 것입니다.
+프리티어를 사용한다 할지라도 초기 설정이 상당히 필요하고, 중간에 발생하는 문제에 대한 트러블슈팅을 온전히 직접 해결해야 합니다.
+
+#### 클라우드 호스팅 서비스
+
+클라우드 컴퓨팅과 말은 비슷하지만, 클라우드 서버를 대여해주는 것이 아닌 배포 자체를 서비스해주는 클라우드 서비스를 이용하는 경우입니다.
+
+개발을 해나가면서 여러 프레임워크를 어쩔 수 없이 써보니 알게 된 사실인데, 미리 만들어진 `프레임워크` 혹은 `서비스`가 생각보다 너무 편하다는 것을 알게 되었습니다.
+프론트엔드를 `Vercel`을 통해 배포해보니 여러 가지 기능들이 기본적으로 제공되었고, 굳이 직접 구축해야 하는 필요성과 안정성을 느끼지 못했습니다.
+
+`Vercel`을 통해 `Web vital`이나 `Analytics`를 쉽게 적용할 수 있었고, `CD`가 자동으로 되는 것도 큰 장점이었습니다.
+
+이렇게 되면 프론트엔드 뿐만 아니라 백엔드도 `Firebase`나 기타 플랫폼을 통해 서비스 하는 게 더욱 유리할 것이라는 생각이 들었습니다.
+
+현재 인프라가 필요한 서비스는 다음과 같습니다.
+
+- 스크래퍼 서버 (Node.js)
+- 프론트엔드 서버
+- 백엔드 서버
+- 데이터베이스 서버
+
+스크래퍼 서버의 경우, 성능이 좋은 서버가 필요하여 상용 클라우드나 프리티어를 통해 해결할 수 없을 것 같습니다.
+
+결국, 전반적인 서비스에 필요한 인프라를 직접 클라우드를 대여해 구축하는 것이 아닌
+자동화 된 클라우드 호스팅을 통해 배포할 가능성이 커졌습니다.
+
+## 2. 데이터베이스
+
+데이터베이스의 경우, `MongoDB`를 사용했습니다. `MongoDB`는 `NoSQL`이기 때문에, 데이터베이스 스키마를
+설계할 때, `RDBMS`와는 다른 방식으로 설계해야 합니다. `RDMBS`는 테이블을 만들고, 테이블에 컬럼을
+추가하고, 컬럼에 데이터를 넣는 식으로 데이터를 저장합니다. 하지만 `NoSQL`은 `Collection`을
+만들고, `Collection`에 `Document`를 추가하는 식으로 데이터를 저장합니다.
+
+현재 프로젝트처럼 사전에 어떤 데이터가 필요할지 정형화되어 있지
+않았을 때 `NoSQL`이 더 적합하다고 생각했고, 이전에 사용경험도 있었기 때문에
+`MongoDB`를 채택했습니다. 특히 `MongoDB`의 클라우드 버전인 `Atlas`를 사용하면, `Full Text Search`를
+지원하는데 이는 `ElasticSearch`에서처럼 형태소분석을 지원해주기 때문에, 검색엔진을
+구현하기에도 좋습니다. 둘 다 `Lucene`을 기반으로 만들어졌기 때문에, 나중에 `ElasticSearch`를
+사용하게 된다면, 그전에 미리 익숙해질 기회가 될 것 같습니다.
+
+### DB Schema
+
+스키마를 구성할 때, 모델러 같은 툴을 검사해봤지만, 현재 프로젝트 규모에 맞게끔
+무료 버전을 지원하는 `MongoDB` 모델러가 없어서, 체험 버전을 사용해서 스키마를 구성했는데,
+유지 가능한 스키마는 아니지만, 대략적인 구조를 파악하는 데는 도움이 되었던 것 같습니다.
+
+import DbSchemaScreenshot from '/public/pages/projects/electrokerot/backend/db-schema.png'
+
+<Screenshot alt="db schema" src={DbSchemaScreenshot} caption="db schema" />
+
+### DB Model
+
+API서버와 데이터베이스 통신에는 `ORM`이나 `ODM`을 따로 사용하지는 않았습니다. 처음엔
+`Prisma`를 사용해보려고 했지만, 스키마를 짜고 나니 아직 지원하는 부분이
+부족하다고 생각했고, 현재 필요한 기능들을 `Entity`를 직접 만들어서 구현하는 것이
+더 편하지 않을까 생각했기 때문입니다.
+
+## 3. API 설계
+
+API는 `REST API`를 사용했습니다. `GraphQL`이 더 맞는다고 생각했지만, `GraphQL`을 사용해본 경험이
+없었고, 이번 프로젝트에 적용하기 위해 `GraphQL`까지 습득하기에는 시간이 부족했습니다.
+
+API의 개수가 처음 계획했던 것보다 많아졌습니다. 그래서 `Swagger`를 통해 `API`를 문서화했습니다.
+개발을 여러 싸이클로 나눴기 때문에, 문서도 여러 개로 나눴습니다.
+
+문서화는 inline으로 하지 않았고, 따로 `yaml` 파일을 만들어서 `Swagger`에 `yaml` 파일을 넣어서 문서화했는데,
+inline으로 문서화하면 문서가 코드에 동기화되어 관리가 편하긴 하겠지만
+비즈니스 로직 코드와 문서화 코드가 섞여서 가독성이 떨어진다고 생각했기 때문입니다.
+
+import SwaggerDocScreenshot from '/public/pages/projects/electrokerot/intro/swagger-doc.png'
+
+<details>
+  <summary>Swagger API</summary>
+
+  <a href="https://app.swaggerhub.com/apis-docs/SwimmingPolar/electrokerot/0.0.1" target="_blank">
+    <Screenshot alt="API 문서" src={SwaggerDocScreenshot} caption="API 문서" />
+  </a>
+  <br/>
+  </details>
+
+## 4. TDD
+
+`CI/CD`를 위해 자료를 찾다 보니 프로젝트 `TDD`가 적용되지 않은 상태에서 `CI/CD`를 도입하는 건
+아무 의미가 없다는 것을 알게 되었습니다.
+`Nest.js`를 사용하면서 `TDD`를 통해 작업했는데, `TDD`를 하면서 이전과 전혀 다른 `DX`를 느꼈습니다.
+이 전에는 `Postman`이나 `Insomnia`를 통해 `API`를 하나 구현할 때마다 `API`를 테스트하고, 조금씩 완성해 나갔는데
+이번엔 서버를 한 번도 올리지 않고 구축된 테스트 환경 내에서 모든 `API`를 작성했습니다. 웹개발을 하다 보면 `Postman` 같은 툴을 사용하려고
+개발과 테스트 사이에 컨텍스트 스윗칭을 자주 하는데, 이런 방법이 개발을 비효율적으로 만든다고 생각했습니다. `TDD`를 통해
+이러한 문제를 해결할 수 있었습니다.
+
+이전에는 `TDD`가 왜 필요한지 어렴풋이 알고만 있었는데, 이번 기회를 통해 `TDD`가 왜 필요한지 확실하게 알게 되었습니다. 앞으론 필요하다기보다는
+없으면 개발하기가 너무 힘들 거 같습니다. 특히, 개발할 때는 개발 서버를 한 번도 올리지 않고 나중에 서버를 올렸을 때 모든게 한 번에 돌아가게 되는
+신기한 경험을 했습니다.
+
+프론트엔드와는 다르게 백엔드는 어디에 `TDD`를 적용해야 하는지 보다 확실히 보여서 손쉽게 `TDD`를 적용할 수 있었습니다. 테스트는 비즈니스 로직이
+들어가는 `repository`나 `service`에 적용을 했고, `controller`에는 적용하지 않았습니다. `controller`에선 거의 `DTO`를 받고 `service`로 넘겨주는
+역할만 있었기 때문에 `TDD`를 적용하지 않았습니다. `DTO`의 검증은 `service`를 테스트할 때 같이 진행했습니다.
+
+import TestScreenShot from '/public/pages/projects/electrokerot/intro/test-all.png'
+import TestCoverageScreenShot from '/public/pages/projects/electrokerot/intro/test-coverage.png'
+
+### 테스트 커버리지
+
+<details>
+  <summary>전체 테스트 </summary>
+
+  <Screenshot alt="전체 테스트" src={TestScreenShot} caption="전체 테스트" />
+  <Screenshot
+    alt="테스트 커버리지"
+    src={TestCoverageScreenShot}
+    caption="테스트 커러비지"
+  />
+  <br/>
+</details>
+
+import TestRepositoryScreenShot from '/public/pages/projects/electrokerot/intro/test-repository.png'
+
+### 유닛 테스트
+
+<details>
+  <summary>유닛 테스트 </summary>
+
+  <Screenshot
+    alt="유닛 테스트"
+    src={TestRepositoryScreenShot}
+    caption="유닛 테스트"
+  />
+  <br/>
+</details>
+
+import TestIntegrationScreenShot from '/public/pages/projects/electrokerot/intro/test-integration.png'
+
+### 통합 테스트
+
+<details>
+  <summary>통합 테스트 </summary>
+
+  <Screenshot
+    alt="통합 테스트"
+    src={TestIntegrationScreenShot}
+    caption="통합 테스트"
+  />
+  <br />
 </details>
