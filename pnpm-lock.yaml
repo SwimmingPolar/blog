@@ -16,6 +16,7 @@ specifiers:
   '@storybook/react': ^6.5.16
   '@storybook/testing-library': ^0.0.13
   '@types/crypto-js': ^4.1.1
+  '@types/lodash': ^4.14.191
   '@types/node': 18.11.19
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
@@ -92,6 +93,7 @@ devDependencies:
   '@storybook/react': 6.5.16_cvdxofhutmhp53fr2quh5i36x4
   '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
   '@types/crypto-js': 4.1.1
+  '@types/lodash': 4.14.191
   '@types/react-google-recaptcha': 2.1.5
   '@types/styled-components': 5.1.26
   '@types/uuid': 9.0.0
