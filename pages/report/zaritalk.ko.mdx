@@ -1,0 +1,105 @@
+---
+title: '자리톡 과제'
+---
+
+import { Screenshot } from '@/components'
+
+# 자리톡 과제
+
+## Pre-proudction
+
+### 1. 요구 사항 분석
+
+3개의 페이지를 가진 웹사이트를 개발하는 과제입니다. 환급금 관련 서비스를 제공하는 사이트로,
+임대 계약을 체결한 사용자가 임대 계약 정보를 입력하면 임대 계약 정보를 요약하여 보여주는 서비스입니다.
+
+> `/lease/info` : 임대 계약 입력 페이지
+>
+> `/lease/address` : 임대 거주지 입력 페이지
+>
+> `/lease/complete` : 임대 계약 정보 요약 페이지
+
+**라우팅**
+
+페이지별로 기능이 다르긴 하지만 디자인을 봤을 때, 라우팅이 필요한지
+약간 애매하긴 했습니다. 큰 페이지에서 중간 컴포넌트만 바꿔주는 방식으로
+개발을 할지 아니면 페이지를 분리해서 개발을 할지 고민을 했습니다.
+
+일단, 요구 사항에 `페이지`라고 명시되어 있어서 페이지를 분리해서 개발을 진행할 예정입니다.
+그리고 사용자 입장에서 임대 거주지 입력 페이지에서 뒤로가기를 눌렀을 때, 임대 계약 입력 페이지로
+돌아가는 것이 더 자연스럽다고 생각했습니다.
+
+**상태 관리**
+
+그 외, 각 페이지별 상태 관리를 어떻게 할지 고민을 했습니다.
+
+- redux 같은 전역 상태 관리 라이브러리 사용
+- location.state에 상태를 저장해서 라우팅할 때 같이 넘겨주기
+- context api를 사용
+
+이렇게 3가지 방법을 고민했는데, 전역 상태 관리 라이브러리를 사용하는 것은
+단번에 봐도 너무 무거워보였고, `location.state`를 사용하는 건 할만 했지만,
+직관적이지 않아 보여 context api를 사용하기로 했습니다.
+
+### 2. 디자인 파악
+
+디자인에 무리한 요구사항은 없어서 디자인 파악은 크게 어렵지 않았습니다.
+
+### 3. 기존 사이트 분석
+
+import StacksScreenshot from '/public/pages/report/zaritalk/stacks.png'
+
+<Screenshot src={StacksScreenshot} alt="기술 스택" caption="기술 스택" />
+
+기존 사이트에서는 `Next.js`를 사용하고 있었고, 디자인에는 `Stitches`를 사용해서
+스타일링을 하고 있었습니다. `Stitches`를 잠깐 살펴봤었는데 `utility token` 기반의
+`tailwind`와 비슷한 느낌이었습니다. 사용은 안 해봤지만, 바로 쓰기에는
+기존에 쓰던 `styled-components`보다는 불편할 것 같아서 `styled-components`를 사용하기로 했습니다.
+
+## Proudction
+
+### 4. 공통 컴포넌트 분리
+
+import ComponentsScreenshot from '/public/pages/report/zaritalk/components.png'
+
+<Screenshot src={ComponentsScreenshot} alt="컴포넌트" caption="컴포넌트" />
+
+대부분의 디자인이 텍스트로 이루어져있어 상단의 3가지 컴포넌트만 분리하기로
+했습니다. `Input` 컴포넌트는 `type`에 따라 다른 스타일을 가지고 있습니다.
+`type`에 따라 다른 스타일을 가지는 컴포넌트는
+따로 분리하기로 하고, 총 `RadioInput`, `TextInput`, `Button` 컴포넌트를 만들 예정입니다.
+
+### 5. 코어 컴포넌트 개발
+
+캘린더처럼 따로 분리해서 개발해야하는 하위 컴포넌트는 없어보여서
+공통 컴포넌트만 개발하고, 나머지 컴포넌트는 페이지 컴포넌트에
+직접 작성하기로 했습니다.
+
+### 6. 개발 셋업
+
+- `npx create-next-app@latest`를 사용해서 스캐폴딩
+- eslint
+- prettier
+- storybook
+  - eslint 설정
+  - webpack path alias 설정
+- next.config.js
+  - `styled-components` 사용 설정
+  - TDD를 위해 삽입하는 `data-attribute` 제거 설정 (removeReactProperties)
+- react-testing-library 설정
+- cypress 설정
+- CSS reset
+- 프로젝트 구조 설정
+
+기본적인 세팅을 사용해서 진행했습니다.
+
+## Post-proudction
+
+### 7. 테스트
+
+테스트는 `jest`와 `react-testing-library`를 사용해서 진행했습니다. 추후 `cypress`를
+사용해서 e2e 테스트도 진행할 수 있으면 좋을 것 같습니다.
+
+### 8. 배포
+
+배포는 `chromatic`과 `vercel`을 사용해서 진행했습니다.

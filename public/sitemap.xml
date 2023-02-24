@@ -24,6 +24,14 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
+    <loc>https://ydh.vercel.app/en/temp/zaritalk</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ydh.vercel.app/temp/zaritalk</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
     <loc>https://ydh.vercel.app/en/projects/electrokerot/backend</loc>
     <changefreq>hourly</changefreq>
   </url>

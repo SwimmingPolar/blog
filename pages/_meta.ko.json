@@ -13,5 +13,8 @@
   },
   "contact": {
     "title": "연락처"
+  },
+  "report": {
+    "display": "hidden"
   }
 }
