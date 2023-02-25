@@ -1,0 +1,260 @@
+---
+title: 자리톡 과제 구현 후기
+---
+
+import '@code-hike/mdx/dist/index.css'
+
+# 구현 후기
+
+처음 피그마 디자인을 봤을 때, 진행했던 프로젝트와 비슷한 부분이 있어서 빠르게 개발틀이 잡힐 것 같았습니다.
+개발을 하면서 든 생각인데, 페이지를 보여주는 웹이 아니라 앱으로써 기능하는 웹이 조금 생각할 부분이 많았습니다.
+작은 요소들이 군데군데 있어서, 이 부분을 캐치하지 못 하고 넘어가 개발 중간에 애를 먹기도 하고
+구현 자체를 어떻게 할지 고민하는데도 시간이 조금 길었습니다.
+
+import ComponentsScreenshot from '/public/pages/report/zaritalk/components.png'
+import InputScreenshot from '/public/pages/report/zaritalk/input.png'
+import InputActivePlaceholder from '/public/pages/report/zaritalk/input-active-placeholder.png'
+import InputPassivePlaceholder from '/public/pages/report/zaritalk/input-passive-placeholder.png'
+import ProjectTree from '/public/pages/report/zaritalk/project-tree.png'
+import { Screenshot } from '@/components'
+
+## 컴포넌트계설계
+
+<Screenshot src={ComponentsScreenshot} alt="공통 컴포넌트" />
+
+이렇게 3가지 공통 컴포넌트를 만들어서 사용하기도 했지만 중간에 컴포넌트를 추가하거나 수정하는 과정에서
+컴포넌트를 사용하는 곳에서도 수정을 해줘야 하는 번거로움이 있었습니다.
+
+`TextInput` 컴포넌트를 예로 들면, 위 사진에서
+
+- 혼자 있으면 전체 `width`를 차지
+- 둘이 붙어있으면 `width`를 50%씩 차지
+- 입력해도 placeholder가 사라지지 않음
+- 숫자만 입력 가능
+- 문자만 입력 가능
+
+이런 설계로 만들었지만,
+
+<Screenshot src={InputScreenshot} alt="입력 컴포넌트" />
+
+위 사진처럼 `Input`만 나란히 존재하는 게 아니라, `Input`의 `title`이라던가 `warning message` 같은 게
+존재하는 경우를 생각지 못 했습니다. 이걸 위해 이미 완성 된 `TextInput`을 수정하기에는 시간이 부족했고,
+`TextInput`을 사용하는 곳에서 `className`을 임시로 추가해서 수정하려고 했지만 이것 역시 완벽하지 않아
+디자인을 따라가지 못 한 부분이 있었습니다.
+
+`placeholder`의 경우에도, 처음에는 `TextInput`에 값을 입력해도 유지되는 `placeholder` 모습이었기에
+이걸 토대로 설계하고 개발했지만 다른 페이지에서는 `placeholder`가 입력되면 사라지는 모습이었습니다.
+
+<Screenshot
+  src={InputActivePlaceholder}
+  alt="placeholder 고정"
+  caption="placeholder 고정"
+/>
+
+<br />
+
+<Screenshot
+  src={InputPassivePlaceholder}
+  alt="placeholder 사라짐"
+  caption="placeholder 사라짐"
+/>
+
+중간중간 디자인 요소를 반영시키기는 했지만 처음에 설계했던 부분이 아니라 조금 매끄럽지 못 하게
+구현된 부분이 있습니다.
+
+## 테스트
+
+어떻게 하면 설계에서 빼먹지 않고 미리 체크하면서 개발할지 고민하다 보니
+`TDD`를 알게 됐고 과제 역시 `TDD`를 적용해서 개발했습니다.
+
+총 3개의 페이지에 대한 테스트 케이스를 작성했고, 개발은 기능 요구서와 디자인을 보면서 테스트 `Todo` 케이스를 작성하는
+것을 선두로 다음과 같은 싸이클로 개발했습니다.
+
+- 테스트 Todo 케이스 작성
+- HTML 마크업 작성
+- CSS 작성
+- 테스트 코드 작성
+- 테스트 케이스 실패
+- 테스트 케이스 통과
+
+컴포넌트에 필요한 테스트 케이스를 `Todo` 리스트로 작성하고 마크업을 한 뒤, 스타일을 적용했습니다.
+퍼블리싱이 끝났다면 테스트 코드를 작성해 테스트가 실패하는 것을 확인한 뒤,
+테스트 케이스가 통과되게끔 하는 작업을 진행했습니다.
+이렇게 한 사이클이 끝나면 다음 페이지로 넘어가서 같은 과정을 반복했습니다.
+
+현재 과제의 경우, 비교적 작아 하나의 모듈이 하나의 페이지가 되는 경우라
+각 페이지의 레이아웃 별로 케이스를 쪼갠 뒤, 테스트 케이스를 작성했습니다.
+
+import TestInfoScreenshot from '/public/pages/report/zaritalk/test-info.png'
+import TestAddressScreenshot from '/public/pages/report/zaritalk/test-address.png'
+import TestCompleteScreenshot from '/public/pages/report/zaritalk/test-complete.png'
+
+<Screenshot src={TestInfoScreenshot} alt="Info page test case" />
+
+<br />
+
+<Screenshot src={TestAddressScreenshot} alt="Address page test case" />
+
+<br />
+
+<Screenshot src={TestCompleteScreenshot} alt="Complete page test case" />
+
+고민을 오래할 수 없는 경우였기에 일단은 이렇게 레이아웃 별로 케이스를 나눴지만
+조금 더 개선될 수 있는 부분이 있을 것 같습니다.
+
+### 구현 완성도
+
+<span style={{ color: '#2c7fff' }}>첫 번째 페이지</span>의 경우, 현재 테스트
+케이스 작성과 통과를 <span style={{ color: '#2c7fff' }}>완료</span>했지만
+<span style={{ color: '#ff940e' }}>두 번째 페이지 </span>인 주소를 입력하는
+페이지의 경우 마크업/스타일/기능만 구현되어 있고 테스트 코드를 작성은 했지만
+<span style={{ color: '#ff940e' }}>테스트 통과는 시키지는 못 했습니다.</span> 첫
+번째 페이지와 두 번째 페이지의 구성이 거의 비슷해서 두 번째 페이지의 경우
+마크업과 스타일이 끝나면서 기능 또한 거의 완성되었습니다.
+
+<span style={{ color: '#e74d5a' }}>세 번째 페이지</span>의 경우, 테스트 케이스
+`Todo` 리스트만 작성한 뒤, <span style={{ color: '#e74d5a' }}>구현은 하지 못 했습니다.</span>
+
+## 상태 관리
+
+상태 관리는 `ContextAPI`를 통해 구현했습니다. 처음엔 다른 이유 때문이었지만,
+전역 상태 관리가 필요한 경우가 아니기에 당연히 `Redux`와 같은 툴이 필요없다고 생각하게 됐습니다.
+현재 과제처럼 어떠한 형태의 `form`을 채워넣고 다음 스텝을 진행하는 페이지면
+`form`에서 사용되는 데이터가 전역에서 관리 될 필요가 없다고 생각했습니다.
+
+`TextInput`이 바뀔 때마다 값이 전역으로 저장되어야 하는 것이 아니라, 확인 버튼을 눌렀을 때만
+전역으로 저장되면 되기 때문에 `ContextAPI`가 더 적합하다고 생각했습니다.
+
+```tsx LeaseInfoProvider.tsx
+export type LeaseInfo = {
+  // Lease information
+  leaseType: 'monthly' | 'yearly'
+  leaseDeposit: string
+  monthlyLeaseFee: string
+  monthlyMaintenanceFee: string
+  paymentDueDate: string
+  hasMaintenanceFee: boolean
+
+  // Tenant information
+  tenantAddress: string
+  tenantUnitAddress: string
+  tenantName: string
+  tenantPhoneNumber: string
+
+  // Lease Date
+  leaseStartDate: string
+  leaseEndDate: string
+}
+```
+
+위와 같은 상태만 유지했고, 각 페이지 컴포넌트 별로 해당 컨텍스트의 값을 불러와 사용했습니다.
+불러온 값들은 `local state`로 따로 저장을 했고 `TextInput`의 값이 변경되면 `local state`의 값은
+변하지만 `context`의 값은 변하지 않습니다. `context`의 값은 확인 버튼을 눌렀을 때만 변경되도록
+구현했습니다.
+
+이렇게 하면 `TextInput`의 값을 변경할 때마다 `context`의 값이 변경되는 것을 방지할 수 있고,
+`local state`를 통해 `TextInput`을 `controlled component`로 구현할 수 있습니다.
+
+```tsx /lease/info.tsx
+// Extract initial lease info
+const {
+  handleUpdateLeaseInfo,
+  leaseInfo: {
+    leaseType: leaseTypeBackup,
+    leaseDeposit: leaseDepositBackup,
+    monthlyLeaseFee: monthlyLeaseFeeBackup,
+    monthlyMaintenanceFee: monthlyMaintenanceFeeBackup,
+    paymentDueDate: paymentDueDateBackup,
+    hasMaintenanceFee: hasMaintenanceFeeBackup
+  }
+} = useLeaseInfo()
+
+const [leaseType, setLeaseType] =
+  useState<'monthly' | 'yearly'>(leaseTypeBackup)
+
+const { value: leaseDeposit, handleChange: handleLeaseDepositChange } =
+  useTextInput(leaseDepositBackup)
+
+const { value: monthlyLeaseFee, handleChange: handleMonthlyLeaseFeeChange } =
+  useTextInput(monthlyLeaseFeeBackup)
+
+// ...
+```
+
+`TextInput`의 `props` 전달을 편하게 하기 위해 `inputs`라는 상태를 사용하는데
+이 상태는 `TextInput` 전체가 같이 사용하는 상태입니다.
+이 상태의 값의 의존성 리스트에는 `TextInput`의 모든 `local state`가 들어가게 됩니다.
+따라서 하나의 `TextInput`이 변경되면 다른 `TextInput`도 렌더링이 되게 됩니다.
+
+`local state`를 사용해서 `context`가 업데이트 되는 것을 막고 해당 `context`를 사용하는
+컴포넌트들이 계속해서 렌더링되는 것을 방지했지만 위의 최적화를 진행하지 않으면
+하나의 `TextInput`이 다른 컴포넌트를 리렌더링시키는 것이므로 최적화가 필요합니다.
+
+<details>
+  <summary>const inputs</summary>
+
+```tsx
+const inputs = useMemo(
+  () => ({
+    leaseDeposit: {
+      value: leaseDeposit,
+      placeholder: '보증금',
+      handleChange: handleLeaseDepositChange,
+      unit: '만원',
+      unitRegExp: /[^0-9]/g,
+      decorator: 'leaseDeposit'
+    },
+    monthlyLeaseFee: {
+      value: monthlyLeaseFee,
+      placeholder: '월 임대료',
+      handleChange: handleMonthlyLeaseFeeChange,
+      unit: '만원',
+      unitRegExp: /[^0-9]/g,
+      decorator: 'monthlyLeaseFee'
+    },
+    monthlyMaintenanceFee: {
+      value: monthlyMaintenanceFee,
+      placeholder: '월 관리비',
+      handleChange: handleMonthlyMaintenanceFeeChange,
+      unit: '만원',
+      unitRegExp: /[^0-9]/g,
+      decorator: 'monthlyMaintenanceFee'
+    },
+    paymentDueDate: {
+      value: paymentDueDate,
+      placeholder: '임대료 납부일',
+      handleChange: handlePaymentDueDateChange,
+      unit: '일',
+      unitRegExp: /[^0-9]/g,
+      minValue: 1,
+      maxValue: 31,
+      decorator: 'paymentDueDate'
+    }
+  }),
+  [
+    leaseDeposit,
+    monthlyLeaseFee,
+    monthlyMaintenanceFee,
+    paymentDueDate,
+    handleLeaseDepositChange,
+    handleMonthlyLeaseFeeChange,
+    handleMonthlyMaintenanceFeeChange,
+    handlePaymentDueDateChange
+  ]
+)
+
+// ...
+<TextInput {...inputs['leaseDeposit']} />
+<TextInput {...inputs['monthlyLeaseFee']} />
+// ...
+```
+
+</details>
+
+## 깃플로우
+
+- main
+- develop
+- feature/lease
+
+위와 같은 깃플로우를 사용하려 했지만 현재 전체 구현을 하지 못 했기 때문에 모든 브랜치가 남아있습니다.
