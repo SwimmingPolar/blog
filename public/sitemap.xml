@@ -24,30 +24,6 @@
     <changefreq>hourly</changefreq>
   </url>
   <url>
-    <loc>https://ydh.vercel.app/en/report/zaritalk-demands</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://ydh.vercel.app/report/zaritalk-demands</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://ydh.vercel.app/en/report/zaritalk-report</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://ydh.vercel.app/report/zaritalk-report</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://ydh.vercel.app/en/report/zaritalk</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
-    <loc>https://ydh.vercel.app/report/zaritalk</loc>
-    <changefreq>hourly</changefreq>
-  </url>
-  <url>
     <loc>https://ydh.vercel.app/en/projects/electrokerot/backend</loc>
     <changefreq>hourly</changefreq>
   </url>
@@ -77,6 +53,30 @@
   </url>
   <url>
     <loc>https://ydh.vercel.app/projects/electrokerot/scraper</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ydh.vercel.app/en/report/zaritalk/analysis</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ydh.vercel.app/report/zaritalk/analysis</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ydh.vercel.app/en/report/zaritalk/demands</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ydh.vercel.app/report/zaritalk/demands</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ydh.vercel.app/en/report/zaritalk/report</loc>
+    <changefreq>hourly</changefreq>
+  </url>
+  <url>
+    <loc>https://ydh.vercel.app/report/zaritalk/report</loc>
     <changefreq>hourly</changefreq>
   </url>
 </urlset>

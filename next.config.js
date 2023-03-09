@@ -43,5 +43,19 @@ module.exports = withNextra({
       require('./modules/generate-sitemap.js')
     }
     return config
+  },
+  redirects: async () => {
+    return [
+      {
+        source: '/projects/electrokerot',
+        destination: '/projects/electrokerot/intro',
+        permanent: true
+      },
+      {
+        source: '/report/zaritalk',
+        destination: '/report/zaritalk/analysis',
+        permanent: true
+      }
+    ]
   }
 })
